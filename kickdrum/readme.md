@@ -1,6 +1,6 @@
-# FresherNote
+# KickDrum
 
-[Heroku link][heroku] **Note:** This should be a link to your production site
+[Heroku link][heroku] 
 
 [Trello link][trello]
 
@@ -21,6 +21,7 @@ sufficient CSS styling:
 - [ ] Bookmarking of songs
 - [ ] Post feeds (bookmarked, main, profile)
 - [ ] Playing songs with progress bar with continuous play
+- [ ] Users can search for other users (and possibly by artist)
 - [ ] Production README [sample](docs/production_readme.md)
 
 
@@ -43,23 +44,23 @@ sufficient CSS styling:
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Notes Model, API, and components (2 days)
+### Phase 2: Posts Model, API, and components (2 days)
 
-**Objective:** Notes can be created, read, edited and destroyed through
+**Objective:** Posts can be created, read and destroyed through
 the API.
 
-### Phase 3: Notebooks (2 day)
+### Phase 3: Post Index / Feed (2 days)
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+**Objective:** Post Items make up the Post Index which is rendered as "stream" in feed or a "grid" in profile
 
-### Phase 4: Tags (1 days)
+### Phase 4: - Song Player with continuous playback (2 days)
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+**objective:**  Users can play a post's linked audio file which displays an audio player at bottom of page
 
-### Phase 5: Allow Complex Styling in Notes (1 days, W2 Th 6pm)
+### Phase 5: Bookmarks (1 day)
 
-**objective:** Allow rich text editing of notes.
+**Objective:** Users can bookmark a post, which adds it to their bookmarks feed
 
-### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
+### Phase 6: User Search (2 days)
 
-**objective:** Add infinite scroll to Notes Index
+**objective:** Users can search for users by username (possibly add artist search if there's time)
