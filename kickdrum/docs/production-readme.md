@@ -14,11 +14,11 @@ KickDrum is a full-stack web application inspired by Cymbal.fm.  It utilizes Rub
 
 
 
-  [image of post-form](wireframes/Create.png)
+  ![image of post-form](wireframes/Create.png)
 
-  To create a new post, a user must provide basic info (`artist` and `title`) as well as a public `photo_url` of the album art and an mp3 link, `song_url`. All fields are required for creating a new post. Each post is stored in a Posts table which has a `user_id` for reference. Posts are rendered in three ways: as a PostIndexItem in the main feed (stream), as part of a grid view in user profile / user bookmarks, and a post is the most recent, in post in the ProfileHeader as a featured post. Upon navigating to each section, an API request is made to the posts database (with user params if necessary) to populate the specified component. In each postDetail, the post title, album, photo and bookmark button are displayed (see below:)
+  To create a new post, a user must provide basic info (`artist` and `title`) as well as a public `photo_url` of the album art and an mp3 link, `song_url`. All fields are required for creating a new post. Each post is stored in a Posts table which has a `user_id` for reference. Posts are rendered in three ways: as a PostIndexItem in the main feed (stream), as part of a grid view in user profile / user bookmarks, and if a post is the most recent, in the ProfileHeader as a featured post. Upon navigating to each section, an API request is made to the posts database (with user params if necessary) to populate the specified component. In each postDetail, the post title, album, photo and bookmark button are displayed (see below:)
 
-  [image of postIndexItem](wireframes/Feed.png)
+  ![image of postIndexItem](wireframes/Feed.png)
 
 
 ### Notebooks
