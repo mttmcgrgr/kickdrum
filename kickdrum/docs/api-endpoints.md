@@ -1,28 +1,32 @@
 API Endpoints
-HTML API
 
-Root
+## HTML API
 
-GET / - loads React web app
-JSON API
+### Root
 
-Users
+- `GET /` - loads React web app
 
-POST /api/users
-PATCH /api/users
-GET /api/users/:userId/
-  -user search /user profile
+## JSON API
 
-Session
+### Users
 
-POST /api/session
-DELETE /api/session
-GET /api/session
+- `POST /api/users`
+- `PATCH /api/users`
+- `GET /api/users/:userId/`
 
-Posts
+### Session
 
-GET /api/posts
-  posts index / bookmarked posts
-POST /api/posts
-  requires all params from post form
-DELETE /api/photos/:id
+- `POST /api/session`
+- `DELETE /api/session`
+- `GET /api/session`
+
+## Posts
+
+- `GET /api/posts`
+  - posts index
+- `POST /api/posts`
+  - requires all params from post form
+-  `GET /api/posts/:id`
+    -returns user's posts
+    -returns user's bookmarked posts
+- `DELETE /api/posts/:id`
