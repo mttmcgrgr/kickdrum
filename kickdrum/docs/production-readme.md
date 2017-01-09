@@ -1,4 +1,4 @@
-# FresherNote
+# KickDrum
 
 [KickDrum Live][heroku] **NB:** This should be a link to your production site
 
@@ -12,7 +12,7 @@ KickDrum is a full-stack web application inspired by Cymbal.fm.  It utilizes Rub
 
 ### Creating and Rendering Posts
 
-  On the database side, the notes are stored in one table in the database, which contains columns for `id`, `user_id`, `content`, and `updated_at`.  Upon login, an API call is made to the database which joins the user table and the note table on `user_id` and filters by the current user's `id`.  These notes are held in the `NoteStore` until the user's session is destroyed.  
+
 
   [image of post-form](wireframes/Create.png)
 
@@ -20,7 +20,7 @@ KickDrum is a full-stack web application inspired by Cymbal.fm.  It utilizes Rub
 
   [image of postIndexItem](wireframes/Feed.png)
 
-  
+
 ### Notebooks
 
 Implementing Notebooks started with a notebook table in the database.  The `Notebook` table contains two columns: `title` and `id`.  Additionally, a `notebook_id` column was added to the `Note` table.  
