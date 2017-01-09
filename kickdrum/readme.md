@@ -1,11 +1,11 @@
 # KickDrum
 
-[Heroku link][heroku] 
+[Heroku link][heroku]
 
 [Trello link][trello]
 
 [heroku]: http://www.herokuapp.com
-[trello]: https://trello.com/b/ALgfuX0Q/freshernote
+[trello]: https://trello.com/b/2JSmUvDF/kickdrum
 
 ## Minimum Viable Product
 
