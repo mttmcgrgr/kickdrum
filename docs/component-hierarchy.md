@@ -25,7 +25,7 @@
   **PostIndex**
    - PostIndexItem
    + bookmarks button
-   + post detail
+   + postDetail
 
 **NewPostContainer**
   -PostForm
