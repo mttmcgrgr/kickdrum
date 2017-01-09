@@ -32,4 +32,4 @@ KickDrum is a full-stack web application inspired by Cymbal.fm.  It utilizes Rub
 
 Each render of a post includes a bookmarks button, which creates an association between a post and a user. users can bookmark any post, including their own. Bookmarks are used to make an API request to repopulate the postIndex grid view on the user's profile page with bookmarked posts instead of a list of their own posts.
 
-![image of profile with bookmarks tab](wireframes/profile.png)
+![image of profile with bookmarks tab](wireframes/Profile.png)
