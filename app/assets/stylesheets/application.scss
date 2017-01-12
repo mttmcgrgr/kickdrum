@@ -35,6 +35,10 @@
     background-image: url("http://i.imgur.com/7N5HQja.gif");
   }
 
+  // <img src="http://res.cloudinary.com/dccshngpp/image/upload/v1484184165/noun_409558_wimkcq.png"
+  //      width="40" height="40"
+  //      alt="logo" />
+
  .content {
    height: 100%;
    background-color: white;
@@ -50,32 +54,13 @@
   line-height: 1.8;
   appearance: none;
   box-shadow: none;
-  border-radius: 5;
+  border-radius: 10;
   color: #fff;
   background-color: #6496c8;
   text-shadow: -1px 1px #417cb8;
   border: none;
 }
 
-
- .bench-index-item img {
-   height: 200px;
-   max-width: 130px;
- }
-
- .user-pane {
-   display: flex;
-   justify-content: center;
- }
-
- .right-half {
-   width: 400px;
-   margin-left: 50px;
-   margin-top: 40px;
-   height: 480px;
-   overflow-y: scroll;
-   padding: 0 20px 20px 20px;
- }
 
 
 
@@ -92,25 +77,10 @@
 
 
 
-
- .review-button, .review-form {
-   width: 100px;
-   margin-top: 20px;
- }
-
- .review-button {
-   /* padding-top: 1px; */
- }
-
  .header-name {
   //  margin: 7px 0 0 0;
    background-color: white;
 
- }
-
- .header-favorites {
-   margin: 4px 0 4px 0;
-   font-size: 14px;
  }
 
 
@@ -121,7 +91,6 @@
    display: flex;
    justify-content: center;
    margin-top: 100px;
-
 
  }
 
@@ -138,31 +107,33 @@
  }
 
  .login-form-box {
-   outline: 1px solid black;
+
    padding: 20px;
    background-color: white;
    text-align: center;
+   border-radius: 10px;
+
 
  }
 
 
  .login-signup {
-  //  margin-left: 20px;
    background-color: white;
+   border: 20px;
+   border-color: white;
+   margin-bottom: 20px;
  }
 
- .filter {
-   font-weight: bold;
- }
-
- .header-link {
-   text-decoration: none;
-   color: black;
-   background-color: white;
- }
+ .container {
+  display: flex;
+}
 
 
 
- hr {
-   border-bottom: 1px solid grey;
+ .logo {
+   width: 50px;
+   height: 50px;
+   display: flex;
+   float: left;
+
  }
