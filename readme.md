@@ -18,11 +18,12 @@ sufficient CSS styling:
 - [ ] New account creation, login, and guest/demo login
 - [ ] Images (with playable song links)
 - [ ] User pages
-- [ ] Bookmarking of songs
 - [ ] Post feeds (bookmarked, main, profile)
 - [ ] Playing songs with progress bar with continuous play
-- [ ] Users can search for other users (and possibly by artist)
 - [ ] Production README [sample](docs/production_readme.md)
+- [ ] Bookmarking of songs (bonus)
+- [ ] Users can search for other users (and possibly by artist) (bonus)
+
 
 
 ## Design Docs

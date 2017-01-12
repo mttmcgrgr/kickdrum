@@ -57,7 +57,7 @@
   border-radius: 10;
   color: #fff;
   background-color: #6496c8;
-
+  border-radius: 5px;
   border: none;
 }
 
@@ -74,12 +74,16 @@
    background-color: white;
  }
 
+ .session {
+   text-decoration: underline;
+ }
 
 
 
  .header-name {
   //  margin: 7px 0 0 0;
    background-color: white;
+   text-align: right;
 
  }
 
@@ -111,6 +115,7 @@
  .login-input {
    margin-left: 20px;
    background-color: white;
+   text-align: left;
  }
 
  .login-form-box {
@@ -119,21 +124,22 @@
    background-color: white;
    text-align: center;
    border-radius: 10px;
-
-
  }
+
+
 
 
  .login-signup {
    background-color: white;
    height: 30px;
+   text-decoration: underline;
+
 
  }
 
  .container {
   display: flex;
 }
-
 
 
  .logo {
@@ -143,3 +149,21 @@
    float: left;
    margin-top: 10px;
  }
+
+
+ .logout {
+  display: inline-block;
+  margin: 0 4px 0 0;
+  padding: 4px 4px;
+  font-size: 10px;
+  // font-family: "Bitter",serif;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 10;
+  color: #fff;
+  background-color: #6496c8;
+  border-radius: 5px;
+  border: none;
+  text-align: right;
+}
