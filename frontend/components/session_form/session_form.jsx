@@ -6,6 +6,8 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = { username: "", password: "" };
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.guestLogin = this.guestLogin.bind(this);
+		this.demoButton = this.demoButton.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -38,6 +40,20 @@ class SessionForm extends React.Component {
 		}
 	}
 
+	guestLogin(e) {
+		e.preventDefault();
+		const user = { username: 'Guest', password: '12345678'};
+		this.setState({ username: 'Guest', password: '12345678'});
+		this.props.processForm({user});
+
+	}
+
+	demoButton(){
+		return (
+			<button className="button" onClick={this.guestLogin} value="Demo">Guest</button>
+		);
+	}
+
 	renderErrors() {
 		return(
 			<ul>
@@ -54,9 +70,9 @@ class SessionForm extends React.Component {
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to Kickdrum!
+					<h1>Welcome to Kickdrum!</h1>
 					<br/>
-					Please {this.props.formType} or {this.navLink()}
+					<h3>Please {this.props.formType} or {this.navLink()}</h3>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br/>
@@ -74,7 +90,9 @@ class SessionForm extends React.Component {
 								className="login-input" />
 						</label>
 						<br/>
-						<input type="submit" value="Submit" />
+						<input className="button" type="submit" value="Submit" />
+						<br/>
+						{this.props.formType === "login" ? this.demoButton() : "" }
 					</div>
 				</form>
 			</div>
