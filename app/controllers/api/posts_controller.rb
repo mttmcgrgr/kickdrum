@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.includes(:user)
   end
 
   def show
@@ -31,6 +31,6 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :artist, :cover_url, :song_url, :user_id)
   end
 end
