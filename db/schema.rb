@@ -36,8 +36,6 @@ ActiveRecord::Schema.define(version: 20170110215038) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", unique: true, using: :btree
-
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
     t.string   "photo_url"

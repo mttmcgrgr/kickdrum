@@ -11,7 +11,7 @@ const playSong = (post) => {
 const PostIndexItem = ({ post }) => (
   <li className="content_main">
     <section className="post_header">
-      <div className="footer_text">{post.user.username}</div>
+      // <div className="footer_text"></div>
     </section>
     <section>
       <div className="container">

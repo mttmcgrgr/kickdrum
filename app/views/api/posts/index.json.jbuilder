@@ -5,8 +5,8 @@ json.array! @posts do |post|
   json.song_url post.song_url
   json.user_id post.user_id
 
-  json.user do
-    json.username post.user.username
-    json.photo_url post.user.photo_url
-  end
+  # json.user do
+  #   json.username post.user.username
+  #   json.photo_url post.user.photo_url
+  # end
 end

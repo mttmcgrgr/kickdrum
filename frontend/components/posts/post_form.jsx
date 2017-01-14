@@ -65,28 +65,33 @@ class PostForm extends React.Component {
 
   render () {
     return (
-      <div>
-        <h3>Create Post</h3>
-        <form onSubmit={this.handleSubmit}>
+      <div className="login-form-container">
+        <form onSubmit={this.handleSubmit} className="login-form-box">
+          <h3>Create Post</h3>
+          <div className="login-form">
+          <br/>
           <label>Title
             <input
               type="text"
               value={this.state.title}
-              onChange={this.update('title')} />
+              onChange={this.update('title')}
+              className="login-input" />
           </label>
-
+           <br/>
           <label>Artist
             <input
               type="text"
               value={this.state.artist}
-              onChange={this.update('artist')} />
+              onChange={this.update('artist')}
+              className="login-input" />
           </label>
-
-          <button onClick={this.cloudSong}>Add Song</button>
-
-          <button onClick={this.cloudArt}>Add Cover Art</button>
-
-          <input type="submit" value="Create Post" />
+          <br/>
+          <button onClick={this.cloudSong} className="button">Add Song</button>
+          <br/>
+          <button onClick={this.cloudArt} className="button">Add Cover Art</button>
+          <br/>
+          <input type="submit" value="Create Post" className="button" />
+         </div>
         </form>
       </div>
     );
