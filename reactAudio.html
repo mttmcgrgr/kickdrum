@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/benwiley4000/react-responsive-audio-player/3d31d4c18c367686ccba011d772a83c49189289c/audioplayer.css">
+    <div id="audio_player_container"></div>
+
+    <!-- react/react-dom served over CDN -->
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <!-- audioplayer.js v1.1.2 -->
+    <script src="https://cdn.rawgit.com/benwiley4000/react-responsive-audio-player/3d31d4c18c367686ccba011d772a83c49189289c/audioplayer.js"></script>
+    <script>
+      var playlist =
+        [{ url: 'song1.mp3', displayText: 'Track 1 - a track to remember' },
+         { url: 'song2.ogg', displayText: 'Oggs Oggs Oggs' }];
+      ReactDOM.render(
+        React.createElement(AudioPlayer, {
+          playlist: playlist,
+          autoplay: true,
+          autoplayDelayInSeconds: 2.1,
+          style: { position: 'fixed', bottom: 0 }
+        }),
+        document.getElementById('audio_player_container')
+      );
+    </script>
+  </body>
+</html>

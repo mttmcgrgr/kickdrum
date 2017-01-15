@@ -249,7 +249,18 @@
     // background-color: rgba(0,0,0,1);
 }
 
-.footer_text {
+.footer_artist {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.footer_title {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font-size: 20px;
+}
+
+.user_text {
     display: list-item;
     text-align: -webkit-match-parent;
 }

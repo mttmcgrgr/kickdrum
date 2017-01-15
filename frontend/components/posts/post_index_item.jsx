@@ -8,10 +8,10 @@ const playSong = (post) => {
 }
 
 
-const PostIndexItem = ({ post }) => (
+const PostIndexItem = ( {post} ) => (
   <li className="content_main">
     <section className="post_header">
-    <div className="footer_text">mttmcgrgr</div>
+    <div className="user_text">mttmcgrgr</div>
     </section>
     <section>
       <div className="container">
@@ -23,7 +23,12 @@ const PostIndexItem = ({ post }) => (
     </section>
     <section className="post_footer">
       <div className="footer_text">{post.title}</div>
-      <div className="footer_text">{post.artist}</div>
+      <div className="footer_artist">{post.artist}</div>
+        <div>
+          <audio controls>
+            <source src={ post.song_url } type='audio/mpeg'/>
+          </audio>
+        </div>
     </section>
   </li>
 );
