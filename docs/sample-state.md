@@ -7,13 +7,6 @@
       photo_url: "xxxxxxx"
       username: 'Matt'
     },
-    errors: []
-  },
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createPost: {errors: []}
-  },
   posts: [
     { id: 1
       title: "Title2",
@@ -31,31 +24,29 @@
       }
     ]
   userDetail: {
-
-    user: {
-      id: 1,
-      photo_url: "xxxxxxx"
-      username: 'Sam'
-    },
-
-    posts: [
-      { id: 1
-        title: "Title2",
-        artist: "Artist",
-        cover_url: "xxxxxxxxx",
-        song_url : "xxxxxxxxx",
-        user_id: 1,
-        }
-      ],
-    bookmarks: [
-      { id: 2
-        title: "Title1",
-        artist: "Artist",
-        cover_url: "xxxxxxxxx",
-        song_url : "xxxxxxxxx",
-        user_id: 3,    
-        }
-      ]
+      user: {
+        id: 1,
+        photo_url: "xxxxxxx"
+        username: 'Sam'
+      },
+      posts: [
+        { id: 1
+          title: "Title2",
+          artist: "Artist",
+          cover_url: "xxxxxxxxx",
+          song_url : "xxxxxxxxx",
+          user_id: 1,
+          }
+        ],
+      bookmarks: [
+        { id: 2
+          title: "Title1",
+          artist: "Artist",
+          cover_url: "xxxxxxxxx",
+          song_url : "xxxxxxxxx",
+          user_id: 3,    
+          }
+        ]
     }
   }
 ```
