@@ -15,7 +15,7 @@ const UserInfo = ( {user} ) => (
       <img className="image2" src={user.posts[0].cover_url}/>
     </div>
     <div className="user-info-box">
-      <h1 className="user-name-info"> {user.username}</h1>
+      <h1 className="user-name-info">{user.username}</h1>
       <button className="add-button" onClick={createPost}>
         <img className="add-post-button" src="http://www.free-icons-download.net/images/add-button-icon-73846.png"/>
       </button>

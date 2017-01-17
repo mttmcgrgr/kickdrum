@@ -38,5 +38,34 @@ Post.create!([{
     song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484368581/od1m3cd1suootuwaf3rl.mp3',
     cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484369689/599c9a11_ibz0x5.jpg',
     user_id: 1
-  }
-  ])
+  },
+    {
+    title:"Finally",
+    artist: 'Cymbals Eat Guitars',
+    song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484622910/cu7l98tanxdghiogd5zo.mp3',
+    cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484623799/tkrll3ozocdwb37mflyw.jpg',
+    user_id: 2
+  },
+  {
+  title:"True Love Waits",
+  artist: 'Radiohead',
+  song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484629374/11_True_Love_Waits_gi18hg.mp3',
+  cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484636084/0080052016_emd7uq.jpg',
+  user_id: 2
+},
+  {
+  title:"Figth For Your Right",
+  artist: 'Beastie Boys',
+  song_url: 'https://cloudinary.com/console/media_library#/dialog/video/upload/07_Fight_For_Your_Right_xk8afu',
+  cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484636308/MI0000702880.jpg_pav4qg.jpg',
+  user_id: 2
+},
+{
+title:"Narcoleptic",
+artist: 'White Lung',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484636935/02_Narcoleptic_hoxmfe.mp3',
+cover_url: 'https://f4.bcbits.com/img/a0852303980_10.jpg',
+user_id: 2
+}
+
+])

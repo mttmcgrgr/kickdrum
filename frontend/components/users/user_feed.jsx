@@ -7,8 +7,8 @@ class UserFeed extends React.Component {
 
 
 
+  
   render () {
-
     const posts = this.props.user.posts;
     posts.shift();
 

@@ -67,7 +67,7 @@
  }
 
 .header-group {
-  //  background-image: url("http://i.imgur.com/7N5HQja.gif");
+
 }
 
 .header-button {
@@ -120,15 +120,7 @@
 
  }
 
- .user-feed-container {
-   display: flex;
-   justify-content: center;
-   border-style: solid;
-   border-width: 1px;
-   height: 100%;
-   width: 100%;
 
- }
 
  .profile-container {
     display: block;
@@ -177,27 +169,7 @@
     list-style: none;
 }
 
-// .post-header {
-//     background-color: white;
-//     padding: 14px 20px;
-//     font-size: 15px;
-//     font-weight: bold;
-//     color: #303942;
-//     border-left: 1px solid rgba(0,0,0,0.08);
-//     border-right: 1px solid rgba(0,0,0,0.08);
-//     border-top: 1px solid rgba(0,0,0,0.08);
-//     border-top-left-radius: 3px;
-//     border-top-right-radius: 3px;
-// }
 
-// .feed_photo {
-//   width: 400px;
-//   height: 400px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-// }
 
   .post_photo{
     display: block;
@@ -271,8 +243,8 @@ border-width: 1px;
 }
 
 .user-name-info {
-  display: flex;
-  justify-content: flex-end;
+
+  float: right;
 
 
 
@@ -292,8 +264,8 @@ border-width: 1px;
   width: 70px;
   border-style: none;
   float: right;
-  top: 270px;
-  left: 30px
+  top: 300px;
+  left: 180px
 }
 
 .add-button:focus {
@@ -302,24 +274,28 @@ border-width: 1px;
 
  .user-feed-container {
    display: flex;
-   flex-direction: row;
-   justify-content: center;
-   overflow: auto;
  };
 
+.delete-button {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  float:right;
+border-style: none;
+
+}
 
 
 
 
 
 .home_background {
-  // background-image: url("http://i.imgur.com/7N5HQja.gif");
+
   height: 100%;
   width: 100%;
 }
 
 .feed_background {
-  background-image: url("http://i.imgur.com/7N5HQja.gif");
   height: 100%;
   width: 100%;
 }

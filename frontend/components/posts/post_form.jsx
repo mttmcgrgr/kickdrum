@@ -18,7 +18,9 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPost(this.state);
+    this.props.createPost(this.state).then(() =>
+      this.props.router.replace(`posts/`)
+      )
   }
 
   update(field) {
