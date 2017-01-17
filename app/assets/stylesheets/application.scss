@@ -21,6 +21,7 @@
   body {
     font-family: 'Abel', sans-serif;
 
+
   }
 
 
@@ -39,6 +40,21 @@
   background-color: #6496c8;
   border-radius: 5px;
   border: none;
+}
+
+.logout-button {
+ display: inline-block;
+ padding: 4px 4px 4px;
+ font-size: 20px;
+ // font-family: "Bitter",serif;
+ line-height: 1.8;
+ appearance: none;
+ box-shadow: none;
+ border-radius: 10;
+ color: #fff;
+ background-color: #6496c8;
+ border-radius: 5px;
+ border: none;
 }
 
 
@@ -60,15 +76,50 @@
 
 
  .header-name {
-  //  margin: 7px 0 0 0;
+   font-size: 65px;
+   font-weight: bold;
    background-color: white;
-
 
  }
 
-.header-group {
+ .header-container {
+   display: flex;
+    height: 70px;
+    background-color: white;
+    width: 100%;
+    margin: 0px auto;
+    background-color: white;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 3;
+    top: 0;
+
+ }
+
+.header-group-left {
+  height: 50px;
+    background-color: white;
+    width: 100%;
+    margin: 0px auto;
+    background-color: white;
+    justify-content: left;
+}
+
+
+.header-group-right {
+  height: 40px;
+    background-color: white;
+    width: 100%;
+    margin: 0px auto;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
+    margin: 20px;
+    margin-bottom: 30px;
 
 }
+
 
 .header-button {
   float: right;
@@ -93,9 +144,11 @@
  }
 
  .login-input {
-   margin-left: 20px;
+  //  margin-left: 20px;
    background-color: white;
-   text-align: left;
+   display: flex;
+     flex-direction: row;
+     justify-content: flex-end
  }
 
  .login-form-box {
@@ -104,6 +157,8 @@
    background-color: white;
    text-align: center;
    border-radius: 10px;
+   position: absolute;
+    top: 30%;
  }
 
  .info-feed-box {
@@ -243,8 +298,24 @@ border-width: 1px;
 }
 
 .user-name-info {
-
   float: right;
+
+}
+
+
+.user-name {
+  margin: 10px;
+    padding: 10;
+    outline: 1;
+    font: serif;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    vertical-align: inherit;
+    box-sizing: inherit;
+    background: transparent;
+    margin-top: 10px;
+    margin-right: 10px;
 
 
 
@@ -268,12 +339,13 @@ border-width: 1px;
   left: 180px
 }
 
-.add-button:focus {
-  outline:none;
-}
+// .add-button:focus {
+//   outline:none;
+// }
 
  .user-feed-container {
    display: flex;
+   overflow: scroll;
  };
 
 .delete-button {
@@ -298,6 +370,9 @@ border-style: none;
 .feed_background {
   height: 100%;
   width: 100%;
+  display: flex;
+    justify-content: center;
+    padding: 100px;
 }
 
 

@@ -26,6 +26,12 @@ img {
 }
 
 html {
+  // height:100%;
+  // wdith: 100%;
+  // background-image: url("http://i.imgur.com/7N5HQja.gif");
+}
+
+body {
   height:100%;
   wdith: 100%;
   background-image: url("http://i.imgur.com/7N5HQja.gif");
@@ -38,8 +44,8 @@ html {
 
 /* Clearfix */
 
-.group:after {
-  content: "";
-  display: block;
-  clear: both;
-}
+// .group:after {
+//   content: "";
+//   display: block;
+//   clear: both;
+// }
