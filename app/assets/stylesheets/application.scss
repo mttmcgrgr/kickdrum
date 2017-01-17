@@ -41,6 +41,8 @@
   border: none;
 }
 
+
+
 .logout-button {
  display: inline-block;
  padding: 4px 4px 4px;
@@ -64,9 +66,13 @@
    background-color: white;
  }
 
+
+
  h1, h5 {
    background-color: white;
  }
+
+
 
  .session {
    text-decoration: underline;
@@ -81,6 +87,7 @@
 
  }
 
+
  .header-container {
    display: flex;
     height: 70px;
@@ -92,8 +99,8 @@
     justify-content: space-between;
     z-index: 3;
     top: 0;
-
  }
+
 
 .header-group-left {
   height: 50px;
@@ -201,9 +208,7 @@
    text-decoration: underline;
  }
 
-//  .post {
-//   position:absolute;;
-// }
+
 
 .content_main {
     display: block;
@@ -315,8 +320,6 @@ border-width: 1px;
     background: transparent;
     margin-top: 10px;
     margin-right: 10px;
-
-
 
 }
 
@@ -454,6 +457,8 @@ border-style: none;
     width: 50%;
 }
 
+
+
 .image {
   opacity: 1;
   display: block;
@@ -464,6 +469,8 @@ border-style: none;
   width: 620px;
   height: 620px;
 }
+
+
 
 .middle {
   transition: .5s ease;

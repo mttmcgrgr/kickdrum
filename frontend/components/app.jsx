@@ -8,7 +8,7 @@ const App = ({ children }) => (
     <div className="header-container">
       <div className="header-group-left">
         <div className="header-name">
-          <Link></Link>Kickdrum
+          <Link to={`/posts`}>Kickdrum</Link>
           <img className="logo" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484184165/noun_409558_wimkcq.png"/>
         </div>
       </div>
