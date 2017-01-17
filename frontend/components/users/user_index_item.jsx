@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, hashHistory } from 'react-router';
 
 
 
@@ -9,12 +8,8 @@ const playSong = (post) => {
 };
 
 
-
-const PostIndexItem = ( {post} ) => (
+const UserIndexItem = ( {post} ) => (
   <li className="content_main">
-    <section className="post_header">
-    <Link to={`/users/${post.user_id}`}>{post.username}</Link>
-    </section>
     <section>
       <div className="container">
         <img className="image" src={post.cover_url}/>
@@ -35,4 +30,4 @@ const PostIndexItem = ( {post} ) => (
   </li>
 );
 
-export default PostIndexItem;
+export default UserIndexItem;

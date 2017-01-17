@@ -65,6 +65,7 @@ class PostForm extends React.Component {
 
   render () {
     return (
+    <div className="feed_background">
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h3>Create Post</h3>
@@ -94,6 +95,7 @@ class PostForm extends React.Component {
          </div>
         </form>
       </div>
+     </div>
     );
   }
 }

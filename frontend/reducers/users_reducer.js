@@ -1,12 +1,21 @@
 import {RECEIVE_USER, REMOVE_USER } from '../actions/user_actions';
 import merge from 'lodash/merge';
 
-const UsersReducer = (state = {}, action) => {
+const defaultState = {
+  username : "",
+  posts: [{
+    cover_url: "",
+    song_url: "",
+    title: "",
+    artist: ""
+   }]
+};
+
+const UsersReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
   switch(action.type){
     case RECEIVE_USER:
-      newState[action.user.id] = action.user;
-      return newState;
+      return action.user;
     case REMOVE_USER:
       delete newState[action.userId];
       return newState;

@@ -23,7 +23,7 @@
       user_id: 3,    
       }
     ]
-  userDetail: {
+  users: {
       user: {
         id: 1,
         photo_url: "xxxxxxx"

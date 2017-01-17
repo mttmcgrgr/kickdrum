@@ -7,7 +7,6 @@ fieldset, label, input, textarea,
 span, article, footer, time, small {
   margin: 0;
   padding: 0;
-
   outline: 1;
   font: serif;
   color: inherit;
@@ -30,21 +29,6 @@ img {
 // input[type="email"],
 // input[type="text"],
 // input[type="submit"],
-
-// button {
-//   /*
-//   Get rid of native styling. Read more here:
-//   http://css-tricks.com/almanac/properties/a/appearance/
-//   */
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   appearance: none;
-// }
-
-// button,
-// input[type="submit"] {
-//   cursor: pointer;
-// }
 
 /* Clearfix */
 

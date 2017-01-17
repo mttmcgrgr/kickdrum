@@ -3,7 +3,15 @@ import { RECEIVE_ALL_POSTS,
          REMOVE_POST } from '../actions/post_actions';
 import merge from 'lodash/merge';
 
-const PostsReducer = (state = {}, action) => {
+const defaultState = {
+  title: "",
+  artist: "",
+  cover_url: "",
+  song_url: ""
+};
+
+
+const PostsReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
   switch(action.type){
     case RECEIVE_ALL_POSTS:

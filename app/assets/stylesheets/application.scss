@@ -16,33 +16,13 @@
  @import "base/reset.scss";
 
 
- // ::-webkit-scrollbar {
- //     width: 12px;
- // }
- //
- // ::-webkit-scrollbar-track {
- //     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
- //     border-radius: 10px;
- // }
- //
- // // ::-webkit-scrollbar-thumb {
- // //     border-radius: 10px;
- // //     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
- // // }
+
 
   body {
     font-family: 'Abel', sans-serif;
 
   }
 
-  // <img src="http://res.cloudinary.com/dccshngpp/image/upload/v1484184165/noun_409558_wimkcq.png"
-  //      width="40" height="40"
-  //      alt="logo" />
-
- // .content {
- //   height: 100%;
- //   background-color: white;
- // }
 
 
  .button {
@@ -87,7 +67,7 @@
  }
 
 .header-group {
-//    background-image: url("http://i.imgur.com/7N5HQja.gif");
+  //  background-image: url("http://i.imgur.com/7N5HQja.gif");
 }
 
 .header-button {
@@ -101,6 +81,7 @@
    display: flex;
    justify-content: center;
    margin-top: 100px;
+
 
  }
 
@@ -125,8 +106,43 @@
    border-radius: 10px;
  }
 
+ .info-feed-box {
+   padding: 20px;
+   background-color: white;
+   text-align: center;
+   border-radius: 10px;
+   width: 540px;
+   height: 400px;
+ }
+
+ .info-feed-container {
+   display: flex;
+
+ }
+
+ .user-feed-container {
+   display: flex;
+   justify-content: center;
+   border-style: solid;
+   border-width: 1px;
+   height: 100%;
+   width: 100%;
+
+ }
+
+ .profile-container {
+    display: block;
+    width: 975px;
+
+    padding: 60px 20px 0;
+    position: relative;
+    top: -44px;
+}
+
+
+
  .opaque-background {
-   background-color: rgba(255, 255, 255, 0.8);
+   background-color: rgba(255, 255, 255, 0.4);
  }
 
 
@@ -207,6 +223,95 @@
 }
 
 
+
+.parent {
+  position: relative;;
+  top: 20px;
+  left: -325px;
+}
+
+.image1 {
+  position: absolute;;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.image2 {
+  position: absolute;
+  top: 30px;
+  left: 70px;
+  z-index: 3;
+  height: 303px;
+  width: 303px;
+}
+
+.user-info-box {
+padding: 20px;
+background-color: white;
+height: 358px;
+width: 460px;
+position: relative;
+top: 20px;
+left: 212px;
+border-style: solid;
+border-width: 1px;
+}
+
+.user-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  padding: 50px;
+}
+
+.user-song-info {
+  text-align: left;
+}
+
+.user-name-info {
+  display: flex;
+  justify-content: flex-end;
+
+
+
+}
+
+.add-post-button {
+  position: relative;
+  height: 75px;
+  width: 75px;
+  border-style: none;
+  float: right;
+}
+
+.add-button {
+  position: relative;
+  height: 30px;
+  width: 70px;
+  border-style: none;
+  float: right;
+  top: 270px;
+  left: 30px
+}
+
+.add-button:focus {
+  outline:none;
+}
+
+ .user-feed-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   overflow: auto;
+ };
+
+
+
+
+
+
 .home_background {
   // background-image: url("http://i.imgur.com/7N5HQja.gif");
   height: 100%;
@@ -215,6 +320,8 @@
 
 .feed_background {
   background-image: url("http://i.imgur.com/7N5HQja.gif");
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -319,7 +426,7 @@
 }
 
 .container:hover .image {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .container:hover .middle {

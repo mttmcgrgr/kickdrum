@@ -1,12 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-// react router
+
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-// react components
+
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import PostIndexContainer from './posts/post_index_container';
 import PostFormContainer from './posts/post_form_container';
+import UserProfileContainer from './users/user_profile_container';
 
 const Root = ({ store }) => {
 
@@ -30,8 +31,9 @@ const Root = ({ store }) => {
         <Route path="/" component={App}>
           <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-          <Route path="/posts" component={PostIndexContainer}/>
-          <Route path="/posts/new" component={PostFormContainer}/>
+          <Route path="/posts" component={PostIndexContainer}  onEnter={_ensureLoggedIn} />
+          <Route path="/posts/new" component={PostFormContainer} onEnter={_ensureLoggedIn} />
+          <Route path="/users/:userId" component={UserProfileContainer} onEnter={_ensureLoggedIn}/>
         </Route>
       </Router>
     </Provider>
