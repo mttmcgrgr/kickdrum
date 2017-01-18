@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import SessionFeedContainer from './session_feed_container';
+
 
 class SessionForm extends React.Component {
 	constructor(props) {
@@ -68,10 +70,11 @@ class SessionForm extends React.Component {
 
 	render() {
 		return (
+		<div>
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
 
-					<h3>Please {this.props.formType} or {this.navLink()}</h3>
+					<h3 className="create-title">Please {this.props.formType} or {this.navLink()}</h3>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br/>
@@ -95,6 +98,12 @@ class SessionForm extends React.Component {
 					</div>
 				</form>
 			</div>
+			<footer className="footer">
+
+				<SessionFeedContainer />
+
+			</footer>
+		 </div>
 		);
 	}
 

@@ -6,16 +6,16 @@ class UserFeed extends React.Component {
 
 
 
-
-  
   render () {
-    const posts = this.props.user.posts;
+    const posts = [...this.props.user.posts];
     posts.shift();
+    posts.reverse();
 
+    console.log(posts);
     return (
 
       <div className="user-feed-container">
-        {this.props.user.posts.map(post => (
+        {posts.map(post => (
           <UserIndexItem post={post} key={post.id} />
         ))}
       </div>

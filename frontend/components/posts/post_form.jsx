@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, hashHistory } from 'react-router';
 
 class PostForm extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class PostForm extends React.Component {
   this.update = this.update.bind(this);
   this.cloudSong = this.cloudSong.bind(this);
   this.cloudArt = this.cloudArt.bind(this);
+  this.createPost = this.createPost.bind(this);
   }
 
   handleSubmit(e) {
@@ -65,12 +67,17 @@ class PostForm extends React.Component {
   }
 
 
+  createPost(){
+    hashHistory.push(`/posts`);
+  }
+
+
   render () {
     return (
     <div className="feed_background">
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <h3>Create Post</h3>
+          <h3 className="create-title">Create Post</h3>
           <div className="login-form">
           <br/>
           <label>Title
@@ -93,7 +100,7 @@ class PostForm extends React.Component {
           <br/>
           <button onClick={this.cloudArt} className="button">Add Cover Art</button>
           <br/>
-          <input type="submit" value="Create Post" className="button" />
+          <input type="submit" value="Create Post" onClick={this.createPost} className="button" />
          </div>
         </form>
       </div>

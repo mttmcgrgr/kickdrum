@@ -1,6 +1,7 @@
 class Api::PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user)
+    @posts.to_a.reverse!
   end
 
   def show

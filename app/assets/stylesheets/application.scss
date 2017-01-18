@@ -39,6 +39,7 @@
   background-color: #6496c8;
   border-radius: 5px;
   border: none;
+  text-align: center;
 }
 
 
@@ -47,7 +48,6 @@
  display: inline-block;
  padding: 4px 4px 4px;
  font-size: 20px;
- // font-family: "Bitter",serif;
  line-height: 1.8;
  appearance: none;
  box-shadow: none;
@@ -147,6 +147,7 @@
    justify-content: center;
    flex-direction: column;
    background-color: white;
+   justify-content: flex-start;
  }
 
  .login-input {
@@ -154,17 +155,20 @@
    background-color: white;
    display: flex;
      flex-direction: row;
-     justify-content: flex-end
+     justify-content: center;
+    width:100%;
  }
 
  .login-form-box {
 
    padding: 20px;
    background-color: white;
-   text-align: center;
+   text-align: left;
    border-radius: 10px;
    position: absolute;
-    top: 30%;
+    top: 15%;
+    width:300px;
+    height: 300px;
  }
 
  .info-feed-box {
@@ -196,6 +200,7 @@
 
  .opaque-background {
    background-color: rgba(255, 255, 255, 0.4);
+   width: 100%;
  }
 
 
@@ -206,6 +211,8 @@
    background-color: white;
    height: 30px;
    text-decoration: underline;
+   font-weight: bold;
+
  }
 
 
@@ -272,7 +279,7 @@
   position: absolute;
   top: 30px;
   left: 70px;
-  z-index: 3;
+  z-index: 2;
   height: 303px;
   width: 303px;
 }
@@ -320,6 +327,8 @@ border-width: 1px;
     background: transparent;
     margin-top: 10px;
     margin-right: 10px;
+    font-weight: bold;
+    font-size: 25px;
 
 }
 
@@ -332,30 +341,39 @@ border-width: 1px;
 }
 
 .add-button {
-  position: relative;
-  height: 30px;
-  width: 70px;
-  border-style: none;
-  float: right;
-  top: 300px;
-  left: 180px
+  position: fixed;
+    height: 30px;
+    width: 70px;
+    border-style: none;
+    float: right;
+    top: 500px;
+    left: 1040px;
 }
 
-// .add-button:focus {
-//   outline:none;
-// }
 
  .user-feed-container {
    display: flex;
+   justify-content: flex-start;
    overflow: scroll;
  };
+
+ .session-feed-container {
+   margin-top:20px;
+   display: flex;
+   justify-content: flex-start;
+   list-style: none;
+   height: 300px;
+   width: 900px;
+ };
+
+
 
 .delete-button {
   font-size: 20px;
   height: 20px;
   width: 20px;
   float:right;
-border-style: none;
+  border-style: none;
 
 }
 
@@ -373,13 +391,14 @@ border-style: none;
   height: 100%;
   width: 100%;
   display: flex;
-    justify-content: center;
-    padding: 100px;
+  justify-content: center;
+  padding-top: 100px;
 }
 
 
 .feed_group {
   display: flex;
+
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -457,6 +476,23 @@ border-style: none;
     width: 50%;
 }
 
+.session_container {
+  width: 200px;
+  height: 200px;
+  transform: scale(0.5);
+  background: rgba(76, 175, 80, 0.3)
+}
+
+.session_image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  width: 250px;
+  height: 250px;
+}
 
 
 .image {
@@ -470,9 +506,22 @@ border-style: none;
   height: 620px;
 }
 
+.create-title {
+  text-align: center;
+}
 
 
 .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.session_middle {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -490,9 +539,36 @@ border-style: none;
   opacity: 1;
 }
 
+
+.session_container:hover .image {
+  opacity: 0.9;
+}
+
+.session_container:hover .middle {
+  opacity: 1;
+}
+
+.session_play {
+  color: white;
+  padding: 16px 32px;
+  width: 120px;
+  height: 120px;
+}
+
 .play {
   color: white;
   padding: 16px 32px;
   width: 120px;
   height: 120px;
+}
+
+.footer {
+    position:fixed;
+    height:350px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+    background-color: #6496c8;
+    overflow: scroll;
 }

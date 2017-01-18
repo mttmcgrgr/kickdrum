@@ -15,7 +15,10 @@ class UserProfile extends React.Component {
   }
 
 
+
+
   render () {
+    
     return (
       <div className="feed_background">
         <div className="opaque-background">

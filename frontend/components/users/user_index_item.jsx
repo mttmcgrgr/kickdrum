@@ -18,6 +18,7 @@ const UserIndexItem = ( {post} ) => (
          </div>
      </div>
     </section>
+
     <section className="post_footer">
       <div className="footer_text">{post.title}</div>
       <div className="footer_artist">{post.artist}</div>

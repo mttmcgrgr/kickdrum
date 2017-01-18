@@ -7,6 +7,11 @@ const createPost = () => {
   hashHistory.push(url);
 };
 
+const createButton = () => {
+  const url = `/posts/new`;
+  hashHistory.push(url);
+};
+
 
 const UserInfo = ( {user} ) => (
   <div className="user-info-container">
