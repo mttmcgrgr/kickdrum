@@ -32,9 +32,11 @@ html {
 }
 
 body {
-  // height:100%;
-  // wdith: 100%;
-  background-image: url("http://i.imgur.com/7N5HQja.gif");
+  height:100%;
+  width: 100%;
+  // background-image: url("http://i.imgur.com/7N5HQja.gif");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)),
+    url("http://i.imgur.com/7N5HQja.gif");
 
 }
 //

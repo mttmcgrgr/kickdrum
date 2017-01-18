@@ -8,9 +8,14 @@ const playSong = (post) => {
   audio.play();
 };
 
+const sendToPlayer = (post) => {
+  this.props.receiveTrack(post);
+};
+
 
 
 const PostIndexItem = ( {post} ) => (
+
   <li className="content_main">
     <section className="post_header">
     <Link to={`/users/${post.user_id}`}>{post.username}</Link>

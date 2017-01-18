@@ -56,7 +56,7 @@ Post.create!([{
   {
   title:"Figth For Your Right",
   artist: 'Beastie Boys',
-  song_url: 'https://cloudinary.com/console/media_library#/dialog/video/upload/07_Fight_For_Your_Right_xk8afu',
+  song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484636248/07_Fight_For_Your_Right_xk8afu.mp3',
   cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484636308/MI0000702880.jpg_pav4qg.jpg',
   user_id: 2
 },
@@ -66,6 +66,34 @@ artist: 'White Lung',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484636935/02_Narcoleptic_hoxmfe.mp3',
 cover_url: 'https://f4.bcbits.com/img/a0852303980_10.jpg',
 user_id: 2
+},
+{
+title:"Legend Has It",
+artist: 'Run The Jewels',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484717187/03_Legend_Has_It_ww3svi.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484717333/RunTheJewels3_vh3kqv.jpg',
+user_id: 2
+},
+{
+title:"Sharp Knife",
+artist: 'Third Eye Blind',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484717499/04_Sharp_Knife_xzxg9y.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484717599/third-eye-blind-ursa-major_mus0ku.jpg',
+user_id: 1
+},
+{
+title:"Young Death",
+artist: 'Burial',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484717770/01_Young_Death_g7xcvv.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484717968/homepage_large.e19a898b_cbft8u.jpg',
+user_id: 2
+},
+{
+title:"Modern Act",
+artist: 'Cloud Nothings',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484718138/2016-11-03_2805_cloud_nothings_-_modern_act_imjsvd.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484718231/18948738_life-without-sound_fyakql.jpg',
+user_id: 1
 }
 
 ])

@@ -83,14 +83,14 @@
  .header-name {
    font-size: 65px;
    font-weight: bold;
-   background-color: white;
+   font-style: oblique;
 
  }
 
 
  .header-container {
    display: flex;
-    height: 70px;
+    height: 100px;
     background-color: white;
     width: 100%;
     margin: 0px auto;
@@ -262,6 +262,7 @@
 
 
 
+
 .parent {
   position: relative;;
   top: 20px;
@@ -302,6 +303,9 @@ border-width: 1px;
   justify-content: center;
   position: relative;
   padding: 50px;
+  transform: scale(1.1);
+
+
 }
 
 .user-song-info {
@@ -310,7 +314,6 @@ border-width: 1px;
 
 .user-name-info {
   float: right;
-
 }
 
 
@@ -341,13 +344,13 @@ border-width: 1px;
 }
 
 .add-button {
-  position: fixed;
+  position: absolute;
     height: 30px;
     width: 70px;
     border-style: none;
     float: right;
-    top: 500px;
-    left: 1040px;
+    top: 320px;
+    left: 440px;
 }
 
 
@@ -355,15 +358,17 @@ border-width: 1px;
    display: flex;
    justify-content: flex-start;
    overflow: scroll;
+   transform: scale(.9);
  };
 
  .session-feed-container {
-   margin-top:20px;
+   margin-top:10px;
    display: flex;
    justify-content: flex-start;
    list-style: none;
    height: 300px;
    width: 900px;
+   transform: scale(0.8);
  };
 
 
@@ -479,7 +484,7 @@ border-width: 1px;
 .session_container {
   width: 200px;
   height: 200px;
-  transform: scale(0.5);
+  transform: scale(0.6);
   background: rgba(76, 175, 80, 0.3)
 }
 
@@ -490,8 +495,8 @@ border-width: 1px;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
 }
 
 
@@ -564,11 +569,46 @@ border-width: 1px;
 
 .footer {
     position:fixed;
-    height:350px;
+    height:340px;
     bottom:0px;
     left:0px;
     right:0px;
     margin-bottom:0px;
     background-color: #6496c8;
     overflow: scroll;
+}
+
+.footer-text {
+  color: white;
+  position: fixed;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  background-color: #6496c8;
+}
+
+.background-image {
+background-image: url("http://i.imgur.com/7N5HQja.gif");
+position: fixed;
+left: 0;
+right: 0;
+z-index: 0;
+
+display: block;
+
+height: 100%;
+
+-webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(5px);
+}
+
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }

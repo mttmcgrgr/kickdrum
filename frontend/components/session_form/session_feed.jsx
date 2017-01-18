@@ -1,5 +1,5 @@
 import React from 'react';
-import SessionIndexItem from './session_index_item';
+import SessionFeedItem from './session_feed_item';
 
 
 class SessionFeed extends React.Component {
@@ -19,7 +19,7 @@ class SessionFeed extends React.Component {
 
       <div className="session-feed-container">
         {posts.map(post => (
-          <SessionIndexItem post={post} key={post.id} />
+          <SessionFeedItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
         ))}
       </div>
     );

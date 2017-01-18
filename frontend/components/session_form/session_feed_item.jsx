@@ -8,15 +8,16 @@ const playSong = (post) => {
 };
 
 
-const UserIndexItem = ( {post} ) => (
+
+const SessionFeedItem = ( {post, receiveTrack} ) => (
   <li className="content_main">
       <div className="container">
         <img className="session_image" src={post.cover_url}/>
           <div className="middle">
-            <img className="play" onClick={playSong.bind(null, post)} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
+            <img className="play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
          </div>
      </div>
   </li>
 );
 
-export default UserIndexItem;
+export default SessionFeedItem;
