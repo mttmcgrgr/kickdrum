@@ -18,12 +18,12 @@ class UserProfile extends React.Component {
 
 
   render () {
-    
+
     return (
       <div className="feed_background">
         <div className="opaque-background">
-          <UserInfo user={this.props.user}/>
-          <UserFeed user={this.props.user}/>
+          <UserInfo user={this.props.user} receiveTrack={this.props.receiveTrack}/>
+          <UserFeed user={this.props.user} receiveTrack={this.props.receiveTrack}/>
         </div>
       </div>
     );

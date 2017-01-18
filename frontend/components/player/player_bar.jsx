@@ -1,4 +1,5 @@
 import React from 'react';
+import Sound from 'react-sound';
 
 class PlayerBar extends React.Component {
   constructor(props) {
@@ -8,17 +9,32 @@ class PlayerBar extends React.Component {
 
 
 
+
   render() {
     return (
-      <div>
-        <h3>{this.props.title}</h3>
-        <h3>{this.props.artist}</h3>
-        <audio controls>
-          <source src={ this.props.song_url } type='audio/mpeg'/>
-        </audio>
-      </div>
-    );
+     <div className="player-container">
+        <div className="footer_text">Title: {this.props.title}</div>
+        <div className="footer_artist"> Artist: {this.props.artist}</div>
+        <Sound
+          url={this.props.song_url}
+          playStatus={Sound.status.PLAYING} />
+     </div>
+     );
   }
+
+
 }
 
 export default PlayerBar;
+
+// // render() {
+// //   return (
+// //     <div className="player-container">
+//       <div className="footer_text">Title: {this.props.title}</div>
+//       <div className="footer_artist"> Artist: {this.props.artist}</div>
+// //       <audio controls >
+// //         <source src={ this.props.song_url } type='audio/mpeg'/>
+// //       </audio>
+// //     </div>
+// //   );
+// }

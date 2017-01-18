@@ -54,7 +54,7 @@ Post.create!([{
   user_id: 2
 },
   {
-  title:"Figth For Your Right",
+  title:"Fight For Your Right",
   artist: 'Beastie Boys',
   song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1484636248/07_Fight_For_Your_Right_xk8afu.mp3',
   cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484636308/MI0000702880.jpg_pav4qg.jpg',

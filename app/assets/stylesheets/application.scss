@@ -24,6 +24,12 @@
   }
 
 
+  .player-container {
+    background-color: white;
+    font-size: 25px;
+  }
+
+
 
  .button {
   display: inline-block;
@@ -46,7 +52,7 @@
 
 .logout-button {
  display: inline-block;
- padding: 4px 4px 4px;
+ padding: 4px 10px 4px 10px;
  font-size: 20px;
  line-height: 1.8;
  appearance: none;
@@ -56,6 +62,9 @@
  background-color: #6496c8;
  border-radius: 5px;
  border: none;
+ position: absolute;
+    right: 10px;
+    top: 27px;
 }
 
 
@@ -90,15 +99,16 @@
 
  .header-container {
    display: flex;
-    height: 100px;
+    height: 90px;
     background-color: white;
     width: 100%;
-    margin: 0px auto;
+    margin-bottom: 30px;
     background-color: white;
-    position: fixed;
+    position: absolute;
     justify-content: space-between;
-    z-index: 3;
+    z-index: 1;
     top: 0;
+    position: relative;
  }
 
 
@@ -164,6 +174,7 @@
    padding: 20px;
    background-color: white;
    text-align: left;
+   z-index: 3;
    border-radius: 10px;
    position: absolute;
     top: 15%;
@@ -199,8 +210,9 @@
 
 
  .opaque-background {
-   background-color: rgba(255, 255, 255, 0.4);
+  //  background-color: rgba(255, 255, 255, 0.4);
    width: 100%;
+   margin-top: 10px;
  }
 
 
@@ -233,6 +245,7 @@
     line-height: 1.1666666666;
     opacity: 1;
     list-style: none;
+    z-index: 1;
 }
 
 
@@ -332,8 +345,12 @@ border-width: 1px;
     margin-right: 10px;
     font-weight: bold;
     font-size: 25px;
+    position: absolute;
+    right: 100px;
+    top: 23px;
 
 }
+
 
 .add-post-button {
   position: relative;
@@ -349,7 +366,7 @@ border-width: 1px;
     width: 70px;
     border-style: none;
     float: right;
-    top: 320px;
+    top: 325px;
     left: 440px;
 }
 
@@ -379,6 +396,9 @@ border-width: 1px;
   width: 20px;
   float:right;
   border-style: none;
+  position: relative;
+  bottom: 15px;
+  right: 5px;
 
 }
 
@@ -413,12 +433,15 @@ border-width: 1px;
 
 .post_footer {
     padding: 20px 24px;
+    padding_bottom: 10px;
     margin-bottom: 65px;
     border-bottom: 1px solid rgba(0,0,0,0.08);
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     background-color: white;
     width:570px;
+    position: relative;
+
     // background-color: rgba(0,0,0,1);
 }
 
@@ -430,6 +453,7 @@ border-width: 1px;
     border-top-right-radius: 3px;
     background-color: white;
     width:570px;
+    position:relative;
     // background-color: rgba(0,0,0,1);
 }
 
@@ -569,7 +593,7 @@ border-width: 1px;
 
 .footer {
     position:fixed;
-    height:340px;
+    height:400px;
     bottom:0px;
     left:0px;
     right:0px;
@@ -587,28 +611,44 @@ border-width: 1px;
   background-color: #6496c8;
 }
 
+
+
 .background-image {
-background-image: url("http://i.imgur.com/7N5HQja.gif");
-position: fixed;
-left: 0;
-right: 0;
-z-index: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
 
-display: block;
+  display: block;
+  background-image: url("http://i.imgur.com/7N5HQja.gif");
+  width: 100%;
+  height: 100%;
 
-height: 100%;
-
--webkit-filter: blur(5px);
--moz-filter: blur(5px);
--o-filter: blur(5px);
--ms-filter: blur(5px);
-filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
 
 .content {
-  position: fixed;
+  // position: fixed;
   left: 0;
   right: 0;
   z-index: 9999;
+}
+
+
+.footer-playbar {
+    position:fixed;
+    height:80px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+    background-color: white;
+    overflow: scroll;
+    padding-top: 10px;
+    padding-left:20px;
 }

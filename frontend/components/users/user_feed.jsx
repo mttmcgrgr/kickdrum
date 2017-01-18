@@ -16,7 +16,7 @@ class UserFeed extends React.Component {
 
       <div className="user-feed-container">
         {posts.map(post => (
-          <UserIndexItem post={post} key={post.id} />
+          <UserIndexItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
         ))}
       </div>
     );

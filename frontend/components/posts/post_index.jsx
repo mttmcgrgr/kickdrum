@@ -9,13 +9,13 @@ class PostIndex extends React.Component {
 
   render () {
     const { posts } = this.props;
-  
+
 
     return (
       <div className="feed_background">
         <ul className="opaque-background">
           {posts.map(post => (
-            <PostIndexItem post={post} key={post.id} />
+            <PostIndexItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
           ))}
         </ul>
       </div>
