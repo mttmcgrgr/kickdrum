@@ -11,8 +11,7 @@ const App = ({ children }) => (
     <div className="header-container">
       <div className="header-group-left">
         <div className="header-name">
-          <Link to={`/posts`}>Kickdrum</Link>
-          <img className="logo" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484184165/noun_409558_wimkcq.png"/>
+          <Link className="logo-text" to={`/posts`}>Kickdrum</Link>
         </div>
       </div>
         <GreetingContainer className="header-group-right" />
@@ -26,3 +25,7 @@ const App = ({ children }) => (
 );
 
 export default App;
+
+
+
+// <img className="logo-image" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484184165/noun_409558_wimkcq.png"/>

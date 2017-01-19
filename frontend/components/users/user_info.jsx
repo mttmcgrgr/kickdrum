@@ -13,8 +13,11 @@ const createButton = () => {
 };
 
 
-const UserInfo = ( {user} ) => (
+const UserInfo = ( {user, receiveTrack} ) => (
   <div className="user-info-container">
+    <img className="info-play"
+      src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"
+      onClick={()=> (receiveTrack(user.posts[0]))}/>
      <div className="parent">
       <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
       <img className="image2" src={user.posts[0].cover_url}/>
