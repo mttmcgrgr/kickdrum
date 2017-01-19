@@ -19,12 +19,12 @@
 
 
   body {
-    // font-family: 'Abel', sans-serif;
+    font-family: 'Abel', sans-serif;
     // font-family: 'Bungee Shade', cursive;
     // font-family: 'Gloria Hallelujah', cursive;
-    font-family: 'Permanent Marker', cursive;
+    // font-family: 'Permanent Marker', cursive;
     // font-family: 'Passion One', cursive;
-    // font-family: 'Shrikhand', cursive;
+    // font-family: 'Shrikhand', none;
   }
 
 
@@ -186,7 +186,7 @@
    position: absolute;
     top: 18%;
     width:300px;
-    height: 410px;
+    height: 350px;
     justify-content: center;
     transform:scale(1.5);
  }
@@ -263,13 +263,13 @@
     font: 11px BlinkMacSystemFont;
     font-size: 16px;
     box-sizing: content-box;
-    padding-bottom: 300px;
-    padding-top: 200px;
+    padding-bottom: 50px;
+    padding-top: 50px;
     line-height: 1.1666666666;
     opacity: 1;
     list-style: none;
     z-index: 1;
-    transform:scale(1.5);
+    transform:scale(1);
 
 }
 
