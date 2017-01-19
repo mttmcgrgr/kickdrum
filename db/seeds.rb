@@ -9,7 +9,7 @@
 
 
 User.create!([
-  { username: 'Guest', password: '123456'},
+  { username: 'Guest', password: '12345678'},
   { username: 'mttmcgrgr', password: '123456'}
   ])
 
