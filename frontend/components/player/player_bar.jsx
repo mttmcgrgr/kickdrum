@@ -12,8 +12,9 @@ class PlayerBar extends React.Component {
 
 
   render() {
+    const klassName = this.props.visible ? "player-container" : "hidden";
     return (
-     <div className="player-container">
+     <div className={klassName}>
        <div className="footer_text">
         <div>Title: {this.props.title}</div>
         <div className="footer_artist"> Artist: {this.props.artist}</div>

@@ -12,8 +12,8 @@ class PostIndex extends React.Component {
 
 
     return (
-      <div className="feed_background">
-        <ul className="opaque-background">
+      <div>
+        <ul className="post_content_main">
           {posts.map(post => (
             <PostIndexItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
           ))}

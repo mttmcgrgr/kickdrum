@@ -7,7 +7,7 @@ import { Link, hashHistory } from 'react-router';
 
 const PostIndexItem = ( {post, receiveTrack} ) => (
 
-  <li className="content_main">
+  <li className="li-post-index">
     <section className="post_header">
     <Link to={`/users/${post.user_id}`}>{post.username}</Link>
     </section>
