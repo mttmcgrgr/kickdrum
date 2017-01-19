@@ -76,7 +76,7 @@ class PostForm extends React.Component {
     return (
     <div className="feed_background">
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <form onSubmit={this.handleSubmit} className="create-form-box">
           <h3 className="create-title">Create Post</h3>
           <div className="login-form">
           <br/>

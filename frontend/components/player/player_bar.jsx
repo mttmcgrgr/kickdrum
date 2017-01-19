@@ -1,5 +1,6 @@
 import React from 'react';
 import Sound from 'react-sound';
+import ReactAudioPlayer from 'react-audio-player';
 
 class PlayerBar extends React.Component {
   constructor(props) {
@@ -13,11 +14,14 @@ class PlayerBar extends React.Component {
   render() {
     return (
      <div className="player-container">
-        <div className="footer_text">Title: {this.props.title}</div>
+       <div className="footer_text">
+        <div>Title: {this.props.title}</div>
         <div className="footer_artist"> Artist: {this.props.artist}</div>
-        <Sound
-          url={this.props.song_url}
-          playStatus={Sound.status.PLAYING} />
+       </div>
+        <ReactAudioPlayer
+          src={this.props.song_url}
+          autoPlay
+        />
      </div>
      );
   }
