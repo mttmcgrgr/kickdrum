@@ -12,9 +12,7 @@ const createPost = () => {
 
 const UserInfo = ( {user, currentUser, receiveTrack} ) => {
 
-  if(currentUser === user.username){
-
-
+  if(currentUser.username === user.username){
       let post;
     if(user.posts.length === 0){
        post = {
@@ -28,6 +26,7 @@ const UserInfo = ( {user, currentUser, receiveTrack} ) => {
     }
 
     return (
+
       <div className="user-info-container">
         <img className="info-play"
           src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"
@@ -38,7 +37,7 @@ const UserInfo = ( {user, currentUser, receiveTrack} ) => {
         </div>
 
         <div className="user-info-box">
-          <h1 className="user-name-info">{post.user}</h1>
+          <h1 className="user-name-info">{currentUser.username}</h1>
           <button className="add-button" onClick={createPost}>
             <img className="add-post-button" src="http://www.free-icons-download.net/images/add-button-icon-73846.png"/>
           </button>
@@ -59,7 +58,7 @@ const UserInfo = ( {user, currentUser, receiveTrack} ) => {
         </div>
 
         <div className="user-info-box">
-          <h1 className="user-name-info">{user.username}</h1>
+          <h1 className="user-name-info">{currentUser.username}</h1>
           <h1 className="user-song-info">{user.posts[user.posts.length -1].title}</h1>
           <h3 className="user-song-info">{user.posts[user.posts.length -1].artist}</h3>
         </div>

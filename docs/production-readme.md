@@ -1,8 +1,8 @@
 # KickDrum
 
-[KickDrum Live][heroku] **NB:** This should be a link to your production site
+[KickDrum Live][live] **NB:** This should be a link to your production site
 
-[heroku]: https://kick-drum.herokuapp.com
+[live]: hhttp://www.kickdrum.io
 
 KickDrum is a full-stack web application inspired by Cymbal.fm.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.  
 
