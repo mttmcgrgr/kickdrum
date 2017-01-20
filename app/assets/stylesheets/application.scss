@@ -34,12 +34,18 @@
     font-size: 25px;
     display: flex;
     list-style: none;
-    
+
   }
 
-  .hidden {
-    visibility: hidden;
+  .hidden-playbar {
     background-color: #6496c8;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+    max-height: 0px;
+    transition: max-height 3s;
   }
 
  .button {
@@ -403,6 +409,7 @@ audio {
   padding: 5px;
   background-color: #6496c8;
   font-size: 20px;
+
 }
 
 
@@ -444,4 +451,6 @@ audio {
     overflow: scroll;
     padding-top: 5px;
     padding-left:20px;
+    transition: max-height 3s;
+    font-family: 'Permanent Marker', cursive;
 }

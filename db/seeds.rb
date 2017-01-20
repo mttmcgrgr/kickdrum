@@ -97,6 +97,14 @@ Post.create!([
     user_id: User.second.id
   },
 
+  {
+  title:"North East South West",
+  artist: 'Japandroids',
+  song_url: 'https://res.cloudinary.com/dccshngpp/video/upload/v1484937400/kebxahy0gml6mbi1pvf2.mp3',
+  cover_url: 'https://res.cloudinary.com/dccshngpp/image/upload/v1484937619/xgcfjwkipqhexluwpd7b.jpg',
+  user_id: User.third.id
+  },
+
 
   {
   title:"True Love Waits",

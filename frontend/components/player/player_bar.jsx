@@ -12,9 +12,10 @@ class PlayerBar extends React.Component {
 
 
   render() {
-    const klassName = this.props.visible ? "player-container" : "hidden";
+    const playerClass = this.props.visible ? "footer-playbar" : "hidden-playbar";
     return (
-     <div className={klassName}>
+    <div className={playerClass}>
+     <div className="player-container">
        <div className="footer_text">
         <div>Title: {this.props.title}</div>
         <div className="footer_artist"> Artist: {this.props.artist}</div>
@@ -24,6 +25,7 @@ class PlayerBar extends React.Component {
           autoPlay
         />
      </div>
+    </div>
      );
   }
 
