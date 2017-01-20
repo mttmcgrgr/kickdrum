@@ -1,3 +1,165 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user-info-box {
+padding: 20px;
+background-color: white;
+height: 358px;
+width: 460px;
+position: relative;
+top: 20px;
+left: 212px;
+border-style: solid;
+border-width: 1px;
+}
+
+.user-info-container {
+  display: flex;
+  justify-content: center;
+  transform: scale(0.8);
+  padding-bottom: 5px;
+}
+
+.user-song-info {
+  text-align: left;
+}
+
+.user-name-info {
+  float: right;
+}
+
+
+.user-name {
+  margin: 10px;
+    padding: 10;
+    outline: 1;
+    font: serif;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    vertical-align: inherit;
+    box-sizing: inherit;
+    background: transparent;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    right: 100px;
+    top: 23px;
+
+}
+
+
+.user-feed-container {
+  display: flex;
+  justify-content: flex-start;
+  overflow: scroll;
+  transform: scale(1);
+  bottom: 200px;
+  height: 500px;
+  margin-top: 40px;
+};
+
+.user-profile {
+  justify-content: center;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+
+
+
+
+.delete-button {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  float:right;
+  border-style: none;
+  position: relative;
+  bottom: 15px;
+  right: 5px;
+
+}
+
+
+.user_footer {
+    margin-bottom: 65px;
+    border-bottom: 1px solid rgba(0,0,0,1);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: white;
+    width:310px;
+    position: relative;
+}
+
+
+
+.info-play {
+  z-index:9;
+  margin:0;
+  padding:0;
+  height: 100px;
+  position: relative;
+  top: 150px;
+  left: -56px;
+  opacity: 0;
+}
+
+.info-play:hover {
+  z-index:9;
+  margin:0;
+  padding:0;
+  height: 100px;
+  position: relative;
+  top: 150px;
+  left: -56px;
+  opacity: 1;
+  transition: .5s ease;
+}
+
+
+.info-feed-box {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  width: 540px;
+  height: 400px;
+}
+
+.info-feed-container {
+  display: flex;
+
+}
+
+
+
+.profile-container {
+   display: block;
+   width: 975px;
+
+   padding: 60px 20px 0;
+   position: relative;
+   top: -44px;
+}
+
+
+.user_content_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-decoration: none;
+    font: 11px BlinkMacSystemFont;
+    font-size: 16px;
+    box-sizing: content-box;
+    line-height: 1.1666666666;
+    opacity: 1;
+    list-style: none;
+    z-index: 1;
+    transform:scale(1);
+    width: 310px;
+    height: 310px;
+
+}

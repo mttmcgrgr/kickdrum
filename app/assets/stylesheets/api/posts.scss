@@ -1,3 +1,81 @@
 // Place all the styles related to the api/posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.post_content_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 600px;
+    height: 200px;
+
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-decoration: none;
+    font: 11px BlinkMacSystemFont;
+    font-size: 16px;
+    box-sizing: content-box;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    line-height: 1.1666666666;
+    opacity: 1;
+    list-style: none;
+    z-index: 1;
+    transform:scale(0.7);
+}
+
+.li-post-index {
+  transform:scale(1.2);
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.post_photo{
+  display: block;
+  text-decoration: none;
+  font: 12px BlinkMacSystemFont;
+  font-size: 16px;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1666666666;
+  background-color: rgba(0,0,0,1);
+  width: 520px;
+  height: 520px;
+}
+
+
+.post_photo:hover {
+   opacity: 0.5;
+   transition: opacity .25s ease-in-out;
+   moz-transition: opacity .25s ease-in-out;
+   webkit-transition: opacity .25s ease-in-out;
+   background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+
+
+.post_footer {
+    padding: 20px 24px;
+    padding_bottom: 10px;
+    margin-bottom: 65px;
+    border-bottom: 1px solid rgba(0,0,0,1);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: white;
+    width:572px;
+    position: relative;
+
+}
+
+.post_header {
+    padding: 20px 24px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: white;
+    width:572px;
+    position:relative;
+
+}

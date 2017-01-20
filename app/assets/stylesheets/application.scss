@@ -29,15 +29,12 @@
   }
 
 
-
-
   .player-container {
     background-color: white;
     font-size: 25px;
     display: flex;
     list-style: none;
   }
-
 
 
  .button {
@@ -59,31 +56,10 @@
 
 
 
-.logout-button {
- display: inline-block;
- padding: 4px 10px 4px 10px;
- font-size: 20px;
- line-height: 1.8;
- appearance: none;
- box-shadow: none;
- border-radius: 10;
- color: #fff;
- background-color: #6496c8;
- border-radius: 5px;
- border: none;
- position: absolute;
-    right: 10px;
-    top: 27px;
-}
-
-
-
-
  header {
    margin-left: 5%;
    background-color: white;
  }
-
 
 
  h1, h5 {
@@ -153,43 +129,6 @@
 
 
 
- .login-form-container {
-   display: flex;
-   justify-content: center;
-   margin-top: 100px;
-
-
- }
-
- .login-form {
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   background-color: white;
-   justify-content: flex-start;
- }
-
- .login-input {
-  //  margin-left: 20px;
-   background-color: white;
-   display: flex;
-     flex-direction: row;
-     justify-content: center;
-    width:100%;
- }
-
- .login-form-box {
-   padding: 20px;
-   background-color: white;
-   text-align: left;
-   z-index: 3;
-   border-radius: 10px;
-   position: absolute;
-    top: 13%;
-
-    justify-content: center;
-    transform:scale(0.9);
- }
 
  .create-form-box {
    padding: 20px;
@@ -203,30 +142,6 @@
 
  }
 
- .info-feed-box {
-   padding: 20px;
-   background-color: white;
-   text-align: center;
-   border-radius: 10px;
-   width: 540px;
-   height: 400px;
- }
-
- .info-feed-container {
-   display: flex;
-
- }
-
-
-
- .profile-container {
-    display: block;
-    width: 975px;
-
-    padding: 60px 20px 0;
-    position: relative;
-    top: -44px;
-}
 
 
 
@@ -240,120 +155,19 @@
 
 
 
- .login-signup {
-   background-color: white;
-   height: 30px;
-   text-decoration: underline;
-   font-weight: bold;
-
- }
-
- .li-post-index {
-   transform:scale(1.2);
-   margin-top: 50px;
-   margin-bottom: 150px;
- }
-
-
-.post_content_main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 600px;
-    height: 200px;
-
-    margin-right: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    text-decoration: none;
-    font: 11px BlinkMacSystemFont;
-    font-size: 16px;
-    box-sizing: content-box;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    line-height: 1.1666666666;
-    opacity: 1;
-    list-style: none;
-    z-index: 1;
-    transform:scale(0.7);
-}
-
-
-.user_content_main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-decoration: none;
-    font: 11px BlinkMacSystemFont;
-    font-size: 16px;
-    box-sizing: content-box;
-    line-height: 1.1666666666;
-    opacity: 1;
-    list-style: none;
-    z-index: 1;
-    transform:scale(1);
-    width: 310px;
-    height: 310px;
-
-}
 
 
 
 
-.session_main {
-  display: flex;
-    /* width: 600px; */
-    /* margin: auto; */
-    margin-top: 30px;
-    margin-right: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    /* text-decoration: none; */
-    /* font: 11px BlinkMacSystemFont; */
-    font-size: 16px;
-    box-sizing: content-box;
-    /* padding-bottom: 10px; */
-    /* line-height: 1.1666666666; */
-    /* opacity: 1; */
-    list-style: none;
-    z-index: 1;
-    /* transform: scale(0.9); */
-
-}
 
 
 
-  .post_photo{
-    display: block;
-    text-decoration: none;
-    font: 12px BlinkMacSystemFont;
-    font-size: 16px;
-    box-sizing: content-box;
-    margin: 0;
-    padding: 0;
-    line-height: 1.1666666666;
-    background-color: rgba(0,0,0,1);
-    width: 520px;
-    height: 520px;
-}
 
-.post_photo:hover {
-   opacity: 0.5;
-   transition: opacity .25s ease-in-out;
-   moz-transition: opacity .25s ease-in-out;
-   webkit-transition: opacity .25s ease-in-out;
-   background-color: rgba(255, 255, 255, 0.7);
 
-}
 
-.post_photo:hover {
-   opacity: 0.5;
-   transition: opacity .25s ease-in-out;
-   moz-transition: opacity .25s ease-in-out;
-   webkit-transition: opacity .25s ease-in-out;
-   background-color: rgba(255, 255, 255, 0.7);
 
-}
+
+
 
 
 
@@ -379,54 +193,6 @@
   width: 303px;
 }
 
-.user-info-box {
-padding: 20px;
-background-color: white;
-height: 358px;
-width: 460px;
-position: relative;
-top: 20px;
-left: 212px;
-border-style: solid;
-border-width: 1px;
-}
-
-.user-info-container {
-  display: flex;
-  justify-content: center;
-  transform: scale(0.8);
-  padding-bottom: 5px;
-}
-
-.user-song-info {
-  text-align: left;
-}
-
-.user-name-info {
-  float: right;
-}
-
-
-.user-name {
-  margin: 10px;
-    padding: 10;
-    outline: 1;
-    font: serif;
-    color: inherit;
-    text-align: inherit;
-    text-decoration: inherit;
-    vertical-align: inherit;
-    box-sizing: inherit;
-    background: transparent;
-    margin-top: 10px;
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 25px;
-    position: absolute;
-    right: 100px;
-    top: 23px;
-
-}
 
 
 .add-post-button {
@@ -448,32 +214,7 @@ border-width: 1px;
 }
 
 
- .user-feed-container {
-   display: flex;
-   justify-content: flex-start;
-   overflow: scroll;
-   transform: scale(1);
-   bottom: 200px;
-   height: 500px;
-   margin-top: 40px;
- };
 
- .user-profile {
-   justify-content: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
- }
-
- .session-feed-container {
-   margin-top: 10px;
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    height: 100px;
-    width: 900px;
-    transform: scale(0.8);
- };
 
 audio {
   height: 50px;
@@ -485,19 +226,6 @@ audio {
 
 }
 
-.delete-button {
-  font-size: 20px;
-  height: 20px;
-  width: 20px;
-  float:right;
-  border-style: none;
-  position: relative;
-  bottom: 15px;
-  right: 5px;
-
-}
-
-
 
 
 
@@ -506,6 +234,8 @@ audio {
   height: 100%;
   width: 100%;
 }
+
+
 
 .feed_background {
   height: 100%;
@@ -526,47 +256,8 @@ audio {
 
 }
 
-.post_footer {
-    padding: 20px 24px;
-    padding_bottom: 10px;
-    margin-bottom: 65px;
-    border-bottom: 1px solid rgba(0,0,0,1);
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: white;
-    width:572px;
-    position: relative;
-    // font-size: 20px;
-
-}
-
-.user_footer {
-
-    margin-bottom: 65px;
-    border-bottom: 1px solid rgba(0,0,0,1);
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: white;
-    width:310px;
-    position: relative;
 
 
-
-    // background-color: rgba(0,0,0,1);
-}
-
-
-.post_header {
-    padding: 20px 24px;
-    // margin-bottom: 65px;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: white;
-    width:572px;
-    position:relative;
-    // background-color: rgba(0,0,0,1);
-}
 
 .footer_artist {
     display: list-item;
@@ -602,22 +293,6 @@ audio {
 
 
 
- .logout {
-  display: inline-block;
-  margin: 0 4px 0 0;
-  padding: 4px 4px;
-  font-size: 10px;
-  // font-family: "Bitter",serif;
-  line-height: 1.8;
-  appearance: none;
-  box-shadow: none;
-  border-radius: 10;
-  color: #fff;
-  background-color: #6496c8;
-  border-radius: 5px;
-  border: none;
-}
-
 
 .container {
     position: relative;
@@ -629,23 +304,7 @@ audio {
   width: 50%;
 }
 
-.session_container {
-  width: 200px;
-  height: 200px;
-  transform: scale(0.6);
-  background: rgba(76, 175, 80, 0.3)
-}
 
-.session_image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  width: 150px;
-  height: 150px;
-}
 
 
 .image {
@@ -717,20 +376,7 @@ audio {
 }
 
 
-.session_container:hover .image {
-  opacity: 0.95;
-}
 
-.session_container:hover .middle {
-  opacity: 1;
-}
-
-.session_play {
-  color: white;
-  padding: 16px 32px;
-  width: 120px;
-  height: 120px;
-}
 
 .play {
   color: white;
@@ -789,28 +435,6 @@ audio {
   filter: blur(5px);
 }
 
-.info-play {
-  z-index:9;
-  margin:0;
-  padding:0;
-  height: 100px;
-  position: relative;
-  top: 150px;
-  left: -56px;
-  opacity: 0;
-}
-
-.info-play:hover {
-  z-index:9;
-  margin:0;
-  padding:0;
-  height: 100px;
-  position: relative;
-  top: 150px;
-  left: -56px;
-  opacity: 1;
-  transition: .5s ease;
-}
 
 
 .content {

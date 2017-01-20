@@ -9,7 +9,7 @@ class UserProfile extends React.Component {
   }
 
 
-  componentWillMount() {
+  componentDidMount() {
     const user_id = this.props.params.userId;
     this.props.fetchUser(user_id);
     window.scrollTo(0,0);

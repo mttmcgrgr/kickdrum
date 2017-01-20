@@ -15,13 +15,12 @@ class PostForm extends React.Component {
   this.update = this.update.bind(this);
   this.cloudSong = this.cloudSong.bind(this);
   this.cloudArt = this.cloudArt.bind(this);
-  this.createPost = this.createPost.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.createPost(this.state).then(() =>
-      this.props.router.replace(`posts/`)
+      this.props.router.replace(`/posts`)
       )
   }
 
@@ -67,10 +66,6 @@ class PostForm extends React.Component {
   }
 
 
-  createPost(){
-    hashHistory.push(`/posts`);
-  }
-
 
   render () {
     return (
@@ -100,7 +95,7 @@ class PostForm extends React.Component {
           <br/>
           <button onClick={this.cloudArt} className="button">Add Cover Art</button>
           <br/>
-          <input type="submit" value="Create Post" onClick={this.createPost} className="button" />
+          <input type="submit" value="Create Post" className="button" />
          </div>
         </form>
       </div>

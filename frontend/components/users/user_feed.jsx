@@ -11,7 +11,6 @@ class UserFeed extends React.Component {
     posts.shift();
     posts.reverse();
 
-    console.log(posts);
     return (
 
       <div className="user-feed-container">

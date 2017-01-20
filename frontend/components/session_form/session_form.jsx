@@ -42,6 +42,7 @@ class SessionForm extends React.Component {
 		}
 	}
 
+
 	guestLogin(e) {
 		e.preventDefault();
 		const user = { username: 'Guest', password: '123456'};
