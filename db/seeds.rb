@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+  User.destroy_all;
+  Post.destroy_all;
 
 
 User.create!([
@@ -67,7 +68,7 @@ Post.create!([{
 title:"Narcoleptic",
 artist: 'White Lung',
 song_url: 'https://res.cloudinary.com/dccshngpp/video/upload/v1484636935/02_Narcoleptic_hoxmfe.mp3',
-cover_url: 'httpss://f4.bcbits.com/img/a0852303980_10.jpg',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1484870707/a0852303980_10_aqehwl.jpgg',
 user_id: 2
 },
 {
