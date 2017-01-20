@@ -15,14 +15,22 @@ class UserProfile extends React.Component {
     window.scrollTo(0,0);
   }
 
+  componentWillReceiveProps(nextProps){
+    if(this.props.params.userId !== nextProps.params.userId){
+      this.props.fetchUser(nextProps.params.userId);
+    }
+  }
+
 
 
 
   render () {
     const post = [...this.props.user.posts].pop();
+    const currentUser = this.props.currentUser;
     return (
         <div className="user-profile">
           <UserInfo
+            currentUser={currentUser}
             post={post}
             user={this.props.user}
             receiveTrack={this.props.receiveTrack}
@@ -30,6 +38,7 @@ class UserProfile extends React.Component {
             fetchUser={this.props.fetchUser}/>
 
           <UserFeed
+            currentUser={currentUser}
             user={this.props.user}
             receiveTrack={this.props.receiveTrack}
             deletePost={this.props.deletePost}

@@ -10,7 +10,7 @@ const playSong = (post) => {
 
 
 const SessionFeedItem = ( {post, receiveTrack} ) => (
-  <li className="session_main">
+  <li className="session_main" key={post.id}>
       <div className="container">
         <img className="session_image" src={post.cover_url}/>
           <div className="middle">

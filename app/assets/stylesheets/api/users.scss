@@ -59,6 +59,7 @@ border-width: 1px;
   bottom: 200px;
   height: 500px;
   margin-top: 40px;
+  padding-left: 20px;
 };
 
 .user-profile {
@@ -108,14 +109,14 @@ button:hover {
 
 
 .info-play {
-  z-index:9;
-  margin:0;
-  padding:0;
-  height: 100px;
-  position: relative;
-  top: 150px;
-  left: -56px;
-  opacity: 0;
+  z-index: 9;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    position: relative;
+    top: 155px;
+    left: -60px;
+    opacity: 0;
 }
 
 .info-play:hover {
@@ -124,8 +125,8 @@ button:hover {
   padding:0;
   height: 100px;
   position: relative;
-  top: 150px;
-  left: -56px;
+  top: 155px;
+  left: -60px;
   opacity: 1;
   transition: .5s ease;
 }

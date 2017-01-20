@@ -15,6 +15,10 @@ const removeUser = user => ({
 });
 
 
+export const clearUser = (user) => dispatch => (
+  () => dispatch(receiveUser(user))
+);
+
 
 export const fetchUser = id => dispatch => (
   UserApiUtil.fetchUser(id).then(user => dispatch(receiveUser(user)))

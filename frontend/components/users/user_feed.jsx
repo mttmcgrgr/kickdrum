@@ -8,15 +8,16 @@ class UserFeed extends React.Component {
 
   render () {
     const posts = [...this.props.user.posts].slice(0,-1);
-  
     posts.reverse();
+    const currentUser = this.props.currentUser;
+
 
     return (
-
       <div className="user-feed-container">
         {posts.map(post => (
           <UserIndexItem
-            user={post.user}
+            currentUser={this.props.currentUser}
+            user={this.props.user}
             post={post}
             receiveTrack={this.props.receiveTrack}
             deletePost={this.props.deletePost}
