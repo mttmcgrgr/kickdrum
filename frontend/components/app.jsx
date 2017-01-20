@@ -4,6 +4,7 @@ import { Link, hashHistory } from 'react-router';
 import PlayerContainer from './player/player_container';
 
 
+
 const App = ({ children }) => (
   <div>
     <div className="background-image"></div>

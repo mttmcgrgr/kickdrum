@@ -34,10 +34,12 @@
     font-size: 25px;
     display: flex;
     list-style: none;
+    
   }
 
   .hidden {
     visibility: hidden;
+    background-color: #6496c8;
   }
 
  .button {
@@ -388,7 +390,7 @@ audio {
     margin-bottom:0px;
     background-color: #6496c8;
     overflow: scroll;
-    height:35%;
+    height:40%;
     transform: scale(1);
 
 }
