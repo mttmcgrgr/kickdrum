@@ -7,15 +7,21 @@ class UserFeed extends React.Component {
 
 
   render () {
-    const posts = [...this.props.user.posts];
-    posts.shift();
+    const posts = [...this.props.user.posts].slice(0,-1);
+  
     posts.reverse();
 
     return (
 
       <div className="user-feed-container">
         {posts.map(post => (
-          <UserIndexItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
+          <UserIndexItem
+            user={post.user}
+            post={post}
+            receiveTrack={this.props.receiveTrack}
+            deletePost={this.props.deletePost}
+            fetchUser={this.props.fetchUser}
+            key={post.id} />
         ))}
       </div>
     );

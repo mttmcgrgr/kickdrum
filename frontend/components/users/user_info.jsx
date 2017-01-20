@@ -7,10 +7,7 @@ const createPost = () => {
   hashHistory.push(url);
 };
 
-const createButton = () => {
-  const url = `/posts/new`;
-  hashHistory.push(url);
-};
+
 
 
 const UserInfo = ( {user, receiveTrack} ) => (
@@ -20,8 +17,9 @@ const UserInfo = ( {user, receiveTrack} ) => (
       onClick={()=> (receiveTrack(user.posts[user.posts.length - 1]))}/>
      <div className="parent">
       <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
-      <img className="image2" src={user.posts[user.posts.length-1].cover_url}/>
+      <img className="image2" src={user.posts[user.posts.length -1].cover_url}/>
     </div>
+
     <div className="user-info-box">
       <h1 className="user-name-info">{user.username}</h1>
       <button className="add-button" onClick={createPost}>

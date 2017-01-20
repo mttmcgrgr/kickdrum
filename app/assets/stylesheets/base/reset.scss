@@ -25,33 +25,14 @@ img {
   display: block;
 }
 
-html {
-  // height:100%;
-  // wdith: 100%;
-  // background-image: url("http://i.imgur.com/7N5HQja.gif");
-}
+
 
 body {
   height:100%;
-  // width: 100%;
-  // background-image: linear-gradient(to bottom, rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)),
-  //   url("http://i.imgur.com/7N5HQja.gif");
+
 
 }
 
 body:after {
   filter: blur(10px);
 }
-//
-// input[type="password"],
-// input[type="email"],
-// input[type="text"],
-// input[type="submit"],
-
-/* Clearfix */
-
-// .group:after {
-//   content: "";
-//   display: block;
-//   clear: both;
-// }

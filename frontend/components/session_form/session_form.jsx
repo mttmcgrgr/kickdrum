@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 import SessionFeedContainer from './session_feed_container';
 
 
@@ -32,6 +32,7 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		this.props.processForm({user});
+		this.props.router.replace("/posts");
 	}
 
 	navLink() {
