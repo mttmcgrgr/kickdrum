@@ -12,18 +12,20 @@ const createPost = () => {
 
 const UserInfo = ( {user, currentUser, receiveTrack} ) => {
 
+  let post;
+  if(user.posts.length === 0){
+     post = {
+      cover_url: "https://res.cloudinary.com/dccshngpp/image/upload/v1484894838/gelbe_Note_jzhs4a.png",
+      song_url: "",
+      title: "Add your first post",
+      artist: ""
+    };
+  } else {
+    post = user.posts[user.posts.length -1];
+  }
+
   if(currentUser.username === user.username){
-      let post;
-    if(user.posts.length === 0){
-       post = {
-        cover_url: "https://res.cloudinary.com/dccshngpp/image/upload/v1484894838/gelbe_Note_jzhs4a.png",
-        song_url: "",
-        title: "Add your first post",
-        artist: ""
-      };
-    } else {
-      post = user.posts[user.posts.length -1];
-    }
+
 
     return (
 
@@ -58,7 +60,7 @@ const UserInfo = ( {user, currentUser, receiveTrack} ) => {
         </div>
 
         <div className="user-info-box">
-          <h1 className="user-name-info">{currentUser.username}</h1>
+          <h1 className="user-name-info">{user.username}</h1>
           <h1 className="user-song-info">{user.posts[user.posts.length -1].title}</h1>
           <h3 className="user-song-info">{user.posts[user.posts.length -1].artist}</h3>
         </div>
