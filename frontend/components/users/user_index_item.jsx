@@ -21,7 +21,7 @@ class UserIndexItem extends React.Component {
 
   render(){
     const { post, receiveTrack, currentUser, user } = this.props;
-    debugger;
+  
     if(user.username === currentUser.username){
       return (
         <li className="user_content_main">

@@ -102,7 +102,7 @@ class SessionForm extends React.Component {
 				</form>
 			</div>
 			<footer className="footer">
-				 <h1 className="footer-text">Now Playing:</h1>
+				 <h1 className="footer-text">Trending Now:</h1>
 				<SessionFeedContainer />
 
 			</footer>
