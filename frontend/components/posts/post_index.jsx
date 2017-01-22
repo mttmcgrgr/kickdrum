@@ -12,11 +12,11 @@ class PostIndex extends React.Component {
   render () {
     const { posts } = this.props;
 
-    
+
     return (
       <div>
         <ul className="post_content_main">
-          {feedPosts.map(post => (
+          {posts.map(post => (
             <PostIndexItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
           ))}
         </ul>
