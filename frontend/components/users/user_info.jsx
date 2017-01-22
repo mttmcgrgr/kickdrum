@@ -17,7 +17,7 @@ const UserInfo = ( {user, currentUser, receiveTrack} ) => {
      post = {
       cover_url: "https://res.cloudinary.com/dccshngpp/image/upload/v1484894838/gelbe_Note_jzhs4a.png",
       song_url: "",
-      title: "Add your first post",
+      title: "Add your first post!",
       artist: ""
     };
   } else {
