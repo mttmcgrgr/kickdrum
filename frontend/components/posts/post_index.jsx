@@ -12,7 +12,7 @@ class PostIndex extends React.Component {
   render () {
     const { posts } = this.props;
 
-    let feedPosts = posts.reverse();
+    
     return (
       <div>
         <ul className="post_content_main">
