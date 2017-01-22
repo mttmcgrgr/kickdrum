@@ -20,8 +20,8 @@ const PostIndexItem = ( {post, receiveTrack} ) => (
      </div>
     </section>
     <section className="post_footer">
-      <div className="footer_text">{post.title}</div>
-      <div className="footer_artist">{post.artist}</div>
+      <div className="post_footer_title">{post.title}</div>
+      <div className="post_footer_artist">{post.artist}</div>
     </section>
   </li>
 );

@@ -21,7 +21,7 @@ class UserIndexItem extends React.Component {
 
   render(){
     const { post, receiveTrack, currentUser, user } = this.props;
-  
+
     if(user.username === currentUser.username){
       return (
         <li className="user_content_main">
@@ -35,8 +35,8 @@ class UserIndexItem extends React.Component {
           </section>
 
           <section className="user_footer">
-            <div className="footer_text">{post.title}</div>
-            <div className="footer_artist">{post.artist}</div>
+            <div className="user_footer_title">{post.title}</div>
+            <div className="user_footer_artist">{post.artist}</div>
             <button className="delete-button" onClick={this.handleDelete}>
               <img className="delete-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484637568/delete-button_318-77600_nd5tdo.jpg" />
             </button>
