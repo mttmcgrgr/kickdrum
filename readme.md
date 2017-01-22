@@ -1,6 +1,6 @@
 # KickDrum
 
-[Live link][heroku]
+[Live link][Live]
 
 [Trello link][trello]
 
