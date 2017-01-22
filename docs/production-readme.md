@@ -1,6 +1,6 @@
 # Kickdrum
 
-[Kickdrum link][Live]
+[Try Kickdrum][Live]
 
 [Live]: http://www.kickdrum.io/
 
