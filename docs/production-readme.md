@@ -1,6 +1,6 @@
-# KickDrum
+# Kickdrum
 
-[KickDrum Live][live] **NB:** This should be a link to your production site
+[Kickdrum link][live]
 
 [live]: hhttp://www.kickdrum.io
 
