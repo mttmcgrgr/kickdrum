@@ -56,8 +56,8 @@ class UserIndexItem extends React.Component {
           </section>
 
           <section className="user_footer">
-            <div className="footer_text">{post.title}</div>
-            <div className="footer_artist">{post.artist}</div>
+            <div className="user_footer_title">{post.title}</div>
+            <div className="user_footer_artist">{post.artist}</div>
           </section>
         </li>
       );
