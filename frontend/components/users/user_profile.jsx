@@ -25,19 +25,23 @@ class UserProfile extends React.Component {
 
 
   render () {
-    const post = [...this.props.user.posts].pop();
+    let userPosts = [...this.props.user.posts];
+    let recentPost = userPosts.pop();
+    let otherPosts = userPosts.reverse();
+
     const currentUser = this.props.currentUser;
     return (
         <div className="user-profile">
           <UserInfo
             currentUser={currentUser}
-            post={post}
+            post={recentPost}
             user={this.props.user}
             receiveTrack={this.props.receiveTrack}
             deletePost={this.props.deletePost}
             fetchUser={this.props.fetchUser}/>
 
           <UserFeed
+            posts={otherPosts}
             currentUser={currentUser}
             user={this.props.user}
             receiveTrack={this.props.receiveTrack}

@@ -7,8 +7,8 @@ class UserFeed extends React.Component {
 
 
   render () {
-    const posts = [...this.props.user.posts].slice(0,-1);
-    posts.reverse();
+    const posts = [...this.props.posts];
+
     const currentUser = this.props.currentUser;
 
 

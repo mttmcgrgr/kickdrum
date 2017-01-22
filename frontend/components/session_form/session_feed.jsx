@@ -12,7 +12,7 @@ class SessionFeed extends React.Component {
 
 
   render () {
-    const posts = [...this.props.posts];
+    const posts = [...this.props.posts].reverse();
 
 
     return (
