@@ -6,6 +6,8 @@
 
 Kickdrum is a full-stack web application inspired by Cymbal.fm.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.  
 
+![image of login](images/login.png)
+
 ## Features & Implementation
 
 
