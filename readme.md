@@ -1,42 +1,67 @@
 # Kickdrum
 
-[Try Kickdrum][Live]
+[Live link][Live]
+
+[Trello link][trello]
 
 [Live]: http://www.kickdrum.io/
+[trello]: https://trello.com/b/2JSmUvDF/kickdrum
 
-Kickdrum is a full-stack web application inspired by Cymbal.fm.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.  
+## Minimum Viable Product
 
-![image of login](images/login.png)
+Kickdrum is a web application inspired by Cymbal.fm built using Ruby on Rails
+and React/Redux.  By the end of Week 9, this app will, at a minimum, satisfy the
+following criteria with smooth, bug-free navigation, adequate seed data and
+sufficient CSS styling:
 
-## Features & Implementation
-
-
-
-### Creating and Rendering Posts
-
-  ![image of post-form](images/post-form.png)
-
-  To create a new post, a user must provide basic info (`artist` and `title`) as well as a public `photo_url` of the album art and an mp3 link, `song_url`. All fields are required for creating a new post. Each post is stored in a Posts table which has a `user_id` for reference. Posts are rendered in four ways: as a PostIndexItem in the main feed (stream), as part of a grid view in user profile / user bookmarks, in a song player at the bottom of the page, and if a post is the most recent, in the ProfileHeader as a featured post. Upon navigating to each section, an API request is made to the posts database (with user params if necessary) to populate the specified component. In each postDetail, the post title, album, photo and bookmark button are displayed (see below:)
-
-  ![image of postIndexItem](images/post-item.png)
-
-
-### Playing a Post
-
-  In order to play the associated mp3 link for each post, users click the "play" icon which is visible onHover on a post's photo. Clicking the icon dispatches an action to the player reducer, which updates the player's props and displays artist name, title and begins playing the linked mp3. The player only re-renders when receiving new props, which allows uninterrupted play while users navigate to other pages. The player was built with react audio player library.
-
-  ![image of player at bottom of page](images/player.png)
+- [ ] Hosting on Heroku
+- [ ] New account creation, login, and guest/demo login
+- [ ] Images (with playable song links)
+- [ ] User pages
+- [ ] Post feeds (bookmarked, main, profile)
+- [ ] Playing songs with progress bar with continuous play
+- [ ] Production README [sample](docs/production_readme.md)
+- [ ] Bookmarking of songs (bonus)
+- [ ] Users can search for other users (and possibly by artist) (bonus)
 
 
-### Profiles
 
-User profile holds the most recent user post in a "featured post" component, displaying the post like a vinyl album. All previous posts are kept in a scrollable
-feed below the featured post. Each section is a subcomponent of a User Profile component.
+## Design Docs
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
 
-![image of profile with bookmarks tab](images/profile.png)
+[wireframes]: docs/wireframes
+[components]: docs/component-hierarchy.md
+[sample-state]: docs/sample-state.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
 
+## Implementation Timeline
 
-### Future Feature Implementation
+### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-Plans include bookmarking capability and a bookmarks view in user profiles, queued
-playlist for the music player, artist pages and user follows.
+**Objective:** Functioning rails project with front-end Authentication
+
+### Phase 2: Posts Model, API, and components (2 days)
+
+**Objective:** Posts can be created, read and destroyed through
+the API.
+
+### Phase 3: Post Index / Feed (2 days)
+
+**Objective:** Post Items make up the Post Index which is rendered as "stream" in feed or a "grid" in profile
+
+### Phase 4: - Song Player with continuous playback (2 days)
+
+**objective:**  Users can play a post's linked audio file which displays an audio player at bottom of page
+
+### Phase 5: Bookmarks (1 day)
+
+**Objective:** Users can bookmark a post, which adds it to their bookmarks feed
+
+### Phase 6: User Search (2 days)
+
+**objective:** Users can search for users by username (possibly add artist search if there's time)

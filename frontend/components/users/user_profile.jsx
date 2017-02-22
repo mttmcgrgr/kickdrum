@@ -23,6 +23,7 @@ class UserProfile extends React.Component {
 
 
 
+
   render () {
     let userPosts = [...this.props.user.posts];
     let recentPost = userPosts.pop();
