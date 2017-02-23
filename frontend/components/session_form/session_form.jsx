@@ -37,9 +37,9 @@ class SessionForm extends React.Component {
 
 	navLink() {
 		if (this.props.formType === "login") {
-			return <Link to="/signup" className="session">sign up instead</Link>;
+			return <Link to="/signup" className="session">signup instead</Link>;
 		} else {
-			return <Link to="/login" className="session">log in instead</Link>;
+			return <Link to="/login" className="session">login instead</Link>;
 		}
 	}
 
