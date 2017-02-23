@@ -1,13 +1,10 @@
 import React from 'react';
-import Sound from 'react-sound';
 import ReactAudioPlayer from 'react-audio-player';
 
 class PlayerBar extends React.Component {
   constructor(props) {
     super(props);
-
   }
-
 
 
 
@@ -16,10 +13,12 @@ class PlayerBar extends React.Component {
     return (
     <div className={playerClass}>
      <div className="player-container">
-       <div className="footer_text">
+      <img className="player-image" src={this.props.cover_url}/>
+       <div className="player-text">
         <div>Title: {this.props.title}</div>
-        <div className="footer_artist"> Artist: {this.props.artist}</div>
+        <div className=""> Artist: {this.props.artist}</div>
        </div>
+
         <ReactAudioPlayer
           src={this.props.song_url}
           autoPlay
@@ -33,15 +32,3 @@ class PlayerBar extends React.Component {
 }
 
 export default PlayerBar;
-
-// // render() {
-// //   return (
-// //     <div className="player-container">
-//       <div className="footer_text">Title: {this.props.title}</div>
-//       <div className="footer_artist"> Artist: {this.props.artist}</div>
-// //       <audio controls >
-// //         <source src={ this.props.song_url } type='audio/mpeg'/>
-// //       </audio>
-// //     </div>
-// //   );
-// }

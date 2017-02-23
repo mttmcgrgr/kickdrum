@@ -5,7 +5,8 @@ const defaultState = {
   title: "",
   artist: "",
   song_url: "",
-  visible: false
+  visible: false,
+  cover_url: ""
 };
 
 
@@ -16,6 +17,7 @@ const PlayerReducer = (state = defaultState, action) => {
       newState.song_url = action.post.song_url;
       newState.title = action.post.title;
       newState.artist = action.post.artist;
+      newState.cover_url = action.post.cover_url;
       newState.visible = true;
       return newState;
     default:

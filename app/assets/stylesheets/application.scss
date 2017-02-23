@@ -31,7 +31,7 @@
 
   .player-container {
     background-color: #fafafa;
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     list-style: none;
 
@@ -92,6 +92,16 @@
    font-weight: bold;
    font-style: oblique;
 
+ }
+
+ .player-image {
+   width: 70px;
+    height: 70px;
+    padding-right: 10px;
+ }
+
+ .player-text {
+   padding-top: 10px
  }
 
 
@@ -221,7 +231,7 @@
 audio {
   height: 50px;
     position: absolute;
-    right: 80px;
+    right: 30px;
     width: 50%;
     display: flex;
     justify-content: flex-end;
@@ -265,7 +275,6 @@ audio {
     display: list-item;
     text-align: -webkit-match-parent;
     list-style: none;
-    padding-left: 10px;
 }
 
 .footer_title {
@@ -406,14 +415,15 @@ audio {
     overflow: scroll;
     height:40%;
     transform: scale(1);
-    font-family: 'Permanent Marker', cursive;
+
 
 }
 
 .footer-text {
   color: white;
   position: fixed;
-  font-weight: bold;
+  padding-top: 5px;
+  font-weight: normal;
   text-align: center;
   background-color: #6496c8;
   font-size: 20px;
@@ -458,8 +468,7 @@ audio {
     margin-bottom:0px;
     background-color: #fafafa;
     overflow: scroll;
-    padding-top: 5px;
-    padding-left:20px;
+    padding-left:10px;
     transition: max-height 3s;
-    font-family: 'Permanent Marker', cursive;
+
 }
