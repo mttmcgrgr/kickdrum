@@ -8,6 +8,7 @@ Kickdrum is a full-stack web application inspired by Cymbal.fm.  It utilizes Rub
 
 ## Features & Implementation
 
+  ![image of homepage](docs/images/homepage.png)
 
 
 ### Creating and Rendering Posts
