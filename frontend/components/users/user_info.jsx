@@ -41,7 +41,7 @@ const UserInfo = ( { post, user, currentUser, receiveTrack} ) => {
         <div className="user-info-box">
           <h1 className="user-name-info">{currentUser.username}</h1>
           <button className="add-button" onClick={createPost}>
-            <img className="add-post-button" src="http://www.free-icons-download.net/images/add-button-icon-73846.png"/>
+            <img className="add-post-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487813182/button_create_ldioq7.png"/>
           </button>
           <h1 className="user-song-info">{recentPost.title}</h1>
           <h3 className="user-song-info">{recentPost.artist}</h3>
