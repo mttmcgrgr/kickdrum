@@ -12,7 +12,6 @@ class PostIndex extends React.Component {
   render () {
     const { posts } = this.props;
 
-
     return (
       <div>
         <ul className="post_content_main">

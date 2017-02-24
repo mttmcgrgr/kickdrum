@@ -2,11 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-
-
-
-const PostIndexItem = ( {post, receiveTrack} ) => (
-
+const PostIndexItem = ( {post, receiveTrack} ) => {
+  return (
   <li className="li-post-index">
     <section className="post_header">
     <Link to={`/users/${post.user_id}`}>{post.username}</Link>
@@ -28,6 +25,7 @@ const PostIndexItem = ( {post, receiveTrack} ) => (
       <div className="post_footer_artist">{post.artist}</div>
     </section>
   </li>
-);
+ );
+};
 
 export default PostIndexItem;

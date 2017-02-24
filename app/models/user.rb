@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 	before_validation :ensure_session_token_uniqueness
 
 	has_many :posts
+	has_many :bookmarks
 
 
 	def password= password

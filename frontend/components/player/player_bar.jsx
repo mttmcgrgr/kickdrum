@@ -15,8 +15,8 @@ class PlayerBar extends React.Component {
      <div className="player-container">
       <img className="player-image" src={this.props.cover_url}/>
        <div className="player-text">
-        <div>Title: {this.props.title}</div>
-        <div className=""> Artist: {this.props.artist}</div>
+         <div>Title: {this.props.title}</div>
+         <div> Artist: {this.props.artist}</div>
        </div>
 
         <ReactAudioPlayer
