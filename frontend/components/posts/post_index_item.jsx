@@ -21,6 +21,7 @@ const PostIndexItem = ( {post, receiveTrack} ) => {
      </div>
     </section>
     <section className="post_footer">
+      <img className="bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
       <div className="post_footer_title">{post.title}</div>
       <div className="post_footer_artist">{post.artist}</div>
     </section>
