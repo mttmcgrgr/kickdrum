@@ -6,14 +6,11 @@ import { fetchUser, deletePost } from '../../actions/post_actions';
 class UserIndexItem extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleDelete = this.handleDelete.bind(this);
-
   }
 
 
   handleDelete() {
-
      this.props.deletePost(this.props.post.id);
      this.props.fetchUser(this.props.post.user_id);
    }

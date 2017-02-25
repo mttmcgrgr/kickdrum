@@ -31,6 +31,13 @@ border-width: 1px;
   float: right;
 }
 
+.info-bookmark {
+  height:50px;
+  weight: 50px;
+  position: absolute;
+  top:325px;
+}
+
 
 .user-name {
   margin: 10px;
@@ -82,7 +89,7 @@ border-width: 1px;
   float:right;
   border-style: none;
   position: relative;
-  bottom: 15px;
+  bottom: 20px;
   right: 5px;
 }
 
@@ -102,10 +109,10 @@ button:hover {
 .user_footer {
     margin-bottom: 65px;
     border-bottom: 1px solid rgba(0,0,0,1);
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+
     background-color: white;
     width:310px;
+    height: 55px;
     position: relative;
 }
 
@@ -122,6 +129,12 @@ button:hover {
     opacity: 0;
 }
 
+
+.user-container {
+  position: relative;
+  width: 50%;
+}
+
 .info-play:hover {
   z-index:9;
   margin:0;
@@ -133,6 +146,46 @@ button:hover {
   opacity: 1;
   transition: .5s ease;
 }
+
+
+.user-middle {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transition: .5s ease;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+
+.user-play {
+  color: white;
+  padding: 16px 32px;
+  width: 120px;
+  height: 120px;
+}
+
+
+.user_text {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+
+.user-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  width: 310px;
+  height: 310px;
+  border-bottom: solid 1px
+
+}
+
 
 
 .info-feed-box {
@@ -176,6 +229,8 @@ button:hover {
     transform:scale(1);
     width: 310px;
     height: 310px;
+    padding-right: 3px;
+
 
 }
 
@@ -186,7 +241,7 @@ button:hover {
 
 .user_footer_title {
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 18px;
 }
 
@@ -194,5 +249,6 @@ button:hover {
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 10px;
+  font-size: 13px;
 
 }

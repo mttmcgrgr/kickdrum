@@ -283,10 +283,6 @@ audio {
     font-size: 20px;
 }
 
-.user_text {
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
 
 
  .logo-image {
@@ -311,10 +307,6 @@ audio {
     width: 50%;
 }
 
-.user-container {
-  position: relative;
-  width: 50%;
-}
 
 
 
@@ -328,18 +320,6 @@ audio {
   backface-visibility: hidden;
   width: 620px;
   height: 620px;
-}
-
-.user-image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  width: 310px;
-  height: 310px;
-
 }
 
 .create-title {
@@ -358,15 +338,6 @@ audio {
 }
 
 
-.user-middle {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transition: .5s ease;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
 
 
 .session_middle {
@@ -397,12 +368,6 @@ audio {
   height: 120px;
 }
 
-.user-play {
-  color: white;
-  padding: 16px 32px;
-  width: 120px;
-  height: 120px;
-}
 
 .footer {
     position:fixed;
