@@ -14,6 +14,7 @@ class UserFeed extends React.Component {
 
     return (
       <div className="user-feed-container">
+        <div className="user-posts">
         {posts.map(post => (
           <UserIndexItem
             currentUser={this.props.currentUser}
@@ -24,6 +25,7 @@ class UserFeed extends React.Component {
             fetchUser={this.props.fetchUser}
             key={post.id} />
         ))}
+        </div>
       </div>
     );
   }

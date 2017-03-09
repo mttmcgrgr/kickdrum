@@ -83,6 +83,11 @@ border-width: 1px;
    height: 100%;
 }
 
+.user-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
 
 
@@ -128,8 +133,8 @@ button:hover {
     padding: 0;
     height: 100px;
     position: relative;
-    top: 155px;
-    left: -60px;
+    top: 165px;
+    left: -35px;
     opacity: 0;
 }
 
@@ -145,8 +150,8 @@ button:hover {
   padding:0;
   height: 100px;
   position: relative;
-  top: 155px;
-  left: -60px;
+  top: 165px;
+  left: -35px;
   opacity: 1;
   transition: .5s ease;
 }
