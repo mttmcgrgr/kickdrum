@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 
 const defaultState = {
   username : "Add your first post",
+  photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg",
   posts: [{
     cover_url: "https://res.cloudinary.com/dccshngpp/image/upload/v1484894838/gelbe_Note_jzhs4a.png",
     song_url: "",

@@ -10,7 +10,7 @@
 
 
 User.create!([
-  { username: 'Guest', password: '123456'},
+  { username: 'Guest', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"},
   { username: 'mttmcgrgr', password: '123456'},
   { username: 'noelle', password: '123456'},
   { username: 'smalkmus', password: '123456'},
