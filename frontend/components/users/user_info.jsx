@@ -47,7 +47,7 @@ class UserInfo extends React.Component {
 
           <div className="user-info-box">
             <h1 className="user-name-info">{currentUser.username}</h1>
-            <img className="add-post-button" src={currentUser.photo_url}/>
+            <img className="user_photo" src={currentUser.photo_url}/>
             <button className="add-button" onClick={this.createPost}>
               <img className="add-post-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487813182/button_create_ldioq7.png"/>
             </button>
