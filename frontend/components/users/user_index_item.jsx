@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from 'react-modal';
 import { fetchUser, deletePost } from '../../actions/post_actions';
 
 
@@ -30,10 +31,9 @@ class UserIndexItem extends React.Component {
                </div>
            </div>
           </section>
-
-
         </li>
       );
+
     } else {
       return (
         <li className="user_content_main">
