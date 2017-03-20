@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
 						<br/>
 						<input className="button" type="submit" value="Submit" />
 						<br/>
-						{this.props.formType === "login" ? this.demoButton() : "" }
+						{this.demoButton()}
 					</div>
 				</form>
 			</div>
@@ -117,3 +117,6 @@ class SessionForm extends React.Component {
 }
 
 export default withRouter(SessionForm);
+
+
+//{this.props.formType === "login" ? this.demoButton() : "" }
