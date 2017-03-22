@@ -31,6 +31,15 @@ class UserIndexItem extends React.Component {
                </div>
            </div>
           </section>
+          <Modal
+            isOpen={true}
+            closeTimeoutMS={50000}
+            className="modal"
+            contentLabel="Modal"
+            >
+            <h1>Modal Content</h1>
+            <p>Etc.</p>
+          </Modal>
         </li>
       );
 
