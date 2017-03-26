@@ -33,7 +33,9 @@ border-width: 1px;
 }
 
 .user-name-info {
-  float: right;
+    float: right;
+    position: relative;
+    top: 10px;
 }
 
 .info-bookmark {
@@ -44,10 +46,12 @@ border-width: 1px;
 }
 
 .user_photo {
-  height: 50px;
-  width: 50px;
-  float: right;
-  border-radius: 30px;
+    height: 70px;
+    width: 70px;
+    float: right;
+    border-radius: 30px;
+    position: relative;
+    top: -10px;
 }
 
 
