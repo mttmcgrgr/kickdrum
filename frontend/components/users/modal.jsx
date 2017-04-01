@@ -1,58 +1,41 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
+import ReactModal from 'react-modal';
 
 class UserModal extends React.Component {
-  constructor() {
+  constructor () {
     super();
-
     this.state = {
-      modalIsOpen: false
+      showModal: false
     };
 
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-  openModal() {
-    this.setState({modalIsOpen: true});
+  handleOpenModal () {
+    this.setState({ showModal: true });
   }
 
-  afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    this.refs.subtitle.style.color = '#f00';
+  handleCloseModal () {
+    this.setState({ showModal: false });
   }
 
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
-
-  render() {
+  render () {
     return (
       <div>
-        <button onClick={this.openModal}>Open Modal</button>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          contentLabel="Example Modal"
+        <button onClick={this.handleOpenModal}>Trigger Modal</button>
+        <ReactModal
+           isOpen={this.state.showModal}
+           contentLabel="Minimal Modal Example"
         >
-
-          <h2 ref="subtitle">Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>
+          <button onClick={this.handleCloseModal}>Close Modal</button>
+        </ReactModal>
       </div>
     );
   }
 }
 
-export default Modal;
+const props = {};
+
+ReactDOM.render(<UserModal {...props} />, document.getElementById('main'));

@@ -18,23 +18,18 @@ class UserIndexItem extends React.Component {
 
   handleOpenModal () {
     this.setState({ showModal: true });
-    Modal.content.opacity = 100;
   }
 
   handleCloseModal () {
     this.setState({ showModal: false });
-    Modal.content.opacity = 0;
   }
 
   onModalOpen() {
-
 		this.props.fetchComments(this.props.post.id);
   }
 
   modalClose() {
-
     this.setState({modalOpen: false});
-    Modal.content.opacity = 0;
   }
 
 
@@ -62,11 +57,8 @@ class UserIndexItem extends React.Component {
                </div>
            </div>
           </section>
-          <Modal
-            isOpen={this.state.showModal}
-            contentLabel="Minimal Modal Example"
-            >
-            <button onClick={this.handleCloseModal}>Close Modal</button>
+          <Modal>
+            This is a Modal!
           </Modal>
         </li>
       );
