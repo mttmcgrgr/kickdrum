@@ -1,4 +1,8 @@
-class App extends React.Component {
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+
+class UserModal extends React.Component {
   constructor() {
     super();
 
@@ -32,7 +36,6 @@ class App extends React.Component {
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          style={customStyles}
           contentLabel="Example Modal"
         >
 

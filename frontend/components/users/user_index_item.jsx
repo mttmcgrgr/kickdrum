@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'react-modal';
+import Modal from './modal';
 import { fetchUser, deletePost } from '../../actions/post_actions';
 
 
@@ -18,12 +18,12 @@ class UserIndexItem extends React.Component {
 
   handleOpenModal () {
     this.setState({ showModal: true });
-    modal.content.opacity = 100;
+    Modal.content.opacity = 100;
   }
 
   handleCloseModal () {
     this.setState({ showModal: false });
-    modal.content.opacity = 0;
+    Modal.content.opacity = 0;
   }
 
   onModalOpen() {
@@ -34,7 +34,7 @@ class UserIndexItem extends React.Component {
   modalClose() {
 
     this.setState({modalOpen: false});
-    modal.content.opacity = 0;
+    Modal.content.opacity = 0;
   }
 
 
