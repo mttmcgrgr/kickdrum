@@ -8,6 +8,33 @@ class UserIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
+    this.state = {
+      showModal: false
+    };
+
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal () {
+    this.setState({ showModal: true });
+    modal.content.opacity = 100;
+  }
+
+  handleCloseModal () {
+    this.setState({ showModal: false });
+    modal.content.opacity = 0;
+  }
+
+  onModalOpen() {
+
+		this.props.fetchComments(this.props.post.id);
+  }
+
+  modalClose() {
+
+    this.setState({modalOpen: false});
+    modal.content.opacity = 0;
   }
 
 
@@ -25,12 +52,22 @@ class UserIndexItem extends React.Component {
         <li className="user_content_main">
           <section>
             <div className="container">
-              <img className="user-image" src={post.cover_url}/>
+              <img
+                className="user-image"
+                src={post.cover_url}
+                onClick={this.handleOpenModal}
+              />
                 <div className="middle">
                   <img className="play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
                </div>
            </div>
           </section>
+          <Modal
+            isOpen={this.state.showModal}
+            contentLabel="Minimal Modal Example"
+            >
+            <button onClick={this.handleCloseModal}>Close Modal</button>
+          </Modal>
         </li>
       );
 
