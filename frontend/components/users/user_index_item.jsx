@@ -65,11 +65,10 @@ class UserIndexItem extends React.Component {
             isOpen={this.state.modalOpen}
             onAfterOpen={this.onModalOpen}
             onRequestClose={this.modalClose}
-            closeTimeoutMS={200}
+            closeTimeoutMS={10}
             contentLabel="Modal"
             style={modal}>
               <img className="modal-img" src={post.cover_url}/>
-              <button onClick={this.closeModal}>Close Modal</button>
             </Modal>
 
         </div>

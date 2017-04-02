@@ -5,7 +5,7 @@ module.exports = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(255, 255, 255, 0.75)',
+    backgroundColor   : 'rgba(106, 151, 200, 0.75)',
     width             : '100%',
     height            : '100%'
   },
@@ -23,7 +23,7 @@ module.exports = {
     outline                    : 'none',
     padding                    : '20px',
     opacity                    : '0',
-    transition                 : 'opacity 2s',
+
     width             : '784px',
     height            : '449px'
   }
