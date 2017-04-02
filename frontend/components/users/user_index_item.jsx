@@ -1,5 +1,6 @@
 import React from 'react';
-import Modal from './modal';
+import Modal from 'react-modal';
+import modal from '../../util/modal';
 import { fetchUser, deletePost } from '../../actions/post_actions';
 
 
@@ -7,30 +8,35 @@ import { fetchUser, deletePost } from '../../actions/post_actions';
 class UserIndexItem extends React.Component {
   constructor(props) {
     super(props);
-    this.handleDelete = this.handleDelete.bind(this);
     this.state = {
-      showModal: false
+      modalOpen: false,
     };
 
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.modalClose = this.modalClose.bind(this);
+    this.modalOpen = this.modalOpen.bind(this);
+    this.onModalOpen = this.onModalOpen.bind(this);
   }
 
-  handleOpenModal () {
-    this.setState({ showModal: true });
-  }
+  componentWillMount() {
+    Modal.setAppElement('body');
+ }
 
-  handleCloseModal () {
-    this.setState({ showModal: false });
+  modalOpen() {
+    this.setState({modalOpen: true});
   }
 
   onModalOpen() {
+    modal.content.opacity = 100;
 		this.props.fetchComments(this.props.post.id);
   }
 
+
   modalClose() {
     this.setState({modalOpen: false});
+    modal.content.opacity = 0;
   }
+
 
 
   handleDelete() {
@@ -42,30 +48,36 @@ class UserIndexItem extends React.Component {
   render(){
     const { post, receiveTrack, currentUser, user } = this.props;
 
+
     if(user.username === currentUser.username){
       return (
-        <li className="user_content_main">
+        <div className="user_content_main">
           <section>
             <div className="container">
-              <img
-                className="user-image"
-                src={post.cover_url}
-                onClick={this.handleOpenModal}
-              />
+              <img className="user-image" src={post.cover_url} onClick={this.modalOpen}/>
                 <div className="middle">
                   <img className="play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
                </div>
            </div>
           </section>
-          <Modal>
-            This is a Modal!
-          </Modal>
-        </li>
+
+          <Modal
+            isOpen={this.state.modalOpen}
+            onAfterOpen={this.onModalOpen}
+            onRequestClose={this.modalClose}
+            closeTimeoutMS={200}
+            contentLabel="Modal"
+            style={modal}>
+              <img className="modal-img" src={post.cover_url}/>
+              <button onClick={this.closeModal}>Close Modal</button>
+            </Modal>
+
+        </div>
       );
 
     } else {
       return (
-        <li className="user_content_main">
+        <div className="user_content_main">
           <section>
             <div className="container">
               <img className="user-image" src={post.cover_url}/>
@@ -75,7 +87,7 @@ class UserIndexItem extends React.Component {
            </div>
           </section>
 
-        </li>
+        </div>
       );
     }
   }
