@@ -10,9 +10,10 @@ module.exports = {
     height            : '100%'
   },
   content : {
-    position                   : 'absolute',
+    position                   : 'relative',
+    display                    : 'flex',
     top                        : '16%',
-    left                       : '20%',
+    left                       : '13%',
     right                      : '40px',
     bottom                     : '40px',
     border                     : '1px solid #ccc',
@@ -24,7 +25,7 @@ module.exports = {
     padding                    : '20px',
     opacity                    : '0',
 
-    width             : '784px',
+    width             : '960px',
     height            : '449px'
   }
 };

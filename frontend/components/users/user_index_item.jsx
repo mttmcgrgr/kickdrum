@@ -69,6 +69,11 @@ class UserIndexItem extends React.Component {
             contentLabel="Modal"
             style={modal}>
               <img className="modal-img" src={post.cover_url}/>
+                <div className="user_footer_title">{post.title}</div>
+                <div className="user_footer_artist">{post.artist}</div>
+                <button className="delete-button" onClick={this.handleDelete}>
+                  <img className="delete-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484637568/delete-button_318-77600_nd5tdo.jpg" />
+                </button>
             </Modal>
 
         </div>
@@ -85,6 +90,16 @@ class UserIndexItem extends React.Component {
                </div>
            </div>
           </section>
+
+          <Modal
+            isOpen={this.state.modalOpen}
+            onAfterOpen={this.onModalOpen}
+            onRequestClose={this.modalClose}
+            closeTimeoutMS={10}
+            contentLabel="Modal"
+            style={modal}>
+            <img className="modal-img" src={post.cover_url}/>
+          </Modal>
 
         </div>
       );
