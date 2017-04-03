@@ -10,9 +10,9 @@ module.exports = {
     height            : '100%'
   },
   content : {
-    position                   : 'absolute',
+    position                   : 'relative',
     top                        : '16%',
-  
+    left                       : '25%',
     bottom                     : '40px',
     border                     : '1px solid #ccc',
     background                 : 'white',
