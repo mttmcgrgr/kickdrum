@@ -12,7 +12,7 @@ module.exports = {
   content : {
     position                   : 'relative',
     top                        : '16%',
-    left                       : '25%',
+    left                       : '20%',
     bottom                     : '40px',
     border                     : '1px solid #ccc',
     background                 : 'white',
