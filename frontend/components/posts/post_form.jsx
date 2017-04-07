@@ -65,8 +65,6 @@ class PostForm extends React.Component {
     );
   }
 
-
-
   render () {
     return (
     <div className="feed_background">
