@@ -5,7 +5,6 @@ import { receiveTrack } from '../../actions/player_actions';
 
 const mapStateToProps = state => ({
   posts: Object.keys(state.posts).map(id => state.posts[id])
-
 });
 
 const mapDispatchToProps = dispatch => ({
