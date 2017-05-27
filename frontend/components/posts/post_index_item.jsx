@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const PostIndexItem = ( {post, receiveTrack} ) => {
   return (
-  <li className="li-post-index">
+  <li className="li-post-inde">
     <section className="post_header">
       <Link to={`/users/${post.user_id}`}>{post.username}</Link>
     </section>
