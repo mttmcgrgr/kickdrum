@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import modal from '../../util/modal';
 import { fetchUser, deletePost } from '../../actions/post_actions';
-
+import UserInfo from './user_info'
 
 
 class UserIndexItem extends React.Component {
@@ -28,7 +28,7 @@ class UserIndexItem extends React.Component {
 
   onModalOpen() {
     modal.content.opacity = 100;
-		this.props.fetchComments(this.props.post.id);
+
   }
 
 
@@ -48,8 +48,6 @@ class UserIndexItem extends React.Component {
   render(){
     const { post, receiveTrack, currentUser, user } = this.props;
 
-
-    if(user.username === currentUser.username){
       return (
         <div className="user_content_main">
           <section>
@@ -60,7 +58,6 @@ class UserIndexItem extends React.Component {
                </div>
            </div>
           </section>
-
           <Modal
             isOpen={this.state.modalOpen}
             onAfterOpen={this.onModalOpen}
@@ -68,42 +65,26 @@ class UserIndexItem extends React.Component {
             closeTimeoutMS={10}
             contentLabel="Modal"
             style={modal}>
-              <img className="modal-img" src={post.cover_url}/>
-                <div className="user_footer_title">{post.title}</div>
-                <div className="user_footer_artist">{post.artist}</div>
-                <button className="delete-button" onClick={this.handleDelete}>
-                  <img className="delete-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484637568/delete-button_318-77600_nd5tdo.jpg" />
-                </button>
-            </Modal>
-
-        </div>
-      );
-
-    } else {
-      return (
-        <div className="user_content_main">
-          <section>
-            <div className="container">
-              <img className="user-image" src={post.cover_url}/>
-                <div className="middle">
-                  <img className="play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
+              <section>
+                <div className="container">
+                  <img className="modal-image" src={post.cover_url} onClick={this.modalOpen}/>
+                    <div className="middle">
+                      <img className="play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
+                   </div>
                </div>
-           </div>
-          </section>
+              </section>
+              <section>
+                <h1 className="modal-name-info">{currentUser.username}</h1>
+                <img className="modal-photo" src={currentUser.photo_url}/>
+                <div className="modal-top-section"></div>
+                <h1 className="modal-song-info">{post.title}</h1>
+                <h3 className="modal-artist-info">{post.artist}</h3>
+                <img className="modal-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
 
-          <Modal
-            isOpen={this.state.modalOpen}
-            onAfterOpen={this.onModalOpen}
-            onRequestClose={this.modalClose}
-            closeTimeoutMS={10}
-            contentLabel="Modal"
-            style={modal}>
-            <img className="modal-img" src={post.cover_url}/>
+              </section>
           </Modal>
-
         </div>
       );
-    }
   }
 
 }

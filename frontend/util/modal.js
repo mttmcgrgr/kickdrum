@@ -20,10 +20,11 @@ module.exports = {
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '0px',
     outline                    : 'none',
-    padding                    : '20px',
+    padding                    : '0px',
     opacity                    : '0',
+    display                    : 'flex',
 
     width             : '960px',
-    height            : '449px'
+    height            : '549px'
   }
 };
