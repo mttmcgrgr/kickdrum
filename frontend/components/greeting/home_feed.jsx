@@ -1,14 +1,13 @@
 import React from 'react';
-import SessionFeedItem from './session_feed_item';
+import HomeFeedItem from './home_feed_item';
 
 
-class SessionFeed extends React.Component {
+class HomeFeed extends React.Component {
 
 
   componentDidMount() {
     this.props.fetchPosts();
   }
-
 
 
   render () {
@@ -19,11 +18,11 @@ class SessionFeed extends React.Component {
 
       <div className="session-feed-container">
         {posts.map(post => (
-          <SessionFeedItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
+          <HomeFeedItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
         ))}
       </div>
     );
   }
 }
 
-export default SessionFeed;
+export default HomeFeed;

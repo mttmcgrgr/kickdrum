@@ -9,7 +9,7 @@ const playSong = (post) => {
 
 
 
-const SessionFeedItem = ( {post, receiveTrack} ) => (
+const HomeFeedItem = ( {post, receiveTrack} ) => (
   <li className="session_main" key={post.id}>
       <div className="container">
         <img className="session_image" src={post.cover_url}/>
@@ -20,4 +20,4 @@ const SessionFeedItem = ( {post, receiveTrack} ) => (
   </li>
 );
 
-export default SessionFeedItem;
+export default HomeFeedItem;

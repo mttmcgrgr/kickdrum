@@ -16,6 +16,7 @@ const App = ({ children }) => (
         </div>
       </div>
         <GreetingContainer className="header-group-right" />
+        
         <footer>
           <PlayerContainer />
         </footer>

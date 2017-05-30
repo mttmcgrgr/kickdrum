@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import SessionFeed from './session_feed';
+import HomeFeed from './home_feed';
 import { fetchPosts, deletePost, createPost } from '../../actions/post_actions';
 import { receiveTrack } from '../../actions/player_actions';
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SessionFeed);
+)(HomeFeed);

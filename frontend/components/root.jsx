@@ -8,6 +8,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import PostIndexContainer from './posts/post_index_container';
 import PostFormContainer from './posts/post_form_container';
 import UserProfileContainer from './users/user_profile_container';
+import Home from './greeting/home';
 
 const Root = ({ store }) => {
 
@@ -29,9 +30,8 @@ const Root = ({ store }) => {
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={SessionFormContainer} />
-          <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-          <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
+          <IndexRoute component={Home} />
+          <Route path="/home" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/posts" component={PostIndexContainer}  onEnter={_ensureLoggedIn} />
           <Route path="/posts/new" component={PostFormContainer} onEnter={_ensureLoggedIn} />
           <Route path="/users/:userId" component={UserProfileContainer} onEnter={_ensureLoggedIn}/>
@@ -42,3 +42,8 @@ const Root = ({ store }) => {
 };
 
 export default Root;
+
+
+
+//<Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
+//<Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />

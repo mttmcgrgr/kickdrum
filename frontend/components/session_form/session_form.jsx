@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
-import SessionFeedContainer from './session_feed_container';
 
 
 class SessionForm extends React.Component {
@@ -37,9 +36,9 @@ class SessionForm extends React.Component {
 
 	navLink() {
 		if (this.props.formType === "login") {
-			return <Link to="/signup" className="session">signup here!</Link>;
+			return <Link to="/signup" className="session">signup !</Link>;
 		} else {
-			return <Link to="/login" className="session">login here!</Link>;
+			return <Link to="/login" className="session">login instead!</Link>;
 		}
 	}
 
@@ -105,10 +104,8 @@ class SessionForm extends React.Component {
 
 	render() {
 		return (
-		<div>
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-
 					<h3 className="create-title">{this.props.formType} or {this.navLink()}</h3>
 					{this.renderErrors()}
 					<div className="login-form">
@@ -133,22 +130,13 @@ class SessionForm extends React.Component {
 					</div>
 				</form>
 			</div>
-			<footer className="footer">
-				 <h1 className="footer-text">Popular Now:
-					 <div>
 
-					 </div>
-				 </h1>
-				<SessionFeedContainer />
-
-			</footer>
-		 </div>
 		);
 	}
 
 }
 
-export default withRouter(SessionForm);
+export default SessionForm;
 
 
 //{this.props.formType === "login" ? this.demoButton() : "" }

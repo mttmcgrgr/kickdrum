@@ -327,6 +327,24 @@ audio {
   font-size: 20px;
 }
 
+.welcome-descriptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: #8d929a;
+  border-top: 2px solid black;
+}
+
+.welcome-subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 33%;
+}
 
 .middle {
   opacity: 0;
