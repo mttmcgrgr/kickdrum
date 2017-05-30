@@ -24,7 +24,7 @@ module.exports = {
     opacity                    : '0',
     display                    : 'flex',
 
-    width             : '960px',
+    width             : '995px',
     height            : '549px'
   }
 };
