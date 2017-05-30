@@ -43,12 +43,13 @@ class SessionForm extends React.Component {
 		}
 	}
 
+
 	loginForm(){
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
 
-					<h3 className="create-title">Please {this.props.formType} or {this.navLink()}</h3>
+					<h3 className="create-title">{this.props.formType} or {this.navLink()}</h3>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br/>
@@ -67,6 +68,38 @@ class SessionForm extends React.Component {
 						</label>
 						<br/>
 						<input className="button" type="submit" value="Login" />
+						<br/>
+						{this.demoButton()}
+					</div>
+				</form>
+			</div>
+		)
+	}
+
+	signUpForm(){
+		return (
+			<div className="login-form-container">
+				<form onSubmit={this.handleSubmit} className="login-form-box">
+
+					<h3 className="create-title">{this.props.formType} or {this.navLink()}</h3>
+					{this.renderErrors()}
+					<div className="login-form">
+						<br/>
+						<label> Username:
+							<input type="text"
+								value={this.state.username}
+								onChange={this.update("username")}
+								className="login-input" />
+						</label>
+						<br/>
+						<label> Password:
+							<input type="password"
+								value={this.state.password}
+								onChange={this.update("password")}
+								className="login-input" />
+						</label>
+						<br/>
+						<input className="button" type="submit" value="Sign Up" />
 						<br/>
 						{this.demoButton()}
 					</div>
@@ -109,7 +142,7 @@ class SessionForm extends React.Component {
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
 
-					<h3 className="create-title">Please {this.props.formType} or {this.navLink()}</h3>
+					<h3 className="create-title">{this.props.formType}</h3>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br/>
@@ -134,7 +167,7 @@ class SessionForm extends React.Component {
 				</form>
 			</div>
 			<footer className="footer">
-				 <h1 className="footer-text">Trending Now:
+				 <h1 className="footer-text">Popular Now:
 					 <div>
 
 					 </div>
