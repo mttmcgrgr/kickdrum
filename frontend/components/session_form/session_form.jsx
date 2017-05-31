@@ -8,6 +8,7 @@ class SessionForm extends React.Component {
 		this.state = {
 			username: "",
 			password: "",
+			refresh: false
 		 };
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.guestLogin = this.guestLogin.bind(this);
@@ -26,7 +27,8 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		this.props.processForm({user});
-		this.props.router.replace("/posts");
+		this.props.router.push("/posts");
+		this.setState({refresh: true})
 	}
 
 	navLink() {
