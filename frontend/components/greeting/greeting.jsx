@@ -37,6 +37,7 @@ class Greeting extends React.Component {
     this.modalOpen = this.modalOpen.bind(this);
     this.onModalOpen = this.onModalOpen.bind(this);
     this.logOutRedirect = this.logOutRedirect.bind(this);
+    this.closeAndOpenModal = this.closeAndOpenModal.bind(this);
   }
 
   componentWillMount() {
@@ -59,6 +60,12 @@ class Greeting extends React.Component {
   modalClose() {
     this.setState({modalOpen: false});
     modal.content.opacity = 0;
+  }
+
+  closeAndOpenModal(formType) {
+    return () => {
+      this.openModal(formType)();
+    };
   }
 
   sessionLinks(){
@@ -122,6 +129,7 @@ class Greeting extends React.Component {
               <SessionFormContainer
                formType={this.state.formType}
                modalOpen={this.state.modalOpen}
+               closeAndOpenModal={this.closeAndOpenModal}
               />
           </Modal>
       </div>

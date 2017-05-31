@@ -7,7 +7,8 @@ const mapStateToProps = (state, ownProps) => ({
   loggedIn: state.session.currentUser ? true : false,
   errors: state.session.errors || [],
   formType: ownProps.formType,
-  modalOpen: ownProps.modalOpen
+  modalOpen: ownProps.modalOpen,
+  closeAndOpenModal: ownProps.closeAndOpenModal
 });
 
 

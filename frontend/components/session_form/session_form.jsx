@@ -53,18 +53,16 @@ class SessionForm extends React.Component {
 		const user = { username: 'Guest', password: '123456'};
 		this.setState({ username: 'Guest', password: '123456'});
 		this.props.processForm({user});
-		this.props.router.replace("/posts");
+		this.props.router.push(`/posts`);
 	}
 
-	otherLinks(){
-		if(this.props.formType === "login"){
-			return)
-			<div>
-				Not a member yet?
-				<Link
-			</div>
-		}
-	}
+	otherFormLink() {
+    if (this.props.formType === 'login') {
+      return <a onClick={ this.props.closeAndOpenModal('signup') }>{'Don\'t have an account?'}</a>;
+    } else {
+      return <a onClick={ this.props.closeAndOpenModal('login') }>{'Already have an account?'}</a>;
+    }
+  }
 
 	demoButton(){
 		return (
