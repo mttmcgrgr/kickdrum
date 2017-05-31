@@ -5,21 +5,16 @@ import { Link, withRouter, hashHistory } from 'react-router';
 class SessionForm extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { username: "", password: "" };
+		this.state = {
+			username: "",
+			password: "",
+		 };
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.guestLogin = this.guestLogin.bind(this);
 		this.demoButton = this.demoButton.bind(this);
 	}
 
-	componentDidUpdate() {
-		this.redirectIfLoggedIn();
-	}
 
-	redirectIfLoggedIn() {
-		if (this.props.loggedIn) {
-			this.props.router.replace("/posts");
-		}
-	}
 
 	update(field) {
 		return e => this.setState({
@@ -42,36 +37,14 @@ class SessionForm extends React.Component {
 		}
 	}
 
-	loginForm(){
-		return (
-			<div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
+	componentDidUpdate() {
+	this.redirectIfLoggedIn();
+	}
 
-					<h3 className="create-title">Please {this.props.formType} or {this.navLink()}</h3>
-					{this.renderErrors()}
-					<div className="login-form">
-						<br/>
-						<label> Username:
-							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<br/>
-						<input className="button" type="submit" value="Login" />
-						<br/>
-						{this.demoButton()}
-					</div>
-				</form>
-			</div>
-		)
+	redirectIfLoggedIn() {
+	  if (this.props.loggedIn) {
+			this.props.router.replace("/posts");
+		}
 	}
 
 
@@ -80,7 +53,17 @@ class SessionForm extends React.Component {
 		const user = { username: 'Guest', password: '123456'};
 		this.setState({ username: 'Guest', password: '123456'});
 		this.props.processForm({user});
+		this.props.router.replace("/posts");
+	}
 
+	otherLinks(){
+		if(this.props.formType === "login"){
+			return)
+			<div>
+				Not a member yet?
+				<Link
+			</div>
+		}
 	}
 
 	demoButton(){
@@ -90,7 +73,6 @@ class SessionForm extends React.Component {
 	}
 
 	renderErrors() {
-
 		return(
 			<ul>
 				{this.props.errors.map((error, i) => (
@@ -102,41 +84,39 @@ class SessionForm extends React.Component {
 		);
 	}
 
-	render() {
-		return (
-			<div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
-					<h3 className="create-title">{this.props.formType} or {this.navLink()}</h3>
-					{this.renderErrors()}
-					<div className="login-form">
-						<br/>
-						<label> Username:
-							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<br/>
-						<input className="button" type="submit" value="Submit" />
-						<br/>
-						{this.demoButton()}
-					</div>
-				</form>
-			</div>
+	render(){
+		const title = this.props.formType === "login" ?  "Login" : "Sign Up"
+			return(
+				<div className="login-form-container">
+					<form onSubmit={this.handleSubmit} className="login-form-box">
+						<h3 className="create-title">{title}</h3>
+						{this.renderErrors()}
+						<div className="login-form">
+							<br/>
+							<label> Username:
+								<input type="text"
+									value={this.state.username}
+									onChange={this.update("username")}
+									className="login-input" />
+							</label>
+							<br/>
+							<label> Password:
+								<input type="password"
+									value={this.state.password}
+									onChange={this.update("password")}
+									className="login-input" />
+							</label>
+							<br/>
+							<input className="button" type="submit" value="Submit" />
+							<br/>
+							{this.demoButton()}
 
-		);
-	}
+						</div>
+					</form>
+				</div>
+			)
+	 }
 
 }
 
 export default SessionForm;
-
-
-//{this.props.formType === "login" ? this.demoButton() : "" }

@@ -62,15 +62,13 @@
 }
 
 .login-form-box {
-  padding: 20px;
-  background-color: white;
-  text-align: left;
-  z-index: 3;
-  border-radius: 10px;
-  position: absolute;
-   top: 13%;
-   justify-content: center;
-   transform:scale(0.9);
+    padding: 20px;
+    background-color: white;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+    bottom: 90px;
+    left: 10px;
 }
 
 

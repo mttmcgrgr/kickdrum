@@ -2,7 +2,26 @@ import React from 'react';
 import Modal from 'react-modal';
 import modal from '../../util/modal';
 import SessionForm from '../session_form/session_form';
+import SessionFormContainer from '../session_form/session_form_container';
 import { Link, hashHistory } from 'react-router';
+
+const customStyles = {
+  content : {
+    display        : 'flex',
+    top            : '40%',
+    left           : '50%',
+    right          : 'auto',
+    bottom         : 'auto',
+    marginRight    : '-50%',
+    transform      : 'translate(-50%, -50%)',
+    width          : "250px",
+    height         : "370px"
+  },
+  overlay : {
+    zIndex: 15,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)'
+  }
+};
 
 
 class Greeting extends React.Component {
@@ -10,7 +29,7 @@ class Greeting extends React.Component {
     super(props);
     this.state = {
       modalOpen: false,
-      formType: 'login'
+      formType: ''
     };
     this.sessionLinks = this.sessionLinks.bind(this);
     this.personalGreeting = this.personalGreeting.bind(this);
@@ -24,8 +43,12 @@ class Greeting extends React.Component {
     Modal.setAppElement('body');
  }
 
-  modalOpen() {
-    this.setState({modalOpen: true});
+ componentDidMount() {
+    this.setState({ modalOpen: false });
+  }
+
+  modalOpen(formType) {
+    return () => this.setState({ modalOpen: true, formType: formType });
   }
 
   onModalOpen() {
@@ -40,27 +63,15 @@ class Greeting extends React.Component {
 
   sessionLinks(){
     return(
-    <div>
       <nav className="login-signup">
-        <button className="session-button" onClick={this.modalOpen}>
+        <button className="session-button" onClick={this.modalOpen("login")}>
           Login
         </button>
         &nbsp;&nbsp;
-        <button className="session-button" onClick={this.modalOpen}>
+        <button className="session-button" onClick={this.modalOpen("signup")}>
           Sign Up
         </button>
       </nav>
-      <Modal
-        isOpen={this.state.modalOpen}
-        onAfterOpen={this.onModalOpen}
-        onRequestClose={this.modalClose}
-        closeTimeoutMS={10}
-        contentLabel="Modal"
-        style={modal}>
-        <SessionForm formType={this.state.formType}/>
-      </Modal>
-
-    </div>
     );
   };
 
@@ -79,31 +90,42 @@ class Greeting extends React.Component {
     );
   };
 
-  formModal(type){
-    return(
-      <Modal
-        isOpen={this.state.modalOpen}
-        onAfterOpen={this.onModalOpen}
-        onRequestClose={this.modalClose}
-        closeTimeoutMS={10}
-        contentLabel="Modal"
-        style={modal}>
-        <SessionForm formType={this.state.type}/>
-      </Modal>
-    )
-  }
+
 
   render(){
     const { currentUser, logout } = this.props;
-
     if(currentUser){
       return (
         this.personalGreeting(currentUser, logout)
-      );
+      )
      } else {
       return (
-        this.sessionLinks()
-      );
+       <div>
+         <nav className="login-signup">
+           <button className="session-button" onClick={this.modalOpen("login")}>
+             Login
+           </button>
+           &nbsp;&nbsp;
+           <button className="session-button" onClick={this.modalOpen("signup")}>
+             Sign Up
+           </button>
+         </nav>
+
+          <Modal
+            isOpen={this.state.modalOpen}
+            onAfterOpen={this.onModalOpen}
+            onRequestClose={this.modalClose}
+            closeTimeoutMS={10}
+            contentLabel="Modal"
+            style={customStyles}>
+
+              <SessionFormContainer
+               formType={this.state.formType}
+               modalOpen={this.state.modalOpen}
+              />
+          </Modal>
+      </div>
+      )
     }
   }
 

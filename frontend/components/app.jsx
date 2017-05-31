@@ -12,11 +12,11 @@ const App = ({ children }) => (
     <div className="header-container">
       <div className="header-group-left">
         <div className="header-name">
-          <Link className="logo-text" to={`/posts`}>Kickdrum</Link>
+          <Link className="logo-text" to={`/home`}>Kickdrum</Link>
         </div>
       </div>
         <GreetingContainer className="header-group-right" />
-        
+
         <footer>
           <PlayerContainer />
         </footer>
@@ -27,7 +27,3 @@ const App = ({ children }) => (
 );
 
 export default App;
-
-
-
-// <img className="logo-image" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484184165/noun_409558_wimkcq.png"/>

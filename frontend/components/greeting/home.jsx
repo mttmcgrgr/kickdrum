@@ -1,5 +1,5 @@
 import React from 'react';
-import SessionFeedContainer from './home_feed_container';
+import HomeFeedContainer from './home_feed_container';
 
 const Home = () => (
   <div className='welcome-descriptions'>

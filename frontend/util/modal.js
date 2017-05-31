@@ -23,7 +23,7 @@ module.exports = {
     padding                    : '0px',
     opacity                    : '0',
     display                    : 'flex',
-
+    zIndex                     : 15,
     width             : '995px',
     height            : '549px'
   }
