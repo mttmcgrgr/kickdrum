@@ -106,7 +106,7 @@ class Greeting extends React.Component {
             onRequestClose={this.modalClose}
             closeTimeoutMS={10}
             contentLabel="Modal"
-            style={customStyles}>
+            style={SessionModal}>
 
               <SessionFormContainer
                formType={this.state.formType}
