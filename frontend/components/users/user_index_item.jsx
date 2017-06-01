@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import modal from '../../util/modal';
+import ProfileModal from '../../util/profile_modal';
 import { fetchUser, deletePost } from '../../actions/post_actions';
 import UserInfo from './user_info'
 
@@ -64,7 +64,7 @@ class UserIndexItem extends React.Component {
             onRequestClose={this.modalClose}
             closeTimeoutMS={10}
             contentLabel="Modal"
-            style={modal}>
+            style={ProfileModal}>
               <section>
                 <div className="container">
                   <img className="modal-image" src={post.cover_url} onClick={this.modalOpen}/>

@@ -1,27 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
-import modal from '../../util/modal';
+import SessionModal from '../../util/session_modal';
 import SessionForm from '../session_form/session_form';
 import SessionFormContainer from '../session_form/session_form_container';
 import { Link, hashHistory } from 'react-router';
-
-const customStyles = {
-  content : {
-    display        : 'flex',
-    top            : '40%',
-    left           : '50%',
-    right          : 'auto',
-    bottom         : 'auto',
-    marginRight    : '-50%',
-    transform      : 'translate(-50%, -50%)',
-    width          : "250px",
-    height         : "370px"
-  },
-  overlay : {
-    zIndex: 15,
-    backgroundColor: 'rgba(0, 0, 0, 0.4)'
-  }
-};
 
 
 class Greeting extends React.Component {
