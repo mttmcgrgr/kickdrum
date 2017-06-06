@@ -65,6 +65,10 @@
   text-align: center;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 
 
 
@@ -334,8 +338,7 @@ audio {
   width: 100%;
   height: 150px;
   background-color: #8d929a;
-  border-top: 2px solid black;
-  z-index: 100;
+
 }
 
 .welcome-subcontainer {
@@ -345,6 +348,13 @@ audio {
   align-items: center;
   height: 100%;
   width: 33%;
+  z-index: 3;
+  background-color: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin-left: 5px;
+  margin-right: 5px;
+  opacity: 0.90;
 }
 
 .middle {
