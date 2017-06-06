@@ -27,14 +27,14 @@ class UserIndexItem extends React.Component {
   }
 
   onModalOpen() {
-    modal.content.opacity = 100;
+    ProfileModal.content.opacity = 100;
 
   }
 
 
   modalClose() {
     this.setState({modalOpen: false});
-    modal.content.opacity = 0;
+    ProfileModal.content.opacity = 0;
   }
 
 

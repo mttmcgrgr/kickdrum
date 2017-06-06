@@ -2,10 +2,9 @@ import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 
 class PlayerBar extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
-
 
 
   render() {
@@ -23,6 +22,7 @@ class PlayerBar extends React.Component {
           src={this.props.song_url}
           autoPlay
         />
+      
      </div>
     </div>
      );

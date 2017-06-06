@@ -35,13 +35,13 @@ class Greeting extends React.Component {
   }
 
   onModalOpen() {
-    modal.content.opacity = 100;
+    SessionModal.content.opacity = 100;
 
   }
 
   modalClose() {
     this.setState({modalOpen: false});
-    modal.content.opacity = 0;
+    SessionModal.content.opacity = 0;
   }
 
   closeAndOpenModal(formType) {
