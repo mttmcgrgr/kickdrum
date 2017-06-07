@@ -17,9 +17,8 @@ border-width: 1px;
 
 .user-info-container {
   display: flex;
-  justify-content: center;
-  transform: scale(0.9);
-  padding-bottom: 5px;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .modal {
@@ -36,6 +35,10 @@ border-width: 1px;
     float: right;
     position: relative;
     top: 10px;
+}
+
+.featured {
+  display: flex;
 }
 
 .info-bookmark {

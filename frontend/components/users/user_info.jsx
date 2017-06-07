@@ -33,7 +33,7 @@ class UserInfo extends React.Component {
        )
      } else {
        return(
-        <div>
+        <div className="featured">
            <img className="info-play"
              src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"
              onClick={()=> (receiveTrack(recentPost))}/>
