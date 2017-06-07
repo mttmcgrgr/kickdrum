@@ -17,8 +17,9 @@ border-width: 1px;
 
 .user-info-container {
   display: flex;
-    justify-content: center;
-    flex-direction: row;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 0;
 }
 
 .modal {

@@ -34,21 +34,22 @@ class Greeting extends React.Component {
     return () => this.setState({ modalOpen: true, formType: formType });
   }
 
-  onModalOpen() {
-    SessionModal.content.opacity = 100;
-
-  }
-
   modalClose() {
+    this.props.clearErrors();
     this.setState({modalOpen: false});
     SessionModal.content.opacity = 0;
   }
 
   closeAndOpenModal(formType) {
     return () => {
-      this.openModal(formType)();
+      this.modalOpen(formType)();
     };
   }
+
+  onModalOpen() {
+    SessionModal.content.opacity = 100;
+  }
+
 
   sessionLinks(){
     return(
@@ -108,12 +109,14 @@ class Greeting extends React.Component {
             contentLabel="Modal"
             style={SessionModal}>
 
-              <SessionFormContainer
-               formType={this.state.formType}
-               modalOpen={this.state.modalOpen}
-               closeAndOpenModal={this.closeAndOpenModal}
-              />
-          </Modal>
+            <SessionFormContainer
+             formType={this.state.formType}
+             isOpen={this.state.modalOpen}
+             modalOpen={this.modalOpen}
+             modalClose={this.modalClose}
+             closeAndOpenModal={this.closeAndOpenModal}
+            />
+        </Modal>
       </div>
       )
     }

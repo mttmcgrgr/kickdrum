@@ -4,15 +4,12 @@ import HomeFeedItem from './home_feed_item';
 
 class HomeFeed extends React.Component {
 
-
   componentDidMount() {
     this.props.fetchPosts();
   }
 
-
   render () {
     const posts = [...this.props.posts];
-
 
     return (
 

@@ -18,6 +18,7 @@ module.exports = {
     marginRight    : '-50%',
     transform      : 'translate(-50%, -50%)',
     width          : '995px',
-    height         : '549px'
+    height         : '549px',
+    zIndex         : 1000
   }
 };
