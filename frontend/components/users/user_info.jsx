@@ -7,6 +7,7 @@ class UserInfo extends React.Component {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
     this.createPost = this.createPost.bind(this);
+    this.featuredPost = this.featuredPost.bind(this);
   }
 
   handleDelete() {
@@ -17,6 +18,31 @@ class UserInfo extends React.Component {
   createPost() {
      const url = `/posts/new`;
      hashHistory.push(url);
+   }
+
+   featuredPost() {
+     const { post, user, receiveTrack} = this.props;
+
+     if(user.posts.length === 0){
+       return(
+          <div className="parent">
+           <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
+           <img className="image2" src="http://res.cloudinary.com/dccshngpp/image/upload/v1496796665/12-Vinyl-LP-Record-4_e9nbgk.png"/>
+          </div>
+       )
+     } else {
+       return(
+        <div>
+           <img className="info-play"
+             src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"
+             onClick={()=> (receiveTrack(recentPost))}/>
+            <div className="parent">
+             <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
+             <img className="image2" src={post.cover_url}/>
+           </div>
+         </div>
+       )
+     }
    }
 
   render(){
@@ -37,13 +63,7 @@ class UserInfo extends React.Component {
     if(currentUser.username === user.username){
       return (
         <div className="user-info-container">
-          <img className="info-play"
-            src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"
-            onClick={()=> (receiveTrack(recentPost))}/>
-           <div className="parent">
-            <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
-            <img className="image2" src={recentPost.cover_url}/>
-          </div>
+          {this.featuredPost()}
 
           <div className="user-info-box">
             <h1 className="user-name-info">{currentUser.username}</h1>
