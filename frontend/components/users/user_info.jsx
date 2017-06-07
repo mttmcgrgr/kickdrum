@@ -25,7 +25,7 @@ class UserInfo extends React.Component {
     let recentPost = post;
     if(user.posts.length === 0){
        recentPost = {
-        cover_url: "https://res.cloudinary.com/dccshngpp/image/upload/v1484894838/gelbe_Note_jzhs4a.png",
+        cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496796665/12-Vinyl-LP-Record-4_e9nbgk.png",
         song_url: "",
         title: "Add your first post!",
         artist: ""

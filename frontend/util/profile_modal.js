@@ -11,15 +11,13 @@ module.exports = {
   },
   content : {
     display        : 'flex',
-    top            : '40%',
+    top            : '50%',
     left           : '50%',
     right          : 'auto',
     bottom         : 'auto',
     marginRight    : '-50%',
     transform      : 'translate(-50%, -50%)',
-    width          : "250px",
-    height         : "370px",
-    width             : '995px',
-    height            : '549px'
+    width          : '995px',
+    height         : '549px'
   }
 };
