@@ -10,7 +10,7 @@ module.exports = {
     height            : '100%'
   },
   content : {
-    position                   : 'relative',
+    display                   : 'flex',
     top                        : '16%',
     left                       : '20%',
     bottom                     : '40px',

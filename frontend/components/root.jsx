@@ -15,7 +15,7 @@ const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/login');
+      replace('/home');
     }
   };
 
@@ -42,8 +42,3 @@ const Root = ({ store }) => {
 };
 
 export default Root;
-
-
-
-//<Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-//<Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />

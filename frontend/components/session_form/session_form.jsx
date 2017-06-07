@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		this.props.processForm({user});
-		this.props.router.push(`/posts`);
+		hashHistory.push(`/posts`);
 		this.setState({refresh: true})
 	}
 
@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
 
 	redirectIfLoggedIn() {
 	  if (this.props.loggedIn) {
-			this.props.router.replace("/posts");
+			hashHistory.replace("/posts");
 		}
 	}
 
@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
 		const user = { username: 'Guest', password: '123456'};
 		this.setState({ username: 'Guest', password: '123456'});
 		this.props.processForm({user});
-		this.props.router.push(`/posts`);
+		hashHistory.push(`/posts`);
 	}
 
 	otherFormLink() {
