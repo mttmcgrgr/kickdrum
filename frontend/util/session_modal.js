@@ -7,8 +7,8 @@ module.exports = {
     bottom         : 'auto',
     marginRight    : '-50%',
     transform      : 'translate(-50%, -50%)',
-    width          : "250px",
-    height         : "370px"
+    width          : "240px",
+    height         : "430px"
   },
   overlay : {
     zIndex: 15,

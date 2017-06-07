@@ -12,7 +12,6 @@ class SessionForm extends React.Component {
 		 };
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.guestLogin = this.guestLogin.bind(this);
-		this.demoButton = this.demoButton.bind(this);
 		this.changeForm = this.changeForm.bind(this);
 	}
 
@@ -27,68 +26,55 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
-		this.props.processForm({user});
-		hashHistory.push(`/posts`);
+		this.props.processForm({user})
+		hashHistory.push(`/posts`)
+	}
+
+
+	guestLogin(){
+
+		 this.setState({
+ 			username: "Guest",
+ 			password: "123456",
+ 		 })
 		this.setState({refresh: true})
-	}
-
-	navLink() {
-		if (this.props.formType === "login") {
-			return <Link to="/signup" className="session">signup !</Link>;
-		} else {
-			return <Link to="/login" className="session">login instead!</Link>;
-		}
-	}
-
-	componentDidUpdate() {
-	this.redirectIfLoggedIn();
-	}
-
-	redirectIfLoggedIn() {
-	  if (this.props.loggedIn) {
-			hashHistory.replace("/posts");
-		}
-	}
-
-
-	guestLogin(e) {
-		e.preventDefault;
-		const user = { username: 'Guest', password: '123456'};
-		this.setState({ username: 'Guest', password: '123456'});
-		this.props.processForm({user});
-		hashHistory.push(`/posts`);
+		const user = this.state;
+ 		this.props.processForm({user})
+ 		hashHistory.push(`/posts`)
 	}
 
 	changeForm() {
     if (this.props.formType === 'login') {
       return(
-				<div>
-					<a onClick={ this.props.modalOpen('signup') }>{'Don\'t have an account yet?'}</a>
-					<a onClick={ this.guestLogin() }>{'Demo Account'}</a>
+				<div className="session-text">
+					<a onClick={ this.props.closeAndOpenModal('signup') }>{'Don\'t have an account?'}</a>
+					<br/>
+					<a onClick={ this.guestLogin }>{'Demo'}</a>
+					<br/>
+					<a onClick={ this.props.modalClose }>{'Close'}</a>
 				</div>
 				)
     } else {
       return(
-				<a onClick={ this.props.modalOpen('login') }>{'Already signed up?'}</a>
+				<div className="session-text">
+					<a className="session-text" onClick={ this.props.closeAndOpenModal('login') }>{'Already have an account?'}</a>
+					<br/>
+				<a onClick={ this.guestLogin }>{'Demo'}</a>
+					<br/>
+					<a onClick={ this.props.modalClose }>{'Close'}</a>
+				</div>
+
 			)
     }
   }
 
-	demoButton(){
-		if (this.props.formType === 'login') {
-		return (
-			  <a onClick={ this.guestLogin() }>{'Demo Account'}</a>
-		  );
-	  } else {
-			return ""
-		}
-	}
+
 
 	renderErrors() {
 		return(
-			<ul>
+			<ul className="errors">
 				{this.props.errors.map((error, i) => (
-					<li key={`error-${i}`}>
+					<li className="errors"  key={`error-${i}`}>
 						{error}
 					</li>
 				))}
@@ -97,12 +83,15 @@ class SessionForm extends React.Component {
 	}
 
 	render(){
+
 		const title = this.props.formType === "login" ?  "Login" : "Sign Up"
 			return(
 				<div className="login-form-container">
 					<form onSubmit={this.handleSubmit} className="login-form-box">
 						<h3 className="create-title">{title}</h3>
+
 						{this.renderErrors()}
+
 						<div className="login-form">
 							<br/>
 							<label> Username:
@@ -121,6 +110,7 @@ class SessionForm extends React.Component {
 							<br/>
 							<input className="button" type="submit" value="Submit" />
 							<br/>
+
 								{this.changeForm()}
 
 						</div>
@@ -131,4 +121,4 @@ class SessionForm extends React.Component {
 
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
