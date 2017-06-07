@@ -8,6 +8,7 @@ class UserInfo extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.createPost = this.createPost.bind(this);
     this.featuredPost = this.featuredPost.bind(this);
+    this.userInfo = this.userInfo.bind(this);
   }
 
   handleDelete() {
@@ -45,6 +46,43 @@ class UserInfo extends React.Component {
      }
    }
 
+   userInfo(){
+     const { post, user, deletePost, currentUser} = this.props;
+     if(user.posts.length === 0){
+       return(
+         <div className="user-info-box">
+           <h1 className="user-name-info">{user.username}</h1>
+           <img className="user_photo" src={user.photo_url}/>
+           <button className="add-button" onClick={this.createPost}>
+             <img className="add-post-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487813182/button_create_ldioq7.png"/>
+           </button>
+           <h1 className="user-song-info">{post.title}</h1>
+           <h3 className="user-song-info">{post.artist}</h3>
+           <img className="info-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
+         </div>
+       )
+     } else {
+       return(
+         <div className="user-info-box">
+           <h1 className="user-name-info">{user.username}</h1>
+           <img className="user_photo" src={user.photo_url}/>
+           <button className="add-button" onClick={this.createPost}>
+             <img className="add-post-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487813182/button_create_ldioq7.png"/>
+           </button>
+           <h1 className="user-song-info">{post.title}</h1>
+           <h3 className="user-song-info">{post.artist}</h3>
+           <img className="info-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
+         </div>
+
+       )
+
+     }
+
+
+
+
+   }
+
   render(){
     const { post, user, currentUser, deletePost, receiveTrack} = this.props;
 
@@ -80,13 +118,7 @@ class UserInfo extends React.Component {
     } else {
       return (
         <div className="user-info-container">
-          <img className="info-play"
-            src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"
-            onClick={()=> (receiveTrack(user.posts[user.posts.length - 1]))}/>
-           <div className="parent">
-            <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
-            <img className="image2" src={user.posts[user.posts.length -1].cover_url}/>
-          </div>
+          {this.featuredPost()}
 
           <div className="user-info-box">
             <h1 className="user-name-info">{user.username}</h1>
