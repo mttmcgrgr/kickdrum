@@ -241,8 +241,8 @@
   align-items: center;
   position: relative;
   width: 100%;
-  
   right: 55px;
+  bottom: 8%;
 
   a {
     color: white;
@@ -480,13 +480,16 @@ audio {
 }
 
 .footer-text {
-    color: white;
-    position: fixed;
-    font-weight: bold;
-    text-align: center;
-    background-color: #6496c8;
-    font-size: 25px;
-    bottom: 335px;
+  color: white;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  font-weight: bold;
+  text-align: center;
+  background-color: #6496c8;
+  font-size: 25px;
+  bottom: 10%;
+  padding-left: 20px;
 }
 
 

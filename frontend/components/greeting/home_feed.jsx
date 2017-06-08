@@ -14,8 +14,6 @@ class HomeFeed extends React.Component {
     return (
 
       <div className="session-feed-container">
-        <h1 className="footer-text">Popular Now:</h1>
-        <br/>
         {posts.map(post => (
           <HomeFeedItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
         ))}

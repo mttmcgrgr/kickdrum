@@ -147,10 +147,11 @@ input:hover {
     display: flex;
     position: relative;
     left: 50px;
-    bottom: 50px;
+    bottom: 15%;
     justify-content: flex-start;
     list-style: none;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
 };
 
 .logout {

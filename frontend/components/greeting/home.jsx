@@ -8,7 +8,7 @@ const Home = () => (
 
 
     <footer className="footer">
-
+      <div className="footer-text">Now Trending:</div>
       <HomeFeedContainer />
 
       <div className="links-container">

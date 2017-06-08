@@ -2,7 +2,7 @@ module.exports = {
   content : {
     display        : 'flex',
     top            : '40%',
-    left           : '50%',
+    left           : '47%',
     right          : 'auto',
     bottom         : 'auto',
     marginRight    : '-50%',
