@@ -14,7 +14,7 @@
  *= require_self
  */
  @import "base/reset.scss";
- 
+
 
 
 
@@ -68,6 +68,10 @@
 
 .button:hover {
   cursor: pointer;
+}
+
+.home-vinyl {
+  height: 35px;
 }
 
 
@@ -230,6 +234,25 @@
     top: 305px;
     left: 440px;
 }
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 8px;
+
+    a {
+      color: white;
+      margin: 10px;
+      padding: 0px 3px;
+    }
+
+    a:hover {
+      cursor: pointer;
+    }
+  }
+
 
 
 
