@@ -7,11 +7,9 @@ class PostIndex extends React.Component {
     this.props.fetchPosts();
   }
 
-
-
   render () {
     const { posts } = this.props;
-
+  
     return (
       <div>
         <ul className="post_content_main">

@@ -77,15 +77,30 @@
 
 .post_header {
     padding: 20px 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-top: 1px solid rgba(0,0,0,0.08);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background-color: white;
     width:572px;
-    color: #6295CA;
+
     font-size: 20px;
-    font-weight: bold; 
+    font-weight: normal;
     position:relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.post-user-pic {
+  height: 50px;
+  border-radius: 30px;
+}
+
+.post-user-name {
+  position: relative;
+  top: 12px;
+  padding-left: 10px;
 }
 
 

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { logout, signup, login, clearErrors} from '../../actions/session_actions';
-import Greeting from './greeting';
+import { logout, signup, login, clearErrors } from '../../actions/session_actions';
+import Navbar from './navbar';
 
 
 const mapStateToProps = (state) => ({
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Greeting);
+)(Navbar);

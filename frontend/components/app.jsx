@@ -1,5 +1,5 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
+import NavbarContainer from './home/navbar_container';
 import { Link, hashHistory } from 'react-router';
 import PlayerContainer from './player/player_container';
 
@@ -15,7 +15,7 @@ const App = ({ children }) => (
           <Link className="logo-text" to={`/home`}>Kickdrum</Link>
         </div>
       </div>
-        <GreetingContainer className="header-group-right" />
+        <NavbarContainer className="header-group-right" />
 
         <footer>
           <PlayerContainer />

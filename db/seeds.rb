@@ -11,10 +11,10 @@
 
 User.create!([
   { username: 'Guest', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"},
-  { username: 'mttmcgrgr', password: '123456'},
-  { username: 'noelle', password: '123456'},
-  { username: 'smalkmus', password: '123456'},
-  { username: 'jmascis', password: '123456'}
+  { username: 'mttmcgrgr', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496959781/16123928_1332802113439156_6000979656600190976_n_czvprv.jpg"},
+  { username: 'noelle', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496959784/13423015_1754629838088297_183801605_a_w1zkpv.jpg"},
+  { username: 'smalkmus', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496960284/download-1_l9z3xm.jpg"},
+  { username: 'jmascis', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496960282/download_pm0loa.jpg"}
   ])
 
 

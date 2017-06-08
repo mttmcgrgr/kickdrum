@@ -34,14 +34,15 @@
     width: 300px;
     top: 15px;
     position: relative;
+    font-weight: normal;
 }
 
 .user-name-info {
-    position: relative;
-    top: 10px;
-    font-weight: normal;
-    font-size: 30px;
-    padding-left: 5px;
+  position: relative;
+  top: 5px;
+  font-weight: normal;
+  font-size: 25px;
+  padding-left: 10px;
 }
 
 .name-photo-container {
@@ -68,8 +69,8 @@
 }
 
 .user_photo {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   float: left;
   border-radius: 30px;
   position: relative;
