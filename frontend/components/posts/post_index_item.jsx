@@ -13,7 +13,7 @@ const PostIndexItem = ( {post, receiveTrack} ) => {
         <img className="image" src={post.cover_url}/>
           <div className="middle">
             <img
-              className="play"
+              className="post-play"
               onClick={()=> (receiveTrack(post))}
               src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"
             />
