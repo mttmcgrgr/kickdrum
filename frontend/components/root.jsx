@@ -8,7 +8,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import PostIndexContainer from './posts/post_index_container';
 import PostFormContainer from './posts/post_form_container';
 import UserProfileContainer from './users/user_profile_container';
-import Home from './greeting/home';
+import Home from './home/home';
 
 const Root = ({ store }) => {
 
