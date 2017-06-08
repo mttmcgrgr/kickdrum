@@ -241,7 +241,7 @@
   align-items: center;
   position: relative;
   width: 100%;
-  top: 80px;
+  
   right: 55px;
 
   a {
@@ -468,15 +468,13 @@ audio {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     position: fixed;
-
     display: flex;
     bottom: 0px;
     width: 100%;
     margin-bottom: 0px;
     background-color: #6496c8;
-    overflow: scroll;
+
     height: 40%;
 
 }

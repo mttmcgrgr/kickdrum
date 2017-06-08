@@ -145,11 +145,12 @@ input:hover {
 .session-feed-container {
   margin-top: 10px;
     display: flex;
-    position: fixed;
+    position: relative;
     left: 50px;
-    bottom: 170px;
+    bottom: 50px;
     justify-content: flex-start;
     list-style: none;
+    overflow: scroll;
 };
 
 .logout {
