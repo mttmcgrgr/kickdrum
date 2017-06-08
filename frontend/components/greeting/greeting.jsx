@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import SessionModal from '../../util/session_modal';
 import SessionForm from '../session_form/session_form';
 import SessionFormContainer from '../session_form/session_form_container';
-import { Link, hashHistory } from 'react-router';
+import { Link, hashHistory, withRouter } from 'react-router';
 
 
 class Greeting extends React.Component {
@@ -11,7 +11,8 @@ class Greeting extends React.Component {
     super(props);
     this.state = {
       modalOpen: false,
-      formType: ''
+      formType: '',
+      refresh: false
     };
     this.sessionLinks = this.sessionLinks.bind(this);
     this.personalGreeting = this.personalGreeting.bind(this);
@@ -20,6 +21,7 @@ class Greeting extends React.Component {
     this.onModalOpen = this.onModalOpen.bind(this);
     this.logOutRedirect = this.logOutRedirect.bind(this);
     this.closeAndOpenModal = this.closeAndOpenModal.bind(this);
+    this.guestLogin = this.guestLogin.bind(this);
   }
 
   componentWillMount() {
@@ -70,6 +72,11 @@ class Greeting extends React.Component {
     this.modalClose();
   }
 
+  guestLogin() {
+		const user = {username: "Guest", password: "123456"}
+		this.props.login({user}).then(() => this.props.router.push("/posts"));
+	}
+
 
   personalGreeting(currentUser, logout){
     return(
@@ -79,7 +86,6 @@ class Greeting extends React.Component {
   	</hgroup>
     );
   };
-
 
 
   render(){
@@ -92,6 +98,10 @@ class Greeting extends React.Component {
       return (
        <div>
          <nav className="login-signup">
+           <button className="session-button" onClick={this.guestLogin}>
+             Demo
+           </button>
+           &nbsp;&nbsp;
            <button className="session-button" onClick={this.modalOpen("login")}>
              Login
            </button>
@@ -124,4 +134,4 @@ class Greeting extends React.Component {
 
 }
 
-export default Greeting;
+export default withRouter(Greeting);

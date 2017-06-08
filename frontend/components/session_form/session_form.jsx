@@ -8,7 +8,6 @@ class SessionForm extends React.Component {
 		this.state = {
 			username: "",
 			password: "",
-			refresh: false
 		 };
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.guestLogin = this.guestLogin.bind(this);
@@ -31,16 +30,11 @@ class SessionForm extends React.Component {
 	}
 
 
-	guestLogin(){
-
-		 this.setState({
- 			username: "Guest",
- 			password: "123456",
- 		 })
-		this.setState({refresh: true})
+	guestLogin() {
+		this.state.username = "Guest";
+		this.state.password = "123456";
 		const user = this.state;
- 		this.props.processForm({user})
- 		hashHistory.push(`/posts`)
+		this.props.login({user}).then(() => this.props.router.push("/posts"));
 	}
 
 	changeForm() {
@@ -84,7 +78,7 @@ class SessionForm extends React.Component {
 
 	render(){
 
-		const title = this.props.formType === "login" ?  "Login" : "Sign Up"
+		const title = this.props.formType === "login" ?  "Login" : "Create Account"
 			return(
 				<div className="login-form-container">
 					<form onSubmit={this.handleSubmit} className="login-form-box">

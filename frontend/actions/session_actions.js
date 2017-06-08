@@ -12,9 +12,9 @@ export const signup = user => dispatch => (
 );
 
 export const login = user => dispatch => (
-  APIUtil.login(user)
-    .then(user1 => dispatch(receiveCurrentUser(user1)),
-      err => dispatch(receiveErrors(err.responseJSON)))
+  APIUtil.login(user).then( currentUser => {
+    dispatch(receiveCurrentUser(currentUser)); }
+  ).fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const logout = () => dispatch => (

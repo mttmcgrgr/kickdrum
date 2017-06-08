@@ -15,11 +15,11 @@ const mapStateToProps = (state, ownProps) => ({
 
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const form = ownProps.formType === 'login' ?
+  const currentForm = ownProps.formType === 'login' ?
     (user) => dispatch(login(user)) : (user) => dispatch(signup(user));
-    
+
   return ({
-    processForm: form,
+    processForm: currentForm,
     login: (user) => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors())
   });
