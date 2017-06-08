@@ -11,7 +11,7 @@
     width: 300px;
     position: absolute;
     top: 120px;
-    right: 145px;
+    right: 175px;
     font-size: 30px;
   }
 
@@ -22,13 +22,13 @@
     top: 150px;
     right: 100px;
     font-size: 23px;
-    right: 145px;
+    right: 170px;
   }
 
   .modal-name-info {
     float: right;
     position: relative;
-    top: 25px;
+    top: 50px;
     left: 20px;
   }
 
@@ -37,7 +37,7 @@
     weight: 50px;
     position: absolute;
     bottom: 20px;
-    right: 400px;
+    right: 430px;
 }
 
 .modal-play{
@@ -50,12 +50,13 @@
 
 
   .modal-photo {
-      height: 70px;
-      width: 70px;
-      float: right;
-      border-radius: 30px;
-      position: relative;
+    height: 70px;
+    width: 70px;
+    float: left;
+    border-radius: 30px;
+    position: relative;
     left: 10px;
+    top: 15px;
   }
 
   .modal-top-section {
