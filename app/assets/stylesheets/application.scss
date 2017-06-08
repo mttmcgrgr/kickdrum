@@ -242,6 +242,7 @@
   position: relative;
   width: 100%;
   top: 80px;
+  right: 55px;
 
   a {
     color: white;
@@ -341,9 +342,10 @@ audio {
 
 
 .container {
-    position: relative;
-    width: 50%;
+  position: relative;
+  width: 100%;
 }
+
 
 .image {
   opacity: 1;
@@ -396,12 +398,13 @@ audio {
 
 .middle {
   opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transition: .5s ease;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    /* left: 100%; */
+    transition: .5s ease;
+
 }
 
 
@@ -425,14 +428,23 @@ audio {
   opacity: 1;
 }
 
+.modal-icon {
+   color: white;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    bottom: 30px;
+    left: 5px;
+}
 
 
 
 .play {
   color: white;
-  padding: 16px 32px;
-  width: 120px;
-  height: 120px;
+    height: 120px;
+    position: relative;
+    left: 95px;
+    bottom: 60px;
 }
 
 

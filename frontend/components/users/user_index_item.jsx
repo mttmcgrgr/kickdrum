@@ -55,9 +55,11 @@ class UserIndexItem extends React.Component {
               <img className="user-image" src={post.cover_url} onClick={this.modalOpen}/>
                 <div className="middle">
                   <img className="play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
+                  <img className="modal-icon" onClick={this.modalOpen} src="http://res.cloudinary.com/dccshngpp/image/upload/v1496898350/grey-modal_h5lsun.png"/>
                </div>
            </div>
           </section>
+
           <Modal
             isOpen={this.state.modalOpen}
             onAfterOpen={this.onModalOpen}
@@ -80,9 +82,9 @@ class UserIndexItem extends React.Component {
                 <h1 className="modal-song-info">{post.title}</h1>
                 <h3 className="modal-artist-info">{post.artist}</h3>
                 <img className="modal-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
-
               </section>
           </Modal>
+
         </div>
       );
   }
