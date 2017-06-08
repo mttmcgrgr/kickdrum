@@ -71,7 +71,7 @@ class UserIndexItem extends React.Component {
                 <div className="container">
                   <img className="modal-image" src={post.cover_url} onClick={this.modalOpen}/>
                     <div className="middle">
-                      <img className="play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
+                      <img className="modal-play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
                    </div>
                </div>
               </section>
