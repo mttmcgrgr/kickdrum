@@ -235,26 +235,35 @@
     left: 440px;
 }
 
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  top: 80px;
+
+  a {
+    color: white;
+    margin: 10px;
+    padding: 0px 3px;
+  }
+
+}
+
 .footer-links {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 8px;
 
-    a {
-      color: white;
-      margin: 10px;
-      padding: 0px 3px;
-    }
 
-    a:hover {
-      cursor: pointer;
-    }
   }
 
 
-
+  a:hover {
+    cursor: pointer;
+  }
 
 
 audio {
@@ -428,31 +437,30 @@ audio {
 
 
 .footer {
-    position:fixed;
-    display:flex;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    margin-bottom:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    display: flex;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 0px;
     background-color: #6496c8;
     overflow: scroll;
-    height:40%;
-    transform: scale(1);
-
+    height: 40%;
 
 }
 
 .footer-text {
-  color: white;
-  position: fixed;
-  padding-top: 5px;
-  font-weight: bold;
-  text-align: center;
-  background-color: #6496c8;
-  font-size: 20px;
-  padding-left: 30px;
-
-
+    color: white;
+    position: fixed;
+    font-weight: bold;
+    text-align: center;
+    background-color: #6496c8;
+    font-size: 25px;
+    bottom: 335px;
 }
 
 

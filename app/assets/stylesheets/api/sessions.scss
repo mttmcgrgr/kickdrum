@@ -144,12 +144,12 @@ input:hover {
 
 .session-feed-container {
   margin-top: 10px;
-   display: flex;
-   justify-content: flex-start;
-   list-style: none;
-   height: 100px;
-   width: 900px;
-   transform: scale(0.9);
+    display: flex;
+    position: fixed;
+    left: 50px;
+    bottom: 170px;
+    justify-content: flex-start;
+    list-style: none;
 };
 
 .logout {

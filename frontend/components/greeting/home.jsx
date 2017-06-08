@@ -4,19 +4,21 @@ import { Link, hashHistory, withRouter } from 'react-router';
 
 
 const Home = () => (
-  <div className='welcome-descriptions'>
+
 
 
     <footer className="footer">
-       <h1 className="footer-text">Popular Now:</h1>
+
       <HomeFeedContainer />
-      <div className='footer-links'>
+
+      <div className="links-container">
          <a href='https://github.com/mttmcgrgr/kickdrum' target="_blank">Github</a>
          <img className="home-vinyl" src="http://res.cloudinary.com/dccshngpp/image/upload/v1496889642/favicon_ntjldt.ico"/>
          <a href='https://www.linkedin.com/in/matt-mcgregor/' target="_blank">LinkedIn</a>
-       </div>
+      </div>
+
     </footer>
-  </div>
+
 );
 
 export default Home;
