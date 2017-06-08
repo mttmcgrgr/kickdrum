@@ -2,7 +2,7 @@ import {RECEIVE_USER, REMOVE_USER } from '../actions/user_actions';
 import merge from 'lodash/merge';
 
 const defaultState = {
-  username : "Add your first post",
+  username : "",
   photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg",
   posts: [{
     cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496796665/12-Vinyl-LP-Record-4_e9nbgk.png",
