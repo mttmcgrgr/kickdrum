@@ -152,6 +152,10 @@
     margin: 20px;
     margin-bottom: 30px;
 
+    img:hover {
+      cursor: pointer;
+    }
+
 }
 
 
@@ -243,6 +247,7 @@
   width: 100%;
   right: 55px;
   bottom: 8%;
+  transform: scale(0.8);
 
   a {
     color: white;
@@ -257,8 +262,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-
-
   }
 
 
@@ -274,7 +277,29 @@ audio {
     width: 50%;
     display: flex;
     justify-content: flex-end;
+}
 
+.greeting-profile {
+  height: 50px;
+    bottom: 10px;
+    left: 9px;
+    display: flex;
+    position: relative;
+}
+
+.greeting-logout {
+  position: relative;
+  height: 43px;
+  right: 10px;
+  top: 5px;
+}
+
+.greeting-feed {
+  height: 50px;
+    bottom: 10px;
+    display: flex;
+    position: relative;
+    right: 65px;
 }
 
 

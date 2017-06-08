@@ -81,8 +81,24 @@ class Greeting extends React.Component {
   personalGreeting(currentUser, logout){
     return(
   	<hgroup className="header-group-right">
-      <Link to={`/users/${currentUser.id}`} className="user-name">{currentUser.username}</Link>
-      <button className="logout-button" onClick={this.logOutRedirect}>Log Out</button>
+      <Link to={`/posts`} className="user-name">
+        <img
+          className="greeting-feed"
+          src="http://res.cloudinary.com/dccshngpp/image/upload/v1496952043/download_cwklov.jpg"
+          />
+      </Link>
+      <Link to={`/users/${currentUser.id}`} className="user-name">
+        <img
+          className="greeting-profile"
+          src="http://res.cloudinary.com/dccshngpp/image/upload/v1496952045/profile-user-outline-vector-icon--social-icons--icons-download-26_oogjhi.png"
+          />
+      </Link>
+      <img
+        className="greeting-logout"
+        onClick={this.logOutRedirect}
+        src="http://res.cloudinary.com/dccshngpp/image/upload/v1496952049/43619-200_niqaab.png"
+        />
+
   	</hgroup>
     );
   };

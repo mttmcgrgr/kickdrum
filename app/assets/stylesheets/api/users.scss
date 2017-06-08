@@ -4,15 +4,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .user-info-box {
-padding: 20px;
-background-color: white;
-height: 358px;
-width: 460px;
-position: relative;
-top: 20px;
-left: 212px;
-border-style: solid;
-border-width: 1px;
+      padding: 20px;
+      background-color: white;
+      height: 358px;
+      width: 460px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      top: 20px;
+      left: 212px;
+      border-style: solid;
+      border-width: 1px;
 }
 
 .user-info-container {
@@ -29,17 +31,33 @@ border-width: 1px;
 
 .user-song-info {
   text-align: left;
-  width: 300px;
+    width: 300px;
+    top: 15px;
+    position: relative;
 }
 
 .user-name-info {
-    float: right;
     position: relative;
     top: 10px;
+    font-weight: normal;
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+.name-photo-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .featured {
   display: flex;
+}
+
+.sticky-note-add {
+  z-index: 3;
+  position: relative;
+  left: 380px;
+  top: 0px;
 }
 
 .info-bookmark {
@@ -50,12 +68,18 @@ border-width: 1px;
 }
 
 .user_photo {
-    height: 70px;
-    width: 70px;
-    float: right;
-    border-radius: 30px;
+  height: 70px;
+  width: 70px;
+  float: left;
+  border-radius: 30px;
+  position: relative;
+  top: -10px;
+}
+
+.info-top-section {
+  border-bottom: solid 1px #dbd2d2;
     position: relative;
-    top: -10px;
+    width: 460px;
 }
 
 

@@ -70,16 +70,24 @@ class UserInfo extends React.Component {
      if(user.posts.length === 0){
        return(
          <div className="user-info-box">
-           <h1 className="user-name-info">{user.username}</h1>
-           <img className="user_photo" src={userPic}/>
+           <div className="name-photo-container">
+             <img className="user_photo" src={userPic}/>
+             <h1 className="user-name-info">{user.username}</h1>
+           </div>
+            <div className="info-top-section"></div>
            {this.createButton()}
+
+           <img className="info-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
          </div>
        )
      } else {
        return(
          <div className="user-info-box">
-           <h1 className="user-name-info">{user.username}</h1>
-           <img className="user_photo" src={userPic}/>
+           <div className="name-photo-container">
+             <img className="user_photo" src={userPic}/>
+             <h1 className="user-name-info">{user.username}</h1>
+           </div>
+            <div className="info-top-section"></div>
            {this.createButton()}
            <h1 className="user-song-info">{post.title}</h1>
            <h3 className="user-song-info">{post.artist}</h3>

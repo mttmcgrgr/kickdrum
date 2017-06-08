@@ -10,6 +10,15 @@ class UserFeed extends React.Component {
     const posts = [...this.props.posts];
     const currentUser = this.props.currentUser;
 
+    if (posts.length === 0) {
+      return (
+        <div className="sticky-note-add">
+          <img
+            src="http://res.cloudinary.com/dccshngpp/image/upload/v1496957034/postIt_bWelootsse2253_knhby6.png"
+          />
+        </div>
+      )
+    } else {
     return (
       <div className="user-feed-container">
         <div className="user-posts">
@@ -26,6 +35,7 @@ class UserFeed extends React.Component {
         </div>
       </div>
     );
+   }
   }
 }
 

@@ -47,6 +47,8 @@ class UserIndexItem extends React.Component {
 
   render(){
     const { post, receiveTrack, currentUser, user } = this.props;
+    let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
+    let userPic =  user.photo_url  ?  user.photo_url : defaultPic;
 
       return (
         <div className="user_content_main">
@@ -76,8 +78,8 @@ class UserIndexItem extends React.Component {
                </div>
               </section>
               <section>
-                <h1 className="modal-name-info">{currentUser.username}</h1>
-                <img className="modal-photo" src={currentUser.photo_url}/>
+                <h1 className="modal-name-info">{user.username}</h1>
+                <img className="modal-photo" src={userPic}/>
                 <div className="modal-top-section"></div>
                 <h1 className="modal-song-info">{post.title}</h1>
                 <h3 className="modal-artist-info">{post.artist}</h3>
