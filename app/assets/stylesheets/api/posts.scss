@@ -72,6 +72,9 @@
     background-color: white;
     width:572px;
     position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-top-style: none;
 
 }
 
@@ -79,11 +82,14 @@
     padding: 20px 24px;
     padding-top: 15px;
     padding-bottom: 15px;
-    border-top: 1px solid rgba(0,0,0,0.08);
+
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background-color: white;
     width:572px;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-style: none;
 
     font-size: 20px;
     font-weight: normal;

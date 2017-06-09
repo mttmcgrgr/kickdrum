@@ -8,22 +8,23 @@
 
   .modal-song-info {
     text-align: left;
-    width: 300px;
+    width: 500px;
     position: absolute;
     top: 120px;
-    right: 175px;
-    font-size: 30px;
-    font-weight: normal;
+    right: -20px;
+    font-weight: bold;
   }
 
   .modal-artist-info {
     text-align: left;
-    width: 300px;
+    width: 500px;
     position: absolute;
     top: 150px;
     right: 100px;
-    font-size: 23px;
-    right: 170px;
+    font-size: 20px;
+    right: -20px;
+    font-weight: normal;
+    color: grey;
   }
 
   .modal-name-info {
