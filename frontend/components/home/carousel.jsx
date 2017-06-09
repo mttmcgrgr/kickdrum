@@ -19,7 +19,7 @@ class Carousel extends React.Component {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 4000,
-      pauseOnHover: true
+      pauseOnHover: false
     };
 
     const image1 = "http://res.cloudinary.com/dccshngpp/image/upload/v1496964476/1280-jp-record-shelf-1_pi9izu.jpg"
