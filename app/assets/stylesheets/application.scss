@@ -506,6 +506,38 @@ audio {
   height: 60%;
 }
 
+.carousel-text {
+    color: black;
+    background-color: #f6f6f7;
+    z-index: 6;
+    position: fixed;
+    font-size: 50px;
+    top: 130px;
+    font-weight: bold;
+    padding: 30px;
+    margin-left: 30px;
+}
+
+.scroll-play {
+  position: relative;
+  top: 15px;
+   font-size: 20px;
+}
+
+.scroll-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  right: 550px;
+  bottom: 35px;
+  color: white;
+}
+
+.arrow {
+  height:50px;
+
+}
+
 .footer {
     display: flex;
     flex-direction: column;

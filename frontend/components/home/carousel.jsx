@@ -13,12 +13,14 @@ class Carousel extends React.Component {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
-      arrows: false,
+      speed: 700,
+      arrows: true,
       slidesToShow: 1,
+      swipe: false,
       slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 5000,
+      autoplay: false,
+      autoplaySpeed: 6000,
+      pauseOnHover: true
     };
 
     const image1 = "http://res.cloudinary.com/dccshngpp/image/upload/v1496964476/1280-jp-record-shelf-1_pi9izu.jpg"
@@ -27,9 +29,18 @@ class Carousel extends React.Component {
     return (
     	<div className='slider-container'>
       	<Slider {...settings}>
-        	<div><img className='slider-img' src={image1} /></div>
-          <div><img className='slider-img' src={image2} /></div>
-          <div><img className='slider-img' src={image3} /></div>
+        	<div>
+            <p className="carousel-text">Your next favorite song is here.<br/>And the next. And the next.</p>
+            <img className='slider-img' src={image1} />
+          </div>
+          <div>
+              <p className="carousel-text">Discover what your friends<br/> are listening to now.</p>
+            <img className='slider-img' src={image2} />
+          </div>
+          <div>
+            <p className="carousel-text">Share your latest creation<br/> with the world.</p>
+            <img className='slider-img' src={image3} />
+          </div>
 
         </Slider>
       </div>
