@@ -525,16 +525,18 @@ audio {
 }
 
 .scroll-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  right: 550px;
-  bottom: 35px;
-  color: white;
+  position: fixed;
+    display: flex;
+    flex-direction: row;
+    left: -3%;
+    bottom: 45%;
+    color: white;
 }
 
 .arrow {
-  height:50px;
+  height: 60px;
+  position: relative;
+  bottom: 3px;  
 
 }
 
