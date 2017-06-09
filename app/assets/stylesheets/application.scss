@@ -94,14 +94,24 @@
    font-weight: bold;
  }
 
+.header-line {
+    height: 70px;
+    border-left: solid 1px #dbd2d2;
+    width: 1px;
+    position: relative;
+    top: 9px;
+    left: 2px;
+}
 
 
 
 
  .header-name {
    font-size: 65px;
-   font-weight: bold;
-   font-style: oblique;
+    font-weight: bold;
+    font-style: oblique;
+    display: flex;
+    flex-direction: row;;
  }
 
  .player-image {
@@ -275,10 +285,15 @@
     position: relative;
   }
 
+  .logo-header {
+    height: 80px;
+    height: 80px;
+    padding-top: 5px
+  }
+
 
   a:hover {
     cursor: pointer;
-    color: #6295CA;
   }
 
 
@@ -360,14 +375,6 @@ audio {
 }
 
 
-
- .logo-image {
-   width: 60px;
-   height: 60px;
-   display: flex;
-   float: left;
-   margin-top: 10px;
- }
 
 .logo-text {
   font-family: 'Bungee Shade', cursive;
