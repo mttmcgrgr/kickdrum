@@ -89,8 +89,8 @@ class UserInfo extends React.Component {
            </div>
             <div className="info-top-section"></div>
            {this.createButton()}
-           <h1 className="user-song-info">{post.title}</h1>
-           <h3 className="user-song-info">{post.artist}</h3>
+           <h1 className="user-title-info">{post.title}</h1>
+           <h3 className="user-artist-info">{post.artist}</h3>
            <img className="info-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
          </div>
 

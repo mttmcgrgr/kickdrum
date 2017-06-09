@@ -151,6 +151,7 @@
     position: relative;
     border-bottom-style: solid;
     border-width: 1px;
+    border-color:grey;
  }
 
 
@@ -221,10 +222,15 @@
 }
 
 .image1 {
-  position: absolute;;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color:grey;
 }
 
 .image2 {
@@ -405,6 +411,7 @@ audio {
   height: 620px;
   border-style: solid;
   border-width: 1px;
+  border-color:grey;
 }
 
 .create-title {
@@ -637,5 +644,6 @@ audio {
     transition: max-height 3s;
     border-top-style: solid;
     border-width: 1px;
+    border-color:grey;
 
 }
