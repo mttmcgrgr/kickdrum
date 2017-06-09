@@ -13,7 +13,7 @@ module.exports = {
     display        : 'flex',
     padding        : "0px",
     top            : '50%',
-    left           : '49%',
+    left           : '50%',
     right          : 'auto',
     bottom         : 'auto',
     marginRight    : '-50%',

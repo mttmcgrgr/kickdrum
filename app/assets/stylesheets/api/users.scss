@@ -41,16 +41,17 @@
 .user-title-info {
     font-weight: bold;
     text-align: left;
-    width: 300px;
+    width: 450px;
     top: 15px;
     position: relative;
     font-weight: bold;
+    font-size: 23px
 }
 
 .user-artist-info {
     color:grey;
     text-align: left;
-    width: 300px;
+    width: 450px;
     top: 15px;
     position: relative;
     font-weight: normal;
@@ -59,7 +60,7 @@
 
 .user-name-info {
   position: relative;
-  top: 5px;
+  top: 8px;
   font-weight: normal;
   font-size: 25px;
   padding-left: 10px;
@@ -102,6 +103,7 @@
     position: relative;
     width: 460px;
     border-color: grey;
+
 }
 
 
