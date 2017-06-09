@@ -201,6 +201,7 @@ button:hover {
   left: -35px;
   opacity: 1;
   transition: .5s ease;
+  cursor: pointer;
 }
 
 
@@ -220,6 +221,10 @@ button:hover {
   padding: 16px 32px;
   width: 120px;
   height: 120px;
+}
+
+.user-play:hover {
+  cursor: pointer;
 }
 
 
@@ -275,6 +280,10 @@ button:hover {
    position: relative;
    bottom: 270px;
    left: 240px;
+}
+
+.modal-icon:hover{
+  cursor: pointer;
 }
 
 

@@ -438,6 +438,9 @@ audio {
     bottom: 60px;
 }
 
+.session-play:hover{
+  cursor: pointer;
+}
 .post-play {
   color: white;
     height: 180px;
@@ -468,6 +471,9 @@ audio {
   opacity: 1;
 }
 
+.post-play:hover{
+  cursor: pointer;
+}
 
 
 
@@ -477,6 +483,11 @@ audio {
     position: relative;
     left: 95px;
     bottom: 60px;
+
+}
+
+.play:hover{
+  cursor: pointer;
 }
 
 .slider-container {
@@ -487,7 +498,7 @@ audio {
 
 .slider-img {
   width: 100%;
-  height: 500px;
+  height: 600px;
 
   position: relative;
 }
