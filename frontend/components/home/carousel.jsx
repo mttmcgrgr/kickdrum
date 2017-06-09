@@ -5,16 +5,15 @@ class Carousel extends React.Component {
   constructor(){
     super()
 
-
   }
 
 
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
-      speed: 700,
-      arrows: true,
+      speed: 500,
+      arrows: false,
       slidesToShow: 1,
       swipe: false,
       slidesToScroll: 1,
