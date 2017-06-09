@@ -1,9 +1,8 @@
 import React from 'react';
-import UserIndexItem from './user_index_item';
+import GridIndexItem from './grid_index_item';
 
 
-class UserFeed extends React.Component {
-
+class GridFeed extends React.Component {
 
 
   render () {
@@ -23,7 +22,7 @@ class UserFeed extends React.Component {
       <div className="user-feed-container">
         <div className="user-posts">
         {posts.map(post => (
-          <UserIndexItem
+          <GridIndexItem
             currentUser={this.props.currentUser}
             user={this.props.user}
             post={post}
@@ -39,4 +38,4 @@ class UserFeed extends React.Component {
   }
 }
 
-export default UserFeed;
+export default GridFeed;

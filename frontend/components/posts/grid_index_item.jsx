@@ -2,10 +2,10 @@ import React from 'react';
 import Modal from 'react-modal';
 import ProfileModal from '../../util/profile_modal';
 import { fetchUser, deletePost } from '../../actions/post_actions';
-import UserInfo from './user_info'
 
 
-class UserIndexItem extends React.Component {
+
+class GridIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,7 +48,7 @@ class UserIndexItem extends React.Component {
   render(){
     const { post, receiveTrack, currentUser, user } = this.props;
     let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
-    let userPic =  user.photo_url  ?  user.photo_url : defaultPic;
+    let userPic =  post.user_photo_url  ?  post.user_photo_url : defaultPic;
 
       return (
         <div className="user_content_main">
@@ -78,7 +78,7 @@ class UserIndexItem extends React.Component {
                </div>
               </section>
               <section>
-                <h1 className="modal-name-info">{user.username}</h1>
+                <h1 className="modal-name-info">{post.username}</h1>
                 <img className="modal-photo" src={userPic}/>
                 <div className="modal-top-section"></div>
                 <h1 className="modal-song-info">{post.title}</h1>
@@ -93,7 +93,7 @@ class UserIndexItem extends React.Component {
 
 }
 
-export default UserIndexItem;
+export default GridIndexItem;
 
 
 

@@ -19,8 +19,39 @@
     opacity: 1;
     list-style: none;
     z-index: 1;
-    transform:scale(0.7);
+    transform:scale(0.8);
+}
 
+.change-view-button {
+  height: 60px;
+}
+
+.post-feed-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.post-feed-list {
+  position: relative;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.view-button{
+    box-shadow: none;
+    border: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    background-color: white;
+}
+
+.view-button-container {
+  position: absolute;
+    display: flex;
+    right: 20px;
+    margin-top: 10px;
 }
 
 .li-post-index {

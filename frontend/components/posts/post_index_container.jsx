@@ -1,10 +1,13 @@
 import { connect } from 'react-redux';
-import PostIndex from './post_index';
+import ListFeed from './list_feed';
+import GridFeed from './grid_feed';
 import { fetchPosts, deletePost, createPost } from '../../actions/post_actions';
 import { receiveTrack } from '../../actions/player_actions';
 
 const mapStateToProps = state => ({
-  posts: Object.keys(state.posts).map(id => state.posts[id])
+  posts: Object.keys(state.posts).map(id => state.posts[id]),
+  user: state.user,
+  currentUser: state.session.currentUser|| {}
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -17,4 +20,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PostIndex);
+)(ListFeed, GridFeed);

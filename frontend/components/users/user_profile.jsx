@@ -1,5 +1,5 @@
 import React from 'react';
-import UserFeed from './user_feed';
+import GridFeed from '../posts/grid_feed';
 import UserInfo from './user_info';
 import Loading from 'react-loading-animation';
 
@@ -55,7 +55,7 @@ class UserProfile extends React.Component {
               deletePost={this.props.deletePost}
               fetchUser={this.props.fetchUser}/>
 
-            <UserFeed
+            <GridFeed
               posts={otherPosts}
               currentUser={currentUser}
               user={this.props.user}
