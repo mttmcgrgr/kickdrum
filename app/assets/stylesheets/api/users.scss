@@ -130,18 +130,19 @@
 
 .user-feed-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  // overflow: scroll;
-  transform: scale(1);
-  bottom: 200px;
-  height: 500px;
-  margin-top: 75px;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 150px;
-  height: 100%;
-  width: 950px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    transform: scale(1);
+    bottom: 200px;
+    height: 500px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 150px;
+    height: 100%;
+    width: 960px;
+    position: relative;
+    top: 90px;
+    right: 10px;
 };
 
 .user-profile {
@@ -328,7 +329,8 @@ button:hover {
     transform:scale(1);
     width: 310px;
     height: 310px;
-    padding-right: 3px;
+    padding-right: 10px;
+    margin-bottom: 10px;
 }
 
 .loading {

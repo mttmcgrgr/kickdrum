@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
 				<div className="session-text">
 					<a onClick={ this.props.closeAndOpenModal('signup') }>{'Don\'t have an account?'}</a>
 					<br/>
-					<a onClick={ this.guestLogin }>{'Demo'}</a>
+					<a onClick={ this.guestLogin }>{'Demo Account'}</a>
 					<br/>
 					<a onClick={ this.props.modalClose }>{'Close'}</a>
 				</div>
@@ -53,7 +53,7 @@ class SessionForm extends React.Component {
 				<div className="session-text">
 					<a className="session-text" onClick={ this.props.closeAndOpenModal('login') }>{'Already have an account?'}</a>
 					<br/>
-				<a onClick={ this.guestLogin }>{'Demo'}</a>
+				<a onClick={ this.guestLogin }>{'Demo Account'}</a>
 					<br/>
 					<a onClick={ this.props.modalClose }>{'Close'}</a>
 				</div>
