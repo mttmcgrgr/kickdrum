@@ -17,7 +17,7 @@ class Carousel extends React.Component {
       slidesToShow: 1,
       swipe: false,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 6000,
       pauseOnHover: true
     };
