@@ -97,21 +97,34 @@
 
 
 
+
+
  .header-name {
    font-size: 65px;
    font-weight: bold;
    font-style: oblique;
-
  }
 
  .player-image {
-   width: 70px;
-    height: 70px;
+   width: 90px;
+    height: 90px;
     padding-right: 10px;
  }
 
  .player-text {
-   padding-top: 10px
+   padding-top: 20px
+ }
+ .player-title {
+   font-weight: bold;
+   font-size: 25px;
+ }
+ .player-artist {
+   color:grey;
+   font-size: 20px;
+ }
+
+ .player-audio {
+   padding-top: 15px
  }
 
 
@@ -608,7 +621,7 @@ audio {
     margin-bottom:0px;
     background-color: #fafafa;
     overflow: scroll;
-    padding-left:10px;
+    padding-left:20px;
     transition: max-height 3s;
 
 }

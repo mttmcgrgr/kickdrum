@@ -14,15 +14,15 @@ class PlayerBar extends React.Component {
      <div className="player-container">
       <img className="player-image" src={this.props.cover_url}/>
        <div className="player-text">
-         <div>Title: {this.props.title}</div>
-         <div> Artist: {this.props.artist}</div>
+         <div className="player-title" > {this.props.title}</div>
+         <div className="player-artist"> {this.props.artist}</div>
        </div>
-
-        <ReactAudioPlayer
-          src={this.props.song_url}
-          autoPlay
-        />
-      
+       <div className="player-audio">
+         <ReactAudioPlayer
+           src={this.props.song_url}
+           autoPlay
+         />
+       </div>
      </div>
     </div>
      );
