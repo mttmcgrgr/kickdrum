@@ -22,9 +22,14 @@
   display: flex;
   text-align: center;
   flex-direction: column;
-
   cursor: pointer;
+}
 
+.session-vinyl {
+  height: 65px;
+    position: relative;
+    
+    bottom: 20px;
 }
 
 .session-button {
@@ -90,6 +95,9 @@
     justify-content: center;
     position: relative;
     bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 

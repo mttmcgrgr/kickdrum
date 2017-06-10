@@ -51,9 +51,6 @@
   }
 
  .button {
-  display: inline-block;
-  margin: 0 4px 0 0;
-  padding: 4px 4px;
   font-size: 20px;
   line-height: 1.8;
   appearance: none;
@@ -64,6 +61,28 @@
   border-radius: 5px;
   border: none;
   text-align: center;
+  height:100px;
+}
+
+.form-button{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 10;
+  color: #fff;
+  background-color: #6496c8;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+
+}
+
+.form-button-container{
+  width: 200px;
+    height: 50px;
 }
 
 .button:hover {
@@ -280,7 +299,7 @@
   align-items: center;
   position: relative;
   width: 100%;
-  right: 55px;
+  right: 0px;
   bottom: 8%;
   transform: scale(0.8);
 

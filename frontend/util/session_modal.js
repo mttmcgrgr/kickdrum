@@ -2,13 +2,16 @@ module.exports = {
   content : {
     display        : 'flex',
     top            : '40%',
-    left           : '47%',
+    left           : '50%',
     right          : 'auto',
     bottom         : 'auto',
     marginRight    : '-50%',
     transform      : 'translate(-50%, -50%)',
     width          : "240px",
-    height         : "430px"
+    height         : "430px",
+    width          :"300px",
+    justifyContent : "center",
+    height         :"500px"
   },
   overlay : {
     zIndex: 15,

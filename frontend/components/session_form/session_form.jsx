@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return(
 				<div className="session-text">
-					<a onClick={ this.props.closeAndOpenModal('signup') }>{'Don\'t have an account?'}</a>
+					<a  onClick={ this.props.closeAndOpenModal('signup') }>{'Don\'t have an account?'}</a>
 					<br/>
 					<a onClick={ this.guestLogin }>{'Demo Account'}</a>
 					<br/>
@@ -51,7 +51,7 @@ class SessionForm extends React.Component {
     } else {
       return(
 				<div className="session-text">
-					<a className="session-text" onClick={ this.props.closeAndOpenModal('login') }>{'Already have an account?'}</a>
+					<a  onClick={ this.props.closeAndOpenModal('login') }>{'Already have an account?'}</a>
 					<br/>
 				<a onClick={ this.guestLogin }>{'Demo Account'}</a>
 					<br/>
@@ -82,7 +82,9 @@ class SessionForm extends React.Component {
 
 			return(
 				<div className="login-form-container">
+
 					<form onSubmit={this.handleSubmit} className="login-form-box">
+						<img className="session-vinyl" src="http://res.cloudinary.com/dccshngpp/image/upload/v1496889642/favicon_ntjldt.ico"/>
 						<h3 className="create-title">{title}</h3>
 
 						{this.renderErrors()}
@@ -103,7 +105,9 @@ class SessionForm extends React.Component {
 									className="login-input" />
 							</label>
 							<br/>
-							<input className="button" type="submit" value={button} />
+							<div className="form-button-container">
+								<input className="form-button" type="submit" value={button} />
+							</div>
 							<br/>
 
 								{this.changeForm()}
