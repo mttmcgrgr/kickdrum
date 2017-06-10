@@ -580,22 +580,22 @@ audio {
 .scroll-play {
   position: relative;
   top: 15px;
-   font-size: 20px;
+   font-size: 33px;
 }
 
 .scroll-container {
   position: fixed;
     display: flex;
     flex-direction: row;
-    left: -3%;
-    bottom: 45%;
+    left: -10%;
+    bottom: 25%;
     color: white;
 }
 
 .arrow {
   height: 60px;
   position: relative;
-  bottom: 3px;
+  top: 6px;
 
 }
 
@@ -619,12 +619,12 @@ audio {
   display: flex;
   position: relative;
   justify-content: flex-start;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
   background-color: #6496c8;
   font-size: 25px;
   bottom: 10%;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 
