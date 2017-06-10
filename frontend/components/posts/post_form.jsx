@@ -36,7 +36,17 @@ class PostForm extends React.Component {
       {
         cloud_name: 'dccshngpp',
         upload_preset: 'jvoxzjhw',
-        theme: 'minimal',
+        theme: 'white',
+        show_powered_by: false,
+        multiple: false,
+        sources: ["local", "url"],
+        client_allowed_formats: ["mp3","m4a"],
+        text: {
+          "sources.url.note": "Public URL of an .mp3 or .m4a file:",
+          "sources.local.drop_file": "Drop .mp3 or .m4a file here",
+          "sources.local.drop_or": "Or",
+          "sources.local.select_file": "Select Song",
+        }
       },
       (errors, songInfo) => {
         if (errors === null) {
@@ -54,7 +64,18 @@ class PostForm extends React.Component {
       {
         cloud_name: 'dccshngpp',
         upload_preset: 'jvoxzjhw',
-        theme: 'minimal',
+        theme: 'white',
+        show_powered_by: false,
+        multiple: false,
+        button_caption: "Upload Covert Art",
+        sources: ["local", "url", "image_search"],
+        client_allowed_formats: ["jpeg"],
+        text: {
+          "sources.url.note": "Public URL of a .jpg image:",
+          "sources.local.drop_file": "Drop .jpg  file here",
+          "sources.local.drop_or": "Or",
+          "sources.local.select_file": "Select JPEG",
+        }
       },
       (errors, coverInfo) => {
         if (errors === null) {
