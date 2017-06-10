@@ -126,12 +126,16 @@
    padding-top: 20px
  }
  .player-title {
-   font-weight: bold;
-   font-size: 25px;
+   ffont-weight: bold;
+    font-size: 23px;
+    padding-bottom: 6px;
+    position: relative;
+    bottom: 5px;
  }
  .player-artist {
-   color:grey;
-   font-size: 20px;
+   color: grey;
+    font-size: 20px;
+    font-weight: normal;
  }
 
  .player-audio {

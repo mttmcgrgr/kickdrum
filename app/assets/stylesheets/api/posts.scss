@@ -33,7 +33,7 @@
 
 .post-feed-list {
   position: relative;
-  top: 60px;
+  top: 80px;
   display: flex;
   justify-content: center;
   z-index: 0;
@@ -42,7 +42,7 @@
 .view-button{
     box-shadow: none;
     border: none;
-    border-style: solid;
+    border-style: none;
     border-width: 1px;
     border-color: grey;
     background-color: white;
@@ -52,8 +52,10 @@
 .view-button-container {
   position: absolute;
     display: flex;
-    right: 20px;
+    right: 240px;
     margin-top: 20px;
+    z-index: 500;
+    top: 0px;
 }
 
 .li-post-index {
@@ -108,7 +110,7 @@
     border-style: solid;
     border-width: 1px;
     border-top-style: none;
-    border-color:grey;
+    border-color:#bababa;
 
 }
 
@@ -124,7 +126,7 @@
     border-style: solid;
     border-width: 1px;
     border-bottom-style: none;
-    border-color:grey;
+    border-color:#bababa;
 
     font-size: 20px;
     font-weight: normal;
