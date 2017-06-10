@@ -3,7 +3,7 @@ import merge from 'lodash/merge';
 
 const defaultState = {
   username : "",
-  photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg",
+  photo_url: "",
   posts: [{
     cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496796665/12-Vinyl-LP-Record-4_e9nbgk.png",
     song_url: "",

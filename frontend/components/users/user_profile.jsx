@@ -24,6 +24,8 @@ class UserProfile extends React.Component {
   componentWillReceiveProps(nextProps){
     if(this.props.params.userId !== nextProps.params.userId){
       this.props.fetchUser(nextProps.params.userId);
+      setTimeout(() => {
+      this.setState({loading: false}); }, 100);
     }
   }
 
@@ -58,6 +60,7 @@ class UserProfile extends React.Component {
             <GridFeed
               posts={otherPosts}
               currentUser={currentUser}
+              profileFeed={true}
               user={this.props.user}
               receiveTrack={this.props.receiveTrack}
               deletePost={this.props.deletePost}

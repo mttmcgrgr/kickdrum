@@ -47,10 +47,15 @@ class GridIndexItem extends React.Component {
 
 
   render(){
-    const { post, receiveTrack, currentUser, user } = this.props;
+    const { post, receiveTrack, currentUser, user, profileFeed } = this.props;
     let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
-    let userPic =  post.user_photo_url  ?  post.user_photo_url : defaultPic;
     let name = post.username ? post.username : user.username;
+    let userPic;
+    if(profileFeed){
+      userPic =  user.photo_url  ?  user.photo_url : defaultPic;
+    } else {
+      userPic = post.user_photo_url ? post.user_photo_url : defaultPic;
+    }
 
       return (
         <div className="user_content_main">

@@ -54,6 +54,7 @@ class ListIndex extends React.Component {
 
   renderViewType(){
     const { posts } = this.props;
+
     if(this.state.listView === true){
       return(
         <div className="post-feed-list">
@@ -63,7 +64,6 @@ class ListIndex extends React.Component {
             ))}
           </ul>
         </div>
-
       )
     } else {
       return(
@@ -71,6 +71,7 @@ class ListIndex extends React.Component {
           <GridFeed
             posts={this.props.posts}
             user={this.props.user}
+            profileFeed={false}
             receiveTrack={this.props.receiveTrack}
             deletePost={this.props.deletePost}
             fetchUser={this.props.fetchUser}/>
@@ -80,8 +81,8 @@ class ListIndex extends React.Component {
     }
   }
 
-  render () {
 
+  render () {
     if(this.state.loading) {
       return(
         <div className="loading">

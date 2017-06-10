@@ -26,6 +26,7 @@ class GridFeed extends React.Component {
             currentUser={this.props.currentUser}
             user={this.props.user}
             post={post}
+            profileFeed={this.props.profileFeed}
             receiveTrack={this.props.receiveTrack}
             deletePost={this.props.deletePost}
             fetchUser={this.props.fetchUser}

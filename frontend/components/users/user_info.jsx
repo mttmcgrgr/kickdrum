@@ -1,14 +1,23 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
+import Loading from 'react-loading-animation';
 
 
 class UserInfo extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      loading: true
+    }
     this.handleDelete = this.handleDelete.bind(this);
     this.createPost = this.createPost.bind(this);
     this.featuredPost = this.featuredPost.bind(this);
     this.userInfo = this.userInfo.bind(this);
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+    this.setState({loading: false}); }, 50);
   }
 
   handleDelete() {
@@ -100,15 +109,20 @@ class UserInfo extends React.Component {
 
   render(){
 
+    if(this.state.loading === true) {
+      return(
+        <div className="loading">
+          <Loading />
+        </div>
+      )
+    } else {
       return (
         <div className="user-info-container">
-
           {this.featuredPost()}
-
           {this.userInfo()}
-
         </div>
       );
+    }    
    }
 
 }
