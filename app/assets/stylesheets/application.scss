@@ -374,11 +374,11 @@ audio {
 
 
 .feed_background {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  // padding-top: 100px;
+  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
 }
 
 
