@@ -45,11 +45,17 @@ class Home extends React.Component{
             <div className="links-container">
               <div className="scroll-container">
                 <p className="scroll-play">Scroll & Play</p>
-                <img className="arrow" src="http://res.cloudinary.com/dccshngpp/image/upload/v1496978084/white-arrow-png-41970_cthlu7.png" />
+                <img
+                  className="arrow"
+                  src="http://res.cloudinary.com/dccshngpp/image/upload/v1497141905/white-arrow-transparent-png-10_fdwjtn.png" />
               </div>
-               <a href='https://github.com/mttmcgrgr/kickdrum' target="_blank">Github</a>
-               <img className="home-vinyl" src="http://res.cloudinary.com/dccshngpp/image/upload/v1496889642/favicon_ntjldt.ico"/>
-               <a href='https://www.linkedin.com/in/matt-mcgregor/' target="_blank">LinkedIn</a>
+              <div className="personal-sites">
+                <a href='https://github.com/mttmcgrgr/kickdrum' target="_blank">Github</a>
+                <img className="home-vinyl" src="http://res.cloudinary.com/dccshngpp/image/upload/v1496889642/favicon_ntjldt.ico"/>
+                <a href='https://www.linkedin.com/in/matt-mcgregor/' target="_blank">LinkedIn</a>
+
+              </div>
+
             </div>
           </footer>
         </div>

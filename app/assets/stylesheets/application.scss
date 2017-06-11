@@ -381,6 +381,13 @@ audio {
     margin-top: 150px;
 }
 
+.personal-sites {
+  display: flex;
+    position: relative;
+    justify-content: center;
+    bottom: -40px;
+}
+
 
 .feed_group {
   display: flex;
@@ -594,8 +601,9 @@ audio {
 
 .arrow {
   height: 60px;
-  position: relative;
-  top: 6px;
+    position: relative;
+    /* top: 6px; */
+    transform: scale(2);
 
 }
 
