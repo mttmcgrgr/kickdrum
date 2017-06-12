@@ -62,6 +62,11 @@
   border: none;
   text-align: center;
   height:50px;
+  box-shadow: -2px 2px 2px grey;
+}
+
+.button:hover {
+      box-shadow: -5px 5px 5px grey;
 }
 
 
@@ -240,6 +245,7 @@
   border-bottom-style: solid;
   border-width: 1px;
   border-color:grey;
+  box-shadow: -2px 2px 2px grey;
 }
 
 .image2 {
@@ -264,10 +270,11 @@
   border-style: none;
   float: right;
   background-color: #6295CA;
-    border-radius: 35px;
-    margin-top: 10px;
-    margin-right: 25px;
-    box-shadow: -3px 3px 3px grey;
+  border-radius: 35px;
+  margin-top: 10px;
+  margin-right: 25px;
+  box-shadow: -3px 3px 3px grey;
+  outline: none;
 }
 
 .add-post-button:hover {
@@ -377,6 +384,7 @@ audio {
     position: relative;
     justify-content: center;
     bottom: -40px;
+    text-shadow: -2px 2px #000000;
 }
 
 
@@ -441,6 +449,7 @@ audio {
   border-style: solid;
   border-width: 1px;
   border-color:grey;
+  box-shadow: -3px 0px 3px grey;
 }
 
 .create-title {
