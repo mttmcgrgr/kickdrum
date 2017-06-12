@@ -105,24 +105,3 @@ class GridIndexItem extends React.Component {
 }
 
 export default GridIndexItem;
-
-
-
-
-///current user
-
-// <section className="user_footer">
-//   <div className="user_footer_title">{post.title}</div>
-//   <div className="user_footer_artist">{post.artist}</div>
-//   <button className="delete-button" onClick={this.handleDelete}>
-//     <img className="delete-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484637568/delete-button_318-77600_nd5tdo.jpg" />
-//   </button>
-// </section>
-
-
-// other user
-
-// <section className="user_footer">
-//   <div className="user_footer_title">{post.title}</div>
-//   <div className="user_footer_artist">{post.artist}</div>
-// </section>

@@ -510,7 +510,7 @@ audio {
   color: white;
     height: 120px;
     position: relative;
-  
+
 }
 
 .session-play:hover{
@@ -583,6 +583,7 @@ audio {
     position: absolute;
     right: 5px;
     top: 5px;
+    z-index: 50;
 
 }
 
