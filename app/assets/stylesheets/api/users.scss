@@ -270,6 +270,7 @@ button:hover {
     height: 310px;
     border: solid 1px;
     border-color:#bababa;
+    box-shadow: -3px 3px 3px grey;
 
 }
 
@@ -331,6 +332,12 @@ button:hover {
     height: 310px;
     padding-right: 10px;
     margin-bottom: 10px;
+}
+
+.user_content_main:hover {
+  transition: .25s ease-in-out;
+  transform: scale(1.1);
+  z-index: 50;
 }
 
 .loading {
