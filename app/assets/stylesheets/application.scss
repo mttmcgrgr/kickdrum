@@ -493,14 +493,18 @@ audio {
 }
 
 .middle {
-  opacity: 0;
+    opacity: 0;
     position: absolute;
-    top: 50%;
+    top: 0px;
     height: 100%;
     width: 100%;
-    /* left: 100%; */
     transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 
 .session-play {
   color: white;
@@ -517,8 +521,6 @@ audio {
   color: white;
     height: 180px;
     position: relative;
-    left: 210px;
-    bottom: 80px;
 }
 
 
@@ -550,15 +552,42 @@ audio {
 
 
 .play {
-  color: white;
-    height: 120px;
-    position: relative;
-    left: 95px;
-    bottom: 60px;
-
+  height: 120px;
+    display: flex;
+    align-self: center;
 }
 
 .play:hover{
+  cursor: pointer;
+}
+
+.modal-icon-container {
+  display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.play-icon-container {
+  display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+}
+
+
+.modal-icon {
+  color: white;
+   width: 60px;
+   height: 60px;
+   display: flex;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+}
+
+.modal-icon:hover{
   cursor: pointer;
 }
 
