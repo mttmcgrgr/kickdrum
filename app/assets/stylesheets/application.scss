@@ -148,7 +148,9 @@
  }
 
  .player-audio {
-   padding-top: 15px
+   padding-top: 15px;
+   display:flex;
+   flex-direction: row;
  }
 
 
@@ -383,7 +385,7 @@ audio {
   display: flex;
     position: relative;
     justify-content: center;
-    bottom: -40px;
+    bottom: -60px;
     text-shadow: -2px 2px #000000;
 }
 
@@ -672,8 +674,25 @@ audio {
   z-index: 9999;
 }
 
+.close-player {
+  border: none;
+ outline: none;
+  height: 40px;
+ display: flex;
+ justify-content: center;
+  align-self: center;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+.close-img {
+  height: 20px;
+  width: 20px;
+}
+
 
 .footer-playbar {
+   display: flex;
+    flex-direction: row;
     position:fixed;
     bottom:0px;
     left:0px;
@@ -681,7 +700,6 @@ audio {
     margin-bottom:0px;
     background-color: #fafafa;
     overflow: scroll;
-    padding-left:20px;
     transition: max-height 3s;
     border-top-style: solid;
     border-width: 1px;

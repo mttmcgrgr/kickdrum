@@ -1,4 +1,4 @@
-import { RECEIVE_TRACK } from '../actions/player_actions';
+import { RECEIVE_TRACK, CLEAR_TRACK } from '../actions/player_actions';
 import merge from 'lodash/merge';
 
 const defaultState = {
@@ -20,6 +20,8 @@ const PlayerReducer = (state = defaultState, action) => {
       newState.cover_url = action.post.cover_url;
       newState.visible = true;
       return newState;
+    case CLEAR_TRACK:
+      return merge({}, defaultState);
     default:
       return state;
   }
