@@ -106,6 +106,7 @@ class GridIndexItem extends React.Component {
                 <img className="modal-bookmark"
                   src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
                 <img className="modal-close"
+                  onclick={this.modalClose}
                   src="http://res.cloudinary.com/dccshngpp/image/upload/v1497326370/52084_vqsrat.png"/>
               </section>
           </Modal>
