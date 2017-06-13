@@ -35,8 +35,7 @@ class UserInfo extends React.Component {
      if(user.username === currentUser.username){
        return(
          <button className="add-button" onClick={this.createPost}>
-           <img className="add-post-button"
-             src="http://res.cloudinary.com/dccshngpp/image/upload/v1497319913/button_create_ldioq7_tyddl6_kkznvi.png"/>
+           <img className="add-post-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1497226293/button_create_ldioq7_tyddl6.png"/>
          </button>
        )
      } else {
@@ -58,17 +57,13 @@ class UserInfo extends React.Component {
        )
      } else {
        return(
-          <div className="parent">
+
+            <div className="parent">
              <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
              <img className="image2" src={post.cover_url}/>
-             <div className="info-play-container">
-               <img className="info-play"
-                 src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"
-                 onClick={()=> (receiveTrack(post))}/>
-
-             </div>
-
-
+             <img className="info-play"
+               src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"
+               onClick={()=> (receiveTrack(post))}/>
            </div>
        )
      }

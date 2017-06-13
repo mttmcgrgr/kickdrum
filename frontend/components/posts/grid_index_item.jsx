@@ -98,7 +98,11 @@ class GridIndexItem extends React.Component {
                 <div className="modal-top-section"></div>
                 <h1 className="modal-song-info">{post.title}</h1>
                 <h3 className="modal-artist-info">{post.artist}</h3>
-                <img className="modal-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
+                <img className="modal-bookmark"
+                  src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
+                <img className="modal-close"
+                  onClick={this.modalClose}
+                  src="http://res.cloudinary.com/dccshngpp/image/upload/v1497326370/52084_vqsrat.png"/>
               </section>
           </Modal>
 

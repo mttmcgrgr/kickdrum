@@ -44,6 +44,18 @@
     right: 430px;
 }
 
+.modal-close {
+  height: 50px;
+  weight: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.modal-close:hover {
+  cursor: pointer;
+}
+
 .modal-play{
   color: white;
     height: 100px;
