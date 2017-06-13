@@ -25,8 +25,8 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
-		this.props.processForm({user})
-		hashHistory.push(`/posts`)
+		this.props.processForm({user}).then(() => this.props.router.push("/posts"));
+
 	}
 
 
