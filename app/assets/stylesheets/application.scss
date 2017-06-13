@@ -494,7 +494,7 @@ audio {
   top: 0px;
   height: 100%;
   width: 100%;
-  transition: .3s ease;
+  transition: .1s ease;
   display: flex;
   justify-content: flex-end;
 }
@@ -680,7 +680,7 @@ audio {
   justify-content: flex-start;
   font-weight: normal;
   text-align: center;
-  background-color: #2687FB;
+  background-color: inherit;
   font-size: 25px;
   bottom: 11%;
   padding-left: 25px;
