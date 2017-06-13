@@ -48,11 +48,11 @@ class GridIndexItem extends React.Component {
 
   render(){
     const { post, receiveTrack, currentUser, user, profileFeed } = this.props;
-    let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
+    let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
     let name = post.username ? post.username : user.username;
     let userPic;
     if(profileFeed){
-      userPic =  user.photo_url  ?  user.photo_url : "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png";
+      userPic =  user.photo_url  ?  user.photo_url : defaultPic;
     } else {
       userPic = post.user_photo_url ? post.user_photo_url : defaultPic;
     }
@@ -73,9 +73,9 @@ class GridIndexItem extends React.Component {
                     <div className="hover-artist">{post.artist}</div>
                   </div>
                   <div className="play-icon-container">
-                      <img className="play"
-                        onClick={()=> (receiveTrack(post))}
-                        src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"/>
+                    <img className="play"
+                      onClick={()=> (receiveTrack(post))}
+                      src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"/>
                   </div>
                </div>
            </div>
@@ -92,7 +92,7 @@ class GridIndexItem extends React.Component {
                 <div className="container">
                   <img className="modal-image" src={post.cover_url} onClick={this.modalOpen}/>
                     <div className="middle">
-                      <img className="modal-play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"/>
+                      <img className="modal-play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
                    </div>
                </div>
               </section>
@@ -102,11 +102,7 @@ class GridIndexItem extends React.Component {
                 <div className="modal-top-section"></div>
                 <h1 className="modal-song-info">{post.title}</h1>
                 <h3 className="modal-artist-info">{post.artist}</h3>
-                <img className="modal-bookmark"
-                  src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
-                <img className="modal-close"
-                  onClick={this.modalClose}
-                  src="http://res.cloudinary.com/dccshngpp/image/upload/v1497326370/52084_vqsrat.png"/>
+                <img className="modal-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
               </section>
           </Modal>
 
