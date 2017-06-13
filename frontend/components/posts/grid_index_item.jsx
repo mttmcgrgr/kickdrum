@@ -52,7 +52,7 @@ class GridIndexItem extends React.Component {
     let name = post.username ? post.username : user.username;
     let userPic;
     if(profileFeed){
-      userPic =  user.photo_url  ?  user.photo_url : defaultPic;
+      userPic =  user.photo_url  ?  user.photo_url : "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png";
     } else {
       userPic = post.user_photo_url ? post.user_photo_url : defaultPic;
     }

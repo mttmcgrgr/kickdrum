@@ -10,7 +10,7 @@
 
 
 User.create!([
-  { username: 'Guest', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1497311661/12-Vinyl-LP-Record-4_e9nbgk_gxlll1.png"},
+  { username: 'Guest', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"},
   { username: 'mttmcgrgr', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496959781/16123928_1332802113439156_6000979656600190976_n_czvprv.jpg"},
   { username: 'noelle', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496959784/13423015_1754629838088297_183801605_a_w1zkpv.jpg"},
   { username: 'smalkmus', password: '123456', photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496960284/download-1_l9z3xm.jpg"},
@@ -357,13 +357,163 @@ user_id: User.third.id
 },
 
 {
+title:"XMAS_EVET10",
+artist: 'Aphex Twin',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497325455/xmas_eve.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497325464/ed0fodskivuyrqnfslrv.jpg',
+user_id: User.second.id
+},
+
+{
+title:"Star Guitar",
+artist: 'The Chemical Brothers',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330800/06_Star_Guitar_o74lgu.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330698/KateGibb__2008Brotherhood_IllustrationChronicles_1000_1000_xgltsk.jpg',
+user_id: User.first.id
+},
+
+{
+title:"The Only Thing",
+artist: 'Sufjan Stevens',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330778/1-07_The_Only_Thing_ytmw2a.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330698/1420822634131_f5vl95.jpg',
+user_id: User.third.id
+},
+
+{
+title:"Blown A Wish",
+artist: 'My Bloody Valentine',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330809/1-09_Blown_a_Wish_iemulq.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330695/loveless-55d7b5ec8038b_gsryxo.jpg',
+user_id: User.fourth.id
+},
+
+{
+title:"Obstacle 1",
+artist: 'Interpol',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330753/02_Obstacle_1_yaskjt.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330695/55292eb15e7e442a9f40f09625d6e111_upirsm.png',
+user_id: User.third.id
+},
+
+{
+title:"Rose Parade",
+artist: 'Elliott Smith',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330769/07_Rose_Parade_jfb6ss.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330693/Elliott-Smith-Either-Or-1487883970_qqcev2.jpg',
+user_id: User.second.id
+},
+
+{
+title:"Second Hand News",
+artist: 'Fleetwood Mac',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330738/01_Second_Hand_News_qewakt.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330693/fleetwood-mac-rumours_sq-11b0b64b5817a55faed7c89d205d46f1d9afcf45-s900-c85_m8nfz6.jpg',
+user_id: User.first.id
+},
+
+{
+title:"Tomorrow Never Knows",
+artist: 'The Beatles',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330766/14_Tomorrow_Never_Knows_pac80f.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330693/Revolver_lxhkjh.jpg',
+user_id: User.third.id
+},
+
+{
+title:"Hang With Me",
+artist: 'Robyn',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330766/07_Hang_With_Me_blwiol.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330693/d18ed2212fe60eb732d5867f33cd6f33.1000x1000x1_hmcyhi.jpg',
+user_id: User.second.id
+},
+
+{
+title:"I'm Not Part Of Me",
+artist: 'Cloud Nothings',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330776/08_I_m_Not_Part_Of_Me_mjmq8t.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330692/maxresdefault_wk9trm.jpg',
+user_id: User.fourth.id
+},
+
+{
+title:"Gosh",
+artist: 'Jamie xx',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497325286/gosh.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497325298/uxi3tuoeess9wzqsmeyp.jpg',
+user_id: User.third.id
+},
+
+{
+title:"My Old Man",
+artist: 'Mac DeMarco',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497323478/my_old_man.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329091/e016d633816ada4c55a26832da91f2f4.1000x1000x1_g2aooc.jpg',
+user_id: User.second.id
+},
+
+{
+title:"Reckoner",
+artist: 'Radiohead',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497329721/1-07_Reckoner_zlhwp0.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329641/525c7ac8ba19f54cb8a545c285649b27.1000x1000x1_kwp6ca.jpg',
+user_id: User.fourth.id
+},
+
+{
+title:"Warning",
+artist: 'Cymbals Eat Guitars',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497329719/02_Warning_zbwvdw.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329640/1cd232b54475fa5166316647a8a084f1.1000x1000x1_qtabrd.jpg',
+user_id: User.third.id
+},
+
+{
+title:"Lisztomania",
+artist: 'Phoenix',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497329697/01_Lisztomania_lvb4tv.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329639/rs-136228-591b3b775bad34ace47e5d90e19f1a6addaac39a_zfcodn.jpg',
+user_id: User.second.id
+},
+
+{
+title:"Cecilia",
+artist: 'Simon and Garfunkel',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497329713/03_Cecilia_f8umme.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329640/37e54aa82d217c77755c8dc96ef84a58.1000x1000x1_ey0kmc.png',
+user_id: User.third.id
+},
+
+{
+title:"Countdown",
+artist: 'Beyonce',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497329708/Countdown_ohp2ra.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329657/Beyonce-4-album_ixqxek.jpg',
+user_id: User.fourth.id
+},
+
+{
+title:"Work On You",
+artist: 'MSTRKRFT',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497329702/01_Work_On_You_x4h7jp.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329647/a1722971223_10_fxuq3f.jpg',
+user_id: User.third.id
+},
+
+{
+title:"Ice Cream",
+artist: 'Battles',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497329700/02_Ice_Cream_feat._Matias_Aguayo_bcxvps.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329388/battles-gloss_drop_bcbq2q.jpg',
+user_id: User.second.id
+},
+
+{
 title:"Kennel District",
 artist: 'Pavement',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1488341869/kenneldistrict.mp3',
 cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1488341885/ximja9zsctd8d2ksupiq.jpg',
 user_id: User.first.id
 }
-
-
 
 ])
