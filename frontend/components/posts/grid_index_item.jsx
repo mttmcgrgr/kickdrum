@@ -48,7 +48,7 @@ class GridIndexItem extends React.Component {
 
   render(){
     const { post, receiveTrack, currentUser, user, profileFeed } = this.props;
-    let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
+    let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497311661/12-Vinyl-LP-Record-4_e9nbgk_gxlll1.png"
     let name = post.username ? post.username : user.username;
     let userPic;
     if(profileFeed){
@@ -64,10 +64,14 @@ class GridIndexItem extends React.Component {
               <img className="user-image" src={post.cover_url} onClick={this.modalOpen}/>
                 <div className="middle">
                   <div className="modal-icon-container">
-                    <img className="modal-icon" onClick={this.modalOpen} src="http://res.cloudinary.com/dccshngpp/image/upload/v1496898350/grey-modal_h5lsun.png"/>
+                    <img className="modal-icon"
+                      onClick={this.modalOpen}
+                      src="http://res.cloudinary.com/dccshngpp/image/upload/v1497307913/popout-flat_e8m2zs.png"/>
                   </div>
                   <div className="play-icon-container">
-                    <img className="play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
+                      <img className="play"
+                        onClick={()=> (receiveTrack(post))}
+                        src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"/>
                   </div>
                </div>
            </div>
@@ -84,7 +88,7 @@ class GridIndexItem extends React.Component {
                 <div className="container">
                   <img className="modal-image" src={post.cover_url} onClick={this.modalOpen}/>
                     <div className="middle">
-                      <img className="modal-play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"/>
+                      <img className="modal-play" onClick={()=> (receiveTrack(post))} src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"/>
                    </div>
                </div>
               </section>

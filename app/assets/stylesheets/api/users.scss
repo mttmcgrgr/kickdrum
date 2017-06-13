@@ -5,25 +5,34 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .user-info-box {
   padding: 20px;
-  background-color: white;
-  height: 360px;
-  width: 460px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  top: 20px;
-  left: 212px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: grey;
-  box-shadow: -2px 2px 2px grey;
+    background-color: white;
+    height: 360px;
+    align-self: flex-end;
+    width: 460px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+    left: 202px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    box-shadow: -2px 2px 2px grey;
 }
 
 .user-info-container {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  z-index: 0;
+    z-index: 0;
+    height: 100%;
+    width: 1000px;
+    position: relative;
+    left: -30px;
+}
+
+.parent {
+  position: relative;
+    top: 20px;
+    align-self: flex-start;
 }
 
 .modal {
@@ -200,35 +209,11 @@ button:hover {
 
 
 
-.info-play {
-  z-index: 9;
-    margin: 0;
-    padding: 0;
-    height: 100px;
-    position: relative;
-    top: 165px;
-    left: -35px;
-    opacity: 0;
-}
-
-
 .user-container {
   position: relative;
   width: 50%;
 }
 
-.info-play:hover {
-  z-index:9;
-  margin:0;
-  padding:0;
-  height: 100px;
-  position: relative;
-  top: 165px;
-  left: -35px;
-  opacity: 1;
-  transition: .5s ease;
-  cursor: pointer;
-}
 
 
 .user-middle {
@@ -356,4 +341,40 @@ button:hover {
   padding-top: 5px;
   padding-bottom: 10px;
   font-size: 13px;
+}
+
+
+.info-play-container {
+    height: 340px;
+    width: 340px;
+    position: relative;
+    left: 70px;
+    top: 30px;
+    justify-content: flex-end;
+    display: flex;
+    opacity: 0;
+    z-index: 50;
+}
+
+.info-play-container:hover {
+  opacity: 1 ;
+}
+
+.info-play {
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    z-index: 50;
+    position: relative;
+    opacity: 0.8;
+    align-self: flex-end;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.info-play:hover {
+      opacity: 1;
+      transition: .3s ease;
+      cursor: pointer;
+      z-index: 50;
 }

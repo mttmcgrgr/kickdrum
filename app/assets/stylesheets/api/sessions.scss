@@ -10,7 +10,7 @@
  box-shadow: none;
  border-radius: 10;
  color: #fff;
- background-color: #6496c8;
+ background-color: #2687FB;
  border-radius: 5px;
  border: none;
  position: absolute;
@@ -38,7 +38,7 @@
  line-height: 1.8;
  border-radius: 10;
  color: #fff;
- background-color: #6496c8;
+ background-color: #2687FB;
  border-radius: 5px;
  border: none;
  text-align: center;
@@ -83,7 +83,7 @@
   box-shadow: none;
   border-radius: 10;
   color: #fff;
-  background-color: #6496c8;
+  background-color: #2687FB;
   border-radius: 5px;
   border: none;
   text-align: center;
@@ -215,7 +215,7 @@ input:hover {
  box-shadow: none;
  border-radius: 10;
  color: #fff;
- background-color: #6496c8;
+ background-color: #2687FB;
  border-radius: 5px;
  border: none;
 }
@@ -231,6 +231,10 @@ input:hover {
 
 .session_play {
   color: white;
-  padding: 16px 32px;
-  
+    height: 120px;
+    position: relative;
+    opacity: 0.8;
+    align-self: center;
+    margin-right: 15px;
+
 }

@@ -7,7 +7,7 @@ class PostIndexItem extends React.Component {
 
  render() {
    const { post, receiveTrack } = this.props;
-   const defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
+   const defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497311661/12-Vinyl-LP-Record-4_e9nbgk_gxlll1.png"
    let userPic =  post.user_photo_url  ?  post.user_photo_url : defaultPic;
 
     return (
@@ -23,7 +23,7 @@ class PostIndexItem extends React.Component {
                 <img
                   className="post-play"
                   onClick={()=> (receiveTrack(post))}
-                  src="http://res.cloudinary.com/dccshngpp/image/upload/v1484354473/video-play-3-xxl_hzjck2.png"
+                  src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"
                 />
              </div>
          </div>

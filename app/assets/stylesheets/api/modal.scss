@@ -46,13 +46,18 @@
 
 .modal-play{
   color: white;
-    height: 120px;
-    position: relative;
+    height: 100px;
+    position: absolute;
+    align-self: flex-end;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    opacity: 0.8;
 
 }
 
-.modal-play{
+.modal-play:hover{
   cursor: hover;
+  opacity: 1;
 }
 
 
