@@ -35,7 +35,7 @@ class UserInfo extends React.Component {
      if(user.username === currentUser.username){
        return(
          <button className="add-button" onClick={this.createPost}>
-           <img className="add-post-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1497226293/button_create_ldioq7_tyddl6.png"/>
+           <img className="add-post-button" src="http://res.cloudinary.com/dccshngpp/image/upload/v1497319913/button_create_ldioq7_tyddl6_kkznvi.png"/>
          </button>
        )
      } else {
@@ -61,9 +61,12 @@ class UserInfo extends React.Component {
             <div className="parent">
              <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
              <img className="image2" src={post.cover_url}/>
-             <img className="info-play"
-               src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"
-               onClick={()=> (receiveTrack(post))}/>
+             <div className="info-play-container">
+               <img className="info-play"
+                 src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"
+                 onClick={()=> (receiveTrack(post))}/>
+             </div>
+
            </div>
        )
      }
@@ -72,7 +75,7 @@ class UserInfo extends React.Component {
 
    userInfo(){
      const { post, user, deletePost, currentUser} = this.props;
-     let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
+     let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
      let userPic =  user.photo_url  ?  user.photo_url : defaultPic;
 
      if(user.posts.length === 0){

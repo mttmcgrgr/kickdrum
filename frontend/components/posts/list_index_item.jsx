@@ -7,7 +7,7 @@ class PostIndexItem extends React.Component {
 
  render() {
    const { post, receiveTrack } = this.props;
-   const defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497311661/12-Vinyl-LP-Record-4_e9nbgk_gxlll1.png"
+   const defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
    let userPic =  post.user_photo_url  ?  post.user_photo_url : defaultPic;
 
     return (

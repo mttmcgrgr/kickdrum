@@ -48,7 +48,7 @@ class GridIndexItem extends React.Component {
 
   render(){
     const { post, receiveTrack, currentUser, user, profileFeed } = this.props;
-    let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497311661/12-Vinyl-LP-Record-4_e9nbgk_gxlll1.png"
+    let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
     let name = post.username ? post.username : user.username;
     let userPic;
     if(profileFeed){
