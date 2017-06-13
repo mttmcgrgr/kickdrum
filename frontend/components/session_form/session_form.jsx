@@ -77,8 +77,8 @@ class SessionForm extends React.Component {
 	}
 
 	render(){
-		const title = this.props.formType === "login" ?  "Login" : "Create Account"
-		const button = this.props.formType === "login" ?  "Login" : "Create"
+		const title = this.props.formType === "login" ?  "Log In" : "Create Account"
+		const button = this.props.formType === "login" ?  "Log In" : "Create"
 
 			return(
 				<div className="login-form-container">
