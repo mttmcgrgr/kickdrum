@@ -53,6 +53,7 @@ class UserInfo extends React.Component {
           <div className="parent">
            <img className="image1" src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
            <img className="image2" src="http://res.cloudinary.com/dccshngpp/image/upload/v1496796665/12-Vinyl-LP-Record-4_e9nbgk.png"/>
+           <div className="info-play-container"></div>
           </div>
        )
      } else {
