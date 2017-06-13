@@ -150,11 +150,12 @@
 
 .post_footer_title {
   font-size: 23px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .post_footer_artist {
-  font-size: 16px
+  font-size: 20px;
+  color: grey;
 
 }
 
@@ -181,7 +182,7 @@
   content: '';
 	position: absolute;
 	top: 10px;
-	left: 50%;
+	left: 52%;
 	width: 0;
 	height: 0;
 	border: 18px solid transparent;
