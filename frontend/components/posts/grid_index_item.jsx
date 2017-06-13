@@ -68,6 +68,10 @@ class GridIndexItem extends React.Component {
                       onClick={this.modalOpen}
                       src="http://res.cloudinary.com/dccshngpp/image/upload/v1497307913/popout-flat_e8m2zs.png"/>
                   </div>
+                  <div className="modal-post-info">
+                    <div className="hover-title">{post.title}</div>
+                    <div className="hover-artist">{post.artist}</div>
+                  </div>
                   <div className="play-icon-container">
                       <img className="play"
                         onClick={()=> (receiveTrack(post))}

@@ -157,3 +157,31 @@
   font-size: 16px
 
 }
+
+.modal-post-info {
+  display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-self: center;
+    background-color: white;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    bottom: -60px;
+    z-index: 300;
+    height: 50px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    box-shadow: -5px 5px 5px black;
+}
+
+.hover-title {
+  padding-left: 5px;
+}
+
+.hover-artist {
+  color: grey;
+  padding-left: 5px;
+}
