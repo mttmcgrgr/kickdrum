@@ -256,7 +256,7 @@ title:"Obvious Child",
 artist: 'Paul Simon',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1488344274/1-01_The_Obvious_Child_vl8klu.mp3',
 cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1488344786/51uwqEsFj1L_qemagt.jpg',
-user_id: User.fourth.id
+user_id: User.fifth.id
 },
 
 
@@ -281,7 +281,7 @@ title:"Sunday Morning",
 artist: 'No Doubt',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1488344349/09_Sunday_Morning_tueut3.mp3',
 cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1488344647/TragicKingdom-1024x1024_myvaxd.jpg',
-user_id: User.first.id
+user_id: User.fifth.id
 },
 
 {
@@ -361,7 +361,7 @@ title:"XMAS_EVET10",
 artist: 'Aphex Twin',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497325455/xmas_eve.mp3',
 cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497325464/ed0fodskivuyrqnfslrv.jpg',
-user_id: User.second.id
+user_id: User.fifth.id
 },
 
 {
@@ -401,7 +401,7 @@ title:"Rose Parade",
 artist: 'Elliott Smith',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497330769/07_Rose_Parade_jfb6ss.mp3',
 cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497330693/Elliott-Smith-Either-Or-1487883970_qqcev2.jpg',
-user_id: User.second.id
+user_id: User.fifth.id
 },
 
 {
@@ -449,7 +449,7 @@ title:"My Old Man",
 artist: 'Mac DeMarco',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497323478/my_old_man.mp3',
 cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329091/e016d633816ada4c55a26832da91f2f4.1000x1000x1_g2aooc.jpg',
-user_id: User.second.id
+user_id: User.fifth.id
 },
 
 {
@@ -481,7 +481,7 @@ title:"Cecilia",
 artist: 'Simon and Garfunkel',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1497329713/03_Cecilia_f8umme.mp3',
 cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1497329640/37e54aa82d217c77755c8dc96ef84a58.1000x1000x1_ey0kmc.png',
-user_id: User.third.id
+user_id: User.fifth.id
 },
 
 {
