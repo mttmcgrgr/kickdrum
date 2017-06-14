@@ -622,16 +622,21 @@ audio {
   height: 60%;
 }
 
+
 .carousel-text {
-    color: black;
-    background-color: #f6f6f7;
-    z-index: 6;
-    position: fixed;
-    font-size: 50px;
-    top: 130px;
-    font-weight: normal;
-    padding: 30px;
-    margin-left: 30px;
+  color: black;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: white;
+  z-index: 6;
+  position: fixed;
+  font-size: 45px;
+  top: 130px;
+  font-weight: normal;
+  padding: 30px;
+  margin-left: 30px;
+  box-shadow: -10px 10px 0px black;
 }
 
 .scroll-play {
