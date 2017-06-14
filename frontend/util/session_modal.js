@@ -11,7 +11,8 @@ module.exports = {
     height         : "430px",
     width          :"300px",
     justifyContent : "center",
-    height         :"500px"
+    height         :"500px",
+    boxShadow      : "-15px 15px 15px black",
   },
   overlay : {
     zIndex: 15,
