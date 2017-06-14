@@ -17,7 +17,15 @@ class UserInfo extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 50);
+    this.setState({loading: false}); }, 100);
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(this.props.params.userId !== nextProps.params.userId){
+      this.props.fetchUser(nextProps.params.userId);
+      setTimeout(() => {
+      this.setState({loading: false}); }, 100);
+    }
   }
 
   handleDelete() {
