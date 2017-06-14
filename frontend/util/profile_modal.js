@@ -21,6 +21,7 @@ module.exports = {
     width          : '1050px',
     height         : '549px',
     zIndex         : 1000,
-    overflow       : "hidden"
+    overflow       : "hidden",
+    boxShadow      : "-15px 15px 15px black",
   }
 };
