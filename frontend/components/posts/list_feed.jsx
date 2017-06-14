@@ -22,7 +22,7 @@ class ListIndex extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 50);
+    this.setState({loading: false}); }, 100);
   }
 
   changeView(){

@@ -10,7 +10,6 @@ const defaultState = {
   song_url: ""
 };
 
-
 const PostsReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
   switch(action.type){

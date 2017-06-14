@@ -68,8 +68,8 @@ class Greeting extends React.Component {
   };
 
   logOutRedirect(){
-    this.props.logout();
-    this.modalClose();
+    this.props.logout().then(() => this.props.router.push("/home"));
+
   }
 
   guestLogin() {
