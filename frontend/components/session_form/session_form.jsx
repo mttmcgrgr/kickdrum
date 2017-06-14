@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
 					<br/>
 					<a onClick={ this.guestLogin }>{'Try it out'}</a>
 					<br/>
-					<img onClick= { this.guestLogin }
+					<img onClick= { this.props.modalClose }
 						className="session-close"
 						src="http://res.cloudinary.com/dccshngpp/image/upload/v1497326370/52084_vqsrat.png"/>
 				</div>
@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
 					<br/>
 				<a onClick={ this.guestLogin }>{'Try it out'}</a>
 					<br/>
-				<img onClick= { this.guestLogin }
+				<img onClick= { this.props.modalClose }
 					className="session-close"
 					src="http://res.cloudinary.com/dccshngpp/image/upload/v1497326370/52084_vqsrat.png"/>
 				</div>
