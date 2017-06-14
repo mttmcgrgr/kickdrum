@@ -17,7 +17,7 @@ class UserInfo extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 75);
+    this.setState({loading: false}); }, 25);
   }
 
 

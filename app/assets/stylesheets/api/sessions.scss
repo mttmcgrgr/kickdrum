@@ -23,12 +23,12 @@
   text-align: center;
   flex-direction: column;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .session-vinyl {
   height: 65px;
     position: relative;
-
     bottom: 20px;
 }
 
@@ -47,6 +47,14 @@
  position: relative;
  box-shadow: -2px 2px 2px grey;
  outline: none;
+}
+
+.session-close {
+  position: relative;
+  top: 10px;
+  height: 20px;
+    width: 20px;
+    align-self: center;
 }
 
 .session-button:hover {

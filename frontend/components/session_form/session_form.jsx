@@ -43,9 +43,11 @@ class SessionForm extends React.Component {
 				<div className="session-text">
 					<a  onClick={ this.props.closeAndOpenModal('signup') }>{'Don\'t have an account?'}</a>
 					<br/>
-					<a onClick={ this.guestLogin }>{'Demo Account'}</a>
+					<a onClick={ this.guestLogin }>{'Try it out'}</a>
 					<br/>
-					<a onClick={ this.props.modalClose }>{'Close'}</a>
+					<img onClick= { this.guestLogin }
+						className="session-close"
+						src="http://res.cloudinary.com/dccshngpp/image/upload/v1497326370/52084_vqsrat.png"/>
 				</div>
 				)
     } else {
@@ -53,9 +55,11 @@ class SessionForm extends React.Component {
 				<div className="session-text">
 					<a  onClick={ this.props.closeAndOpenModal('login') }>{'Already have an account?'}</a>
 					<br/>
-				<a onClick={ this.guestLogin }>{'Demo Account'}</a>
+				<a onClick={ this.guestLogin }>{'Try it out'}</a>
 					<br/>
-					<a onClick={ this.props.modalClose }>{'Close'}</a>
+				<img onClick= { this.guestLogin }
+					className="session-close"
+					src="http://res.cloudinary.com/dccshngpp/image/upload/v1497326370/52084_vqsrat.png"/>
 				</div>
 
 			)

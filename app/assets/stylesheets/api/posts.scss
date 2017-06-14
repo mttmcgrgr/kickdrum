@@ -201,3 +201,52 @@
   color: grey;
   padding-left: 5px;
 }
+
+@mixin center-v () {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.aos-trigger {
+  position: absolute;
+    top: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+
+.item {
+  width: 65px;
+  height: 65px;
+  margin-right: 50px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  position: absolute;
+  bottom: 390px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+
+  span {
+    display: block;
+    font-size: 1rem;
+  }
+
+  &--primary {
+    @include center-v;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 20px;
+    background: white;
+    position: fixed;
+    bottom: 90%;
+  }
+
+}

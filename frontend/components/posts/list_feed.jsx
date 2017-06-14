@@ -2,11 +2,16 @@ import React from 'react';
 import ListIndexItem from './list_index_item';
 import GridFeed from './grid_feed';
 import Loading from 'react-loading-animation';
+import AOS from 'aos';
+
 
 
 class ListIndex extends React.Component {
   constructor(props){
     super(props);
+    AOS.init({
+     duration: 300
+    });
     this.state = {
       loading: true,
       listView: true
@@ -20,9 +25,13 @@ class ListIndex extends React.Component {
     this.props.fetchPosts();
   }
 
+  componentWillReceiveProps (){
+    AOS.refresh();
+  }
+
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 100);
+    this.setState({loading: false}); }, 75);
   }
 
   changeView(){
@@ -54,7 +63,6 @@ class ListIndex extends React.Component {
 
   renderViewType(){
     const { posts } = this.props;
-
     if(this.state.listView === true){
       return(
         <div className="post-feed-list">
@@ -76,7 +84,6 @@ class ListIndex extends React.Component {
             deletePost={this.props.deletePost}
             fetchUser={this.props.fetchUser}/>
         </div>
-
       )
     }
   }
@@ -95,6 +102,12 @@ class ListIndex extends React.Component {
           <div className="view-button-container">
             {this.viewButton()}
           </div>
+          <div className="item item--primary"
+            data-aos="fade-left"
+            data-aos-anchor="#trigger-right">
+            {this.viewButton()}
+          </div>
+          <div className="aos-trigger" id="trigger-right"></div>
             {this.renderViewType()}
         </div>
 
