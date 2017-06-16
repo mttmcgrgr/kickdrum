@@ -2,7 +2,43 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-class PostIndexItem extends React.Component {
+class ListIndexItem extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      refresh: false
+    }
+    this.bookmarkFunction = this.bookmarkFunction.bind(this);
+  }
+
+
+  isBookmarked(){
+    if(this.props.currentUser) {
+      let isMarked = this.props.post.bookmarks.find(bookmark => {
+        return bookmark.user_id === this.props.currentUser.id;
+      });
+      let result = isMarked ? true : false;
+      return result;
+    }
+  }
+
+  bookmarkFunction(){
+    if(this.isBookmarked()){
+      this.props.deleteBookmark(this.props.post.id);
+    } else {
+      this.props.createBookmark(this.props.post.id);
+    }
+    this.setState({refresh: !this.state.refresh})
+
+  }
+
+  bookmarkStyle() {
+    if (this.isBookmarked()){
+      return "http://res.cloudinary.com/dccshngpp/image/upload/v1497505286/blue-bookmark_vtsuka.png";
+    } else {
+      return "http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg";
+    }
+  }
 
 
  render() {
@@ -39,4 +75,4 @@ class PostIndexItem extends React.Component {
 
 };
 
-export default PostIndexItem;
+export default ListIndexItem;

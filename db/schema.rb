@@ -17,14 +17,9 @@ ActiveRecord::Schema.define(version: 20170110215038) do
   enable_extension "plpgsql"
 
   create_table "bookmarks", force: :cascade do |t|
-    t.integer  "post_id",    null: false
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "post_id"
+    t.integer "user_id"
   end
-
-  add_index "bookmarks", ["post_id"], name: "index_bookmarks_on_post_id", unique: true, using: :btree
-  add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id", unique: true, using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",      null: false

@@ -3,37 +3,46 @@
 export const RECEIVE_ALL_POSTS = "RECEIVE_ALL_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
+export const RECEIVE_FOLLOWED_POSTS = "RECEIVE_FOLLOWED_POSTS";
 
-const receiveAllPosts = posts => ({
+
+const receiveAllPosts = (posts) => ({
   type: RECEIVE_ALL_POSTS,
   posts
 });
 
-const receivePost = post => ({
+export const receiveFollowedPosts = (posts) => ({
+  type: RECEIVE_FOLLOWED_POSTS,
+  posts
+});
+
+const receivePost = (post) => ({
   type: RECEIVE_POST,
   post
 });
 
-const removePost = post => ({
+const removePost = (post) => ({
   type: REMOVE_POST,
   post
 });
 
+export const fetchPost = (id) => dispatch => (
+  PostApiUtil.fetchPost(id).then(post => dispatch(receivePost(post)))
+);
 
 export const fetchPosts = () => dispatch => (
   PostApiUtil.fetchPosts().then(posts => dispatch(receiveAllPosts(posts)))
 );
 
-export const fetchPost = id => dispatch => (
-  PostApiUtil.fetchPost(id).then(post => dispatch(receivePost(post)))
-);
-
-export const fetchUserPosts = id => dispatch => (
+export const fetchUserPosts = (id) => dispatch => (
   PostApiUtil.fetchUserPosts(id).then(posts => dispatch(receiveAllPosts(posts)))
 );
 
+export const fetchFollowedPosts = (id) => dispatch => (
+  PostApiUtil.fetchPosts(id).then(posts => dispatch(receiveFollowedPosts(posts)))
+);
 
-export const createPost = post => dispatch => (
+export const createPost = (post) => dispatch => (
   PostApiUtil.createPost(post).then(post => dispatch(receivePost(post)))
 );
 

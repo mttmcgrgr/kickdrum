@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
 	has_many :posts
 	has_many :bookmarks
+	has_many :bookmarked_posts, :through => :bookmarks, :source => :post
 
 
 	def password= password

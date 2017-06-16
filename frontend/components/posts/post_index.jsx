@@ -6,7 +6,7 @@ import AOS from 'aos';
 
 
 
-class ListIndex extends React.Component {
+class PostIndex extends React.Component {
   constructor(props){
     super(props);
     AOS.init({
@@ -62,13 +62,19 @@ class ListIndex extends React.Component {
 
 
   renderViewType(){
-    const { posts } = this.props;
+    const { posts, currentUser, receiveTrack, createBookmark, deleteBookmark } = this.props;
     if(this.state.listView === true){
       return(
         <div className="post-feed-list">
           <ul className="post_content_main">
             {posts.map(post => (
-              <ListIndexItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
+              <ListIndexItem
+                key={post.id}
+                post={post}
+                currentUser={currentUser}
+                receiveTrack={receiveTrack}
+                createBookmark={createBookmark}
+                deleteBookmark={deleteBookmark} />
             ))}
           </ul>
         </div>
@@ -80,8 +86,11 @@ class ListIndex extends React.Component {
             posts={this.props.posts}
             user={this.props.user}
             profileFeed={false}
+            currentUser={this.props.currentUser}
             receiveTrack={this.props.receiveTrack}
             deletePost={this.props.deletePost}
+            createBookmark={this.props.createBookmark}
+            deleteBookmark={this.props.deleteBookmark}
             fetchUser={this.props.fetchUser}/>
         </div>
       )
@@ -116,4 +125,4 @@ class ListIndex extends React.Component {
   }
 }
 
-export default ListIndex;
+export default PostIndex;
