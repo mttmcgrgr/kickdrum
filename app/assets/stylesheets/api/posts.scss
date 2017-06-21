@@ -22,6 +22,27 @@
     transform:scale(0.8);
 }
 
+.modal-userpic {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 30px;
+    left: 5px;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 50;
+    opacity: 0.8;
+}
+
+.modal-userpic:hover {
+  cursor: pointer;
+    opacity: 1;
+}
+
 .change-view-button {
   height: 60px;
 }
