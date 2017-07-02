@@ -12,7 +12,7 @@ module.exports = {
   content : {
     display        : 'flex',
     padding        : "0px",
-    top            : '49%',
+    top            : '48%',
     left           : '49%',
     right          : 'auto',
     bottom         : 'auto',
