@@ -14,13 +14,10 @@ class Home extends React.Component{
 
   }
 
-
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 50);
+    this.setState({loading: false}); }, 40);
   }
-
-
 
   render() {
     if(this.state.loading === true) {

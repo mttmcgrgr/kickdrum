@@ -7,12 +7,6 @@ class PlayerBar extends React.Component {
 
   }
 
-
-
-
-
-
-
   render() {
     const playerClass = this.props.visible ? "footer-playbar" : "hidden-playbar";
     return (
