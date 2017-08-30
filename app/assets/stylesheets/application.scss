@@ -643,7 +643,8 @@ audio {
    position: relative;
    top: 15px;
    font-size: 33px;
-   color: #33495F
+   color: #33495F;
+   font-weight: bold;
    //text-shadow: -2px 2px #000000;
 }
 
@@ -684,7 +685,7 @@ audio {
   display: flex;
   position: relative;
   justify-content: flex-start;
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
   background-color: inherit;
   font-size: 25px;
