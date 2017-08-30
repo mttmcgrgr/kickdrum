@@ -10,7 +10,7 @@
  box-shadow: none;
  border-radius: 10;
  color: #fff;
- background-color: #2687FB;
+ background-color: #33495F;
  border-radius: 5px;
  border: none;
  position: absolute;
@@ -90,21 +90,19 @@
   box-shadow: none;
   border-radius: 10;
   color: #fff;
-  background-color: #2687FB;
+  background-color: #33495F;
   border-radius: 5px;
   border: none;
   text-align: center;
-  box-shadow: -2px 2px 2px grey;
+
   outline: none;
 
 }
 
 .form-button:hover {
-  box-shadow: -5px 5px 5px grey;
+  transform:scale(1.05);
 
 }
-
-
 
 
 .login-form {
