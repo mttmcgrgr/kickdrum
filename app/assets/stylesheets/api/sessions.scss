@@ -37,15 +37,14 @@
  font-size: 18px;
  line-height: 1.8;
  border-radius: 10;
- color: #fff;
- background-color: #2687FB;
+ color: white;
+ background-color: #33495F;
  border-radius: 5px;
  border: none;
  text-align: center;
  width: 75px;
  top: 10px;
  position: relative;
- box-shadow: -2px 2px 2px grey;
  outline: none;
 }
 
@@ -58,7 +57,7 @@
 }
 
 .session-button:hover {
-  box-shadow: -5px 5px 5px grey;
+
 }
 
 .errors {

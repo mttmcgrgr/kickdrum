@@ -42,7 +42,6 @@ class UserProfile extends React.Component {
         <div className="loading">
           <Loading />
         </div>
-
       )
     } else {
       return (

@@ -30,7 +30,7 @@ class PostIndex extends React.Component {
   }
 
   componentDidMount(){
-    setTimeout(() => {
+    setTimeout(() => {]
     this.setState({loading: false}); }, 75);
   }
 

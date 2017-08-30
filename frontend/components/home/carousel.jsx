@@ -7,7 +7,6 @@ class Carousel extends React.Component {
 
   }
 
-
   render() {
     const settings = {
       dots: false,
@@ -40,7 +39,6 @@ class Carousel extends React.Component {
             <p className="carousel-text">Share your latest creation<br/> with the world.</p>
             <img className='slider-img' src={image3} />
           </div>
-
         </Slider>
       </div>
     )

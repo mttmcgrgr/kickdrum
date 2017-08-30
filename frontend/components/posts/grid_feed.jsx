@@ -4,7 +4,6 @@ import GridIndexItem from './grid_index_item';
 
 class GridFeed extends React.Component {
 
-
   render () {
     const posts = [...this.props.posts];
     const currentUser = this.props.currentUser;

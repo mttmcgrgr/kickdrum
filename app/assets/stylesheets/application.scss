@@ -297,10 +297,10 @@
   width: 100%;
   right: 0px;
   bottom: 8%;
+  color: #33495F;
   transform: scale(0.8);
 
   a {
-    color: white;
     margin: 10px;
     padding: 0px 3px;
   }
@@ -379,10 +379,11 @@ audio {
 
 .personal-sites {
   display: flex;
-    position: relative;
-    justify-content: center;
-    bottom: -60px;
-    text-shadow: -2px 2px #000000;
+  position: relative;
+  justify-content: center;
+  bottom: -60px;
+  color: #33495F;
+
 }
 
 
@@ -624,11 +625,10 @@ audio {
 
 
 .carousel-text {
-  color: black;
+  color: white;
   border-width: 1px;
   border-color: black;
-  border-style: solid;
-  background-color: white;
+  background-color: #33495F;
   z-index: 6;
   position: fixed;
   font-size: 45px;
@@ -636,13 +636,14 @@ audio {
   font-weight: normal;
   padding: 30px;
   margin-left: 30px;
-  box-shadow: -10px 10px 0px black;
+
 }
 
 .scroll-play {
    position: relative;
    top: 15px;
    font-size: 33px;
+   color: #33495F
    //text-shadow: -2px 2px #000000;
 }
 
@@ -672,14 +673,14 @@ audio {
     bottom: 0px;
     width: 100%;
     margin-bottom: 0px;
-    background-color: #2687FB;
+    background-color: white;
     letter-spacing: 3px;
     height: 40%;
 
 }
 
 .footer-text {
-  color: white;
+  color: #33495F;
   display: flex;
   position: relative;
   justify-content: flex-start;
