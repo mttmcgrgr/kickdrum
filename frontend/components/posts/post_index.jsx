@@ -31,7 +31,7 @@ class PostIndex extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 75);
+    this.setState({loading: false}); }, 50 );
   }
 
   changeView(){
