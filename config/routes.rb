@@ -5,6 +5,5 @@ Rails.application.routes.draw do
     resources :posts
     resources :bookmarks
   end
-
   root "static_pages#root"
 end

@@ -9,6 +9,7 @@ class PlayerBar extends React.Component {
 
   render() {
     const playerClass = this.props.visible ? "footer-playbar" : "hidden-playbar";
+
     return (
     <div className={playerClass}>
       <button className="close-player" onClick={this.props.clearTrack}>
@@ -25,8 +26,7 @@ class PlayerBar extends React.Component {
           <div className="player-audio">
              <ReactAudioPlayer
                src={this.props.song_url}
-               autoPlay
-             />
+               autoPlay />
           </div>
      </div>
     </div>

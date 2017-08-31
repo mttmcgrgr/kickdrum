@@ -751,7 +751,11 @@ audio {
     transition: max-height 3s;
     border-top-style: solid;
     border-width: 1px;
-    border-color:grey;
+    border-color:lightgrey;
     z-index: 300;
 
+}
+.react-audio-player undefined {
+  background-color: #eeeded;
+    opacity: 0.9;
 }
