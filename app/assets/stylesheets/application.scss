@@ -106,7 +106,7 @@
  }
 
 .header-line {
-    height: 70px;
+    height: 50px;
     border-left: solid 1px #dbd2d2;
     width: 1px;
     position: relative;
@@ -118,7 +118,7 @@
 
 
  .header-name {
-   font-size: 65px;
+   font-size: 50px;
     font-weight: bold;
     font-style: oblique;
     display: flex;
@@ -156,7 +156,7 @@
 
  .header-container {
    display: flex;
-    height: 90px;
+    height: 70px;
     background-color: white;
     width: 100%;
     background-color: white;
@@ -315,8 +315,8 @@
   }
 
   .logo-header {
-    height: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     padding-top: 5px
   }
 
@@ -336,8 +336,8 @@ audio {
 }
 
 .greeting-profile {
-  height: 50px;
-    bottom: 10px;
+  height: 40px;
+    bottom: 12px;
     left: 9px;
     display: flex;
     position: relative;
@@ -345,15 +345,14 @@ audio {
 
 .greeting-logout {
   position: relative;
-  height: 43px;
-  right: 10px;
-  top: 5px;
+    height: 36px;
+    right: 10px;
+    top: 3px;
 }
 
 .greeting-feed {
-  height: 50px;
-    bottom: 10px;
-    display: flex;
+  height: 40px;
+    bottom: 12px;
     position: relative;
     right: 65px;
 }
@@ -381,7 +380,7 @@ audio {
   display: flex;
   position: relative;
   justify-content: center;
-  bottom: -60px;
+  bottom: -15%;
   color: #33495F;
 
 }
@@ -626,17 +625,16 @@ audio {
 
 .carousel-text {
   color: white;
-  border-width: 1px;
-  border-color: black;
-  background-color: #33495F;
-  z-index: 6;
-  position: fixed;
-  font-size: 45px;
-  top: 130px;
-  font-weight: normal;
-  padding: 30px;
-  margin-left: 30px;
-
+    border-width: 1px;
+    border-color: black;
+    background-color: #33495F;
+    z-index: 6;
+    position: fixed;
+    font-size: 35px;
+    top: 120px;
+    font-weight: normal;
+    padding: 30px;
+    margin-left: 30px;
 }
 
 .scroll-play {
@@ -682,15 +680,15 @@ audio {
 
 .footer-text {
   color: #33495F;
-  display: flex;
-  position: relative;
-  justify-content: flex-start;
-  font-weight: bold;
-  text-align: center;
-  background-color: inherit;
-  font-size: 25px;
-  bottom: 11%;
-  padding-left: 25px;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    font-weight: bold;
+    text-align: center;
+    background-color: inherit;
+    font-size: 25px;
+    bottom: 10%;
+    padding: 15px;
   //text-shadow: -2px 2px #000000;
 }
 

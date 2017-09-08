@@ -290,7 +290,7 @@ button:hover {
 
 
 .user_content_main {
-    display: flex;
+  display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-decoration: none;
@@ -301,7 +301,7 @@ button:hover {
     opacity: 1;
     list-style: none;
     z-index: 1;
-    transform:scale(1);
+    transform: scale(1);
     width: 310px;
     height: 310px;
     padding-right: 10px;

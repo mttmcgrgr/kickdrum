@@ -46,9 +46,7 @@ class ListIndexItem extends React.Component {
    const defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
    let userPic =  post.user_photo_url  ?  post.user_photo_url : defaultPic;
 
-   if(post.cover_url.length  === 0){
-     return null;
-   } else {
+
     return (
       <li className="li-post-index">
         <section className="post_header">
@@ -75,8 +73,6 @@ class ListIndexItem extends React.Component {
       </li>
      );
     }
-  }
-
 };
 
 export default ListIndexItem;

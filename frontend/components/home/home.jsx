@@ -20,6 +20,8 @@ class Home extends React.Component{
   }
 
   render() {
+    const image1 = "http://res.cloudinary.com/dccshngpp/image/upload/v1496964476/1280-jp-record-shelf-1_pi9izu.jpg"
+
     if(this.state.loading === true) {
       return(
         <div className="loading">

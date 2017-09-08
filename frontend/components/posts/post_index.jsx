@@ -10,7 +10,7 @@ class PostIndex extends React.Component {
   constructor(props){
     super(props);
     AOS.init({
-     duration: 300
+     duration: 200
     });
     this.state = {
       loading: true,
@@ -63,6 +63,9 @@ class PostIndex extends React.Component {
 
   renderViewType(){
     const { posts, currentUser, receiveTrack, createBookmark, deleteBookmark } = this.props;
+
+    if( posts.length === 0 ){ return null }
+
     if(this.state.listView === true){
       return(
         <div className="post-feed-list">
