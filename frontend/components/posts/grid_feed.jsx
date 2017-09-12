@@ -8,7 +8,7 @@ class GridFeed extends React.Component {
     const posts = [...this.props.posts];
     const currentUser = this.props.currentUser;
 
-    if (posts.length === undefined) {
+    if (posts.length === 0) {
       return (
         <div className="sticky-note-add">
           <img
