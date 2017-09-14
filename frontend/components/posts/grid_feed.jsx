@@ -18,8 +18,8 @@ class GridFeed extends React.Component {
       )
     } else {
     return (
-      <div className="user-feed-container">
-        <div className="user-posts">
+      <div className="post-feed-container">
+        <div className="home-posts">
         {posts.map(post => (
           <GridIndexItem
             currentUser={this.props.currentUser}
