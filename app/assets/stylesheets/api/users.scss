@@ -18,7 +18,7 @@
     border-width: 1px;
     border-color: grey;
     box-shadow: -2px 2px 2px grey;
-    transform: scale(0.8)
+
 }
 
 .user-info-container {
@@ -28,6 +28,7 @@
     width: 1000px;
     position: relative;
     left: -30px;
+    transform: scale(0.8);
 }
 
 .parent {
