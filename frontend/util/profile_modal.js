@@ -20,7 +20,7 @@ module.exports = {
     transform      : 'translate(-50%, -50%)',
     width          : '1050px',
     height         : '549px',
-    zIndex         : 1000,
+    zIndex         : 10,
     overflow       : "hidden",
     boxShadow      : "-15px 15px 15px black",
   }
