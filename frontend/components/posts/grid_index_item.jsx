@@ -91,7 +91,7 @@ class GridIndexItem extends React.Component {
             <section>
               <div className="modal-container">
                 <img className="modal-image" src={post.cover_url} onClick={this.modalOpen}/>
-                  <div className="middle">
+                  <div className="modal-middle">
                     <img className="modal-play" onClick={()=> (receiveTrack(post))}
                       src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"/>
                  </div>
