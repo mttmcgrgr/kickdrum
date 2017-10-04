@@ -39,7 +39,6 @@ class GridIndexItem extends React.Component {
   }
 
 
-
   handleDelete() {
      this.props.deletePost(this.props.post.id);
      this.props.fetchUser(this.props.post.user_id);
@@ -90,7 +89,7 @@ class GridIndexItem extends React.Component {
           contentLabel="Modal"
           style={ProfileModal}>
             <section>
-              <div className="container">
+              <div className="modal-container">
                 <img className="modal-image" src={post.cover_url} onClick={this.modalOpen}/>
                   <div className="middle">
                     <img className="modal-play" onClick={()=> (receiveTrack(post))}

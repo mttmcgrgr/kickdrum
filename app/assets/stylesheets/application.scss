@@ -126,24 +126,22 @@
  }
 
  .player-image {
-   width: 90px;
-    height: 90px;
+   width: 60px;
+    height: 60px;
     padding-right: 10px;
  }
 
  .player-text {
-   padding-top: 20px
+   padding-top: 10px
  }
  .player-title {
-   ffont-weight: bold;
-    font-size: 23px;
-    padding-bottom: 6px;
+    font-size: 18px;
     position: relative;
     bottom: 5px;
  }
  .player-artist {
    color: grey;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
  }
 
@@ -327,7 +325,7 @@
 
 
 audio {
-  height: 50px;
+  //  height: 50px;
     position: absolute;
     right: 30px;
     width: 50%;
@@ -412,15 +410,11 @@ audio {
 }
 
 
-
 .logo-text {
   font-family: 'Bungee Shade', cursive;
   padding-left: 15px;
   padding-bottom: 15px;
 }
-
-
-
 
 .container {
   position: relative;
@@ -429,6 +423,16 @@ audio {
 }
 
 .container:hover {
+  z-index: 50;
+}
+
+.modal-container {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.modal-container:hover {
   z-index: 50;
 }
 
@@ -731,8 +735,8 @@ audio {
  margin-right: 10px;
 }
 .close-img {
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
 }
 
 
@@ -743,6 +747,7 @@ audio {
     bottom:0px;
     left:0px;
     right:0px;
+    height: 60px;
     margin-bottom:0px;
     background-color: #fafafa;
     overflow: scroll;
