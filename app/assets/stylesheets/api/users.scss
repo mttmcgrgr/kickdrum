@@ -327,6 +327,17 @@ button:hover {
   top: 200px;
 }
 
+.post-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  //top: 200px;
+  transform:scale(1)
+}
+
 .feed_footer_text {
   padding-left: 10px;
   padding-top: 5px;
