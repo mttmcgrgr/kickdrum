@@ -84,7 +84,7 @@ class PostIndex extends React.Component {
       )
     } else {
       return(
-        <div className="post-feed-grid">
+        <div className="post-grid-content">
           <GridFeed
             posts={this.props.posts}
             user={this.props.user}

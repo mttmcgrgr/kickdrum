@@ -11,7 +11,6 @@ class Home extends React.Component{
     this.state = {
       loading: true
     }
-
   }
 
   componentDidMount(){
@@ -32,9 +31,8 @@ class Home extends React.Component{
       return(
         <div>
           <div className="carousel">
-
-            <Carousel />
-
+            <img className='slider-img' src={image1} />
+            <p className="carousel-text">Your next favorite song is here.<br/>And the next. And the next.</p>
           </div>
           <footer className="footer">
             <div className="footer-text">Now Trending:</div>

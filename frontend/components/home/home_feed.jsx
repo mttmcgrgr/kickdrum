@@ -18,7 +18,7 @@ class HomeFeed extends React.Component {
   }
 
   render () {
-    const posts = [...this.props.posts];
+    const posts = [...this.props.posts]
 
     if(this.state.loading) {
       return(
