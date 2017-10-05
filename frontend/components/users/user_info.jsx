@@ -17,7 +17,7 @@ class UserInfo extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 25);
+    this.setState({loading: false}); }, 50);
   }
 
 
@@ -119,7 +119,7 @@ class UserInfo extends React.Component {
     if(this.state.loading === true) {
       return(
         <div className="loading">
-          <Loading />
+
         </div>
       )
     } else {
