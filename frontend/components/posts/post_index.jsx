@@ -63,7 +63,7 @@ class PostIndex extends React.Component {
 
   renderViewType(){
     const { posts, currentUser, receiveTrack, createBookmark, deleteBookmark } = this.props;
-
+    console.log(posts);
     if( posts.length === 0 ){ return null }
 
     if(this.state.listView === true){

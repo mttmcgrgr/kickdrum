@@ -34,7 +34,7 @@ class UserProfile extends React.Component {
     let userPosts = [...this.props.user.posts];
     let recentPost = userPosts.pop();
     let otherPosts = userPosts.reverse();
-
+    console.log(userPosts);
     const currentUser = this.props.currentUser;
 
     if(this.state.loading === true) {
