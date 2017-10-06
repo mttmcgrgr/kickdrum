@@ -28,7 +28,7 @@
     width: 1000px;
     position: relative;
     left: -30px;
-    transform: scale(0.8);
+    transform: scale(0.9);
 }
 
 .parent {
@@ -95,11 +95,11 @@
 }
 
 .info-bookmark {
-  height:50px;
-  weight: 50px;
+  height: 40px;
   position: absolute;
-  top:325px;
+  bottom: 20px;
 }
+
 
 .user_photo {
   height: 60px;

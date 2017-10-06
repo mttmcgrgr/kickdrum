@@ -1,13 +1,12 @@
 module.exports = {
   content : {
     display        : 'flex',
-    top            : '40%',
+    top            : '50%',
     left           : '50%',
     right          : 'auto',
     bottom         : 'auto',
     marginRight    : '-50%',
     transform      : 'translate(-50%, -50%)',
-    width          : "240px",
     height         : "430px",
     width          :"300px",
     justifyContent : "center",
