@@ -9,9 +9,7 @@ import AOS from 'aos';
 class PostIndex extends React.Component {
   constructor(props){
     super(props);
-    AOS.init({
-     duration: 200
-    });
+
     this.state = {
       loading: true,
       listView: true
@@ -129,3 +127,9 @@ class PostIndex extends React.Component {
 }
 
 export default PostIndex;
+
+/*
+AOS.init({
+ duration: 200
+});
+*/
