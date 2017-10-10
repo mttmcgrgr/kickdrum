@@ -648,9 +648,8 @@ audio {
 .scroll-play {
    position: relative;
    top: 15px;
-   font-size: 33px;
+   font-size: 20px;
    color: #33495F;
-   font-weight: bold;
    //text-shadow: -2px 2px #000000;
 }
 
@@ -659,7 +658,7 @@ audio {
     display: flex;
     flex-direction: row;
     left: -10%;
-    bottom: 25%;
+    bottom: 15%;
     color: white;
 }
 
@@ -667,7 +666,7 @@ audio {
   height: 60px;
     position: relative;
     /* top: 6px; */
-    transform: scale(2);
+    transform: scale(1.5);
 
 }
 
@@ -694,9 +693,10 @@ audio {
     font-weight: bold;
     text-align: center;
     background-color: inherit;
-    font-size: 25px;
+    font-size: 15px;
     bottom: 15%;
-    padding: 15px;
+    padding: 10px;
+    padding-left: 15px;
   //text-shadow: -2px 2px #000000;
 }
 
