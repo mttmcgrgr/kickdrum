@@ -4,12 +4,9 @@ import GridFeed from './grid_feed';
 import Loading from 'react-loading-animation';
 import AOS from 'aos';
 
-
-
 class PostIndex extends React.Component {
   constructor(props){
     super(props);
-
     this.state = {
       loading: true,
       listView: true
@@ -37,25 +34,18 @@ class PostIndex extends React.Component {
   }
 
   viewButton(){
-    if(this.state.listView === true) {
-      return(
-        <button className="view-button" onClick={this.changeView}>
-          <img
-            className="change-view-button"
-            src="http://res.cloudinary.com/dccshngpp/image/upload/v1497036970/arq-grid-512_ogad8x.png"
-            />
-        </button>
-      )
-    } else {
-      return(
-        <button className="view-button" onClick={this.changeView}>
-          <img
-            className="change-view-button"
-            src="http://res.cloudinary.com/dccshngpp/image/upload/v1497036973/Unknown_tdfah8.png"
-            />
-        </button>
-      )
-    }
+    const listImg = "http://res.cloudinary.com/dccshngpp/image/upload/v1497036970/arq-grid-512_ogad8x.png"
+    const gridImg = "http://res.cloudinary.com/dccshngpp/image/upload/v1497036973/Unknown_tdfah8.png"
+    let imgSrc = this.state.listView ? listImg : gridImg;
+
+    return(
+      <button className="view-button" onClick={this.changeView}>
+        <img
+          className="change-view-button"
+          src={imgSrc}
+          />
+      </button>
+    )
   }
 
 
@@ -112,13 +102,7 @@ class PostIndex extends React.Component {
           <div className="view-button-container">
             {this.viewButton()}
           </div>
-          <div className="item item--primary"
-            data-aos="fade-left"
-            data-aos-anchor="#trigger-right">
-            {this.viewButton()}
-          </div>
-          <div className="aos-trigger" id="trigger-right"></div>
-            {this.renderViewType()}
+          {this.renderViewType()}
         </div>
 
       );

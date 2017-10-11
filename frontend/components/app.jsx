@@ -23,13 +23,12 @@ const App = ({ children }) => (
         </div>
       </div>
         <NavbarContainer className="header-group-right" />
-
-        <footer>
-          <PlayerContainer />
-        </footer>
     </div>
          { children }
     </div>
+    <footer>
+      <PlayerContainer />
+    </footer>
   </div>
 );
 
