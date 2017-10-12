@@ -8,7 +8,6 @@ json.array! @posts do |post|
   json.user_photo_url post.user.photo_url
   json.id post.id
   json.created_at post.created_at
-
   json.bookmarks post.bookmarks
 
 end

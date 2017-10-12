@@ -2,13 +2,6 @@ import React from 'react';
 import { fetchUserPosts, deletePost } from '../../actions/post_actions';
 
 
-const playSong = (post) => {
-  var audio = new Audio(post.song_url);
-  audio.play();
-};
-
-
-
 const HomeFeedItem = ( {post, receiveTrack} ) => (
   <li className="session_main" key={post.id}>
       <div className="container">
