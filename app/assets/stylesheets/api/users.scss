@@ -163,7 +163,9 @@
    flex-direction: column;
    height: 100%;
    position: relative;
-    align-items: center;
+   align-items: center;
+   transform: scale(0.9);
+   bottom: 100px;
 }
 
 .user-posts {

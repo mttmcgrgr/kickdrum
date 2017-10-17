@@ -1,6 +1,5 @@
 import React from 'react';
 import HomeFeedContainer from './home_feed_container';
-import Carousel from './carousel';
 import Loading from 'react-loading-animation';
 import { Link, hashHistory, withRouter } from 'react-router';
 
