@@ -18,14 +18,14 @@ class UserProfile extends React.Component {
     this.props.fetchUser(user_id);
     window.scrollTo(0,0);
     setTimeout(() => {
-    this.setState({loading: false}); }, 50);
+    this.setState({loading: false}); }, 75);
   }
 
   componentWillReceiveProps(nextProps){
     if(this.props.params.userId !== nextProps.params.userId){
       this.props.fetchUser(nextProps.params.userId);
       setTimeout(() => {
-      this.setState({loading: false}); }, 50);
+      this.setState({loading: false}); }, 75);
     }
   }
 
