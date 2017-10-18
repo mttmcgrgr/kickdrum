@@ -3,7 +3,7 @@
 export const RECEIVE_ALL_POSTS = "RECEIVE_ALL_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_POST_ERRORS = "RECEIVE_POST_ERRORS";
 export const RECEIVE_FOLLOWED_POSTS = "RECEIVE_FOLLOWED_POSTS";
 
 
@@ -23,7 +23,7 @@ const receivePost = (post) => ({
 });
 
 export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_POST_ERRORS,
   errors
 });
 

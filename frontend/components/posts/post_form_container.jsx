@@ -10,7 +10,9 @@ const mapStateToProps = state => (
 );
 
 const mapDispatchToProps = dispatch => (
-  {createPost: post => dispatch(createPost(post))}
+  {
+    createPost: post => dispatch(createPost(post))
+  }
 );
 
 export default connect(

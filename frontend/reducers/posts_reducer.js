@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_POSTS, RECEIVE_POST, REMOVE_POST, RECEIVE_ERRORS } from '../actions/post_actions';
+import { RECEIVE_ALL_POSTS, RECEIVE_POST, REMOVE_POST, RECEIVE_POST_ERRORS } from '../actions/post_actions';
 import { RECEIVE_BOOKMARK, REMOVE_BOOKMARK } from '../actions/bookmark_actions';
 import { findIndex } from '../util/util';
 import merge from 'lodash/merge';
@@ -27,7 +27,7 @@ const PostsReducer = (state = defaultState, action) => {
     case RECEIVE_BOOKMARK:
       newState[action.bookmark.post_id].bookmarks.push(action.bookmark);
       return newState;
-    case RECEIVE_ERRORS:
+    case RECEIVE_POST_ERRORS:
       newState.errors = action.errors
       return newState;
     case REMOVE_BOOKMARK:
