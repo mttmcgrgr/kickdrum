@@ -3,6 +3,7 @@
 export const RECEIVE_ALL_POSTS = "RECEIVE_ALL_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const RECEIVE_FOLLOWED_POSTS = "RECEIVE_FOLLOWED_POSTS";
 
 
@@ -21,10 +22,17 @@ const receivePost = (post) => ({
   post
 });
 
+export const receiveErrors = errors => ({
+  type: RECEIVE_ERRORS,
+  errors
+});
+
 const removePost = (post) => ({
   type: REMOVE_POST,
   post
 });
+
+
 
 export const fetchPost = (id) => dispatch => (
   PostApiUtil.fetchPost(id).then(post => dispatch(receivePost(post)))
@@ -43,7 +51,8 @@ export const fetchFollowedPosts = (id) => dispatch => (
 );
 
 export const createPost = (post) => dispatch => (
-  PostApiUtil.createPost(post).then(post => dispatch(receivePost(post)))
+  PostApiUtil.createPost(post).then(post => dispatch(receivePost(post)),
+  err => dispatch(receiveErrors(err.responseJSON)))
 );
 
 export const deletePost = id => dispatch => (

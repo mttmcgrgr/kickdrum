@@ -7,14 +7,17 @@ class PostForm extends React.Component {
     this.state = {
      title:'',
      artist:'',
-     cover_url:'',
-     song_url:'',
-     user_id: props.user.id
-   };
-  this.handleSubmit = this.handleSubmit.bind(this);
-  this.update = this.update.bind(this);
-  this.cloudSong = this.cloudSong.bind(this);
-  this.cloudArt = this.cloudArt.bind(this);
+     cover_url: '',
+     cover_uploaded: false,
+     song_url: '',
+     song_uploaded: false,
+     user_id: props.user.id,
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+    this.cloudSong = this.cloudSong.bind(this);
+    this.cloudArt = this.cloudArt.bind(this);
   }
 
   handleSubmit(e) {
@@ -23,6 +26,18 @@ class PostForm extends React.Component {
       this.props.router.replace(`/posts`)
       )
   }
+
+  renderErrors() {
+		return(
+			<ul className="errors">
+				{this.props.errors.map((error, i) => (
+					<li className="errors"  key={`error-${i}`}>
+						{error}
+					</li>
+				))}
+			</ul>
+		);
+	}
 
   update(field) {
     return (e) => {
@@ -39,6 +54,7 @@ class PostForm extends React.Component {
         theme: 'white',
         show_powered_by: false,
         multiple: false,
+        stylesheet: null,
         sources: ["local", "url"],
         client_allowed_formats: ["mp3","m4a"],
         text: {
@@ -51,7 +67,10 @@ class PostForm extends React.Component {
       (errors, songInfo) => {
         if (errors === null) {
           let song_info = songInfo[0].url;
-          this.setState({song_url: song_info});
+          this.setState({
+            song_url: song_info,
+            song_uploaded: true
+          });
         }
       }
     );
@@ -80,18 +99,32 @@ class PostForm extends React.Component {
       (errors, coverInfo) => {
         if (errors === null) {
           let cover_info = coverInfo[0].url;
-          this.setState({cover_url: cover_info});
+          this.setState({
+            cover_url: cover_info,
+            cover_uploaded: true
+          });
         }
       }
     );
   }
 
   render () {
+    let successImg = 'http://res.cloudinary.com/dccshngpp/image/upload/v1508350086/Green_check_iob46m.png'
+    let errorImg =  'http://res.cloudinary.com/dccshngpp/image/upload/v1508350082/768px-Red_X.svg_dggd8h.png'
+
+    console.log(this.state.cover_url);
+
+    let songStatus = this.state.song_uploaded ? successImg : errorImg;
+    let artStatus = this.state.cover_uploaded ? successImg : errorImg;;
+
     return (
     <div className="feed_background">
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="create-form-box">
           <h3 className="create-title">Create Post</h3>
+
+          {this.renderErrors()}
+          
           <div className="login-form">
           <br/>
           <label>Title
@@ -110,9 +143,19 @@ class PostForm extends React.Component {
               className="login-input" />
           </label>
           <br/>
-          <button onClick={this.cloudSong} className="button">Add Song</button>
+          <div className="post-form-buttons">
+            <button onClick={this.cloudSong} className="post-button">
+              Add Song
+            </button>
+            <img className="status-img" src={songStatus} />
+          </div>
           <br/>
-          <button onClick={this.cloudArt} className="button">Add Cover Art</button>
+          <div className="post-form-buttons">
+            <button onClick={this.cloudArt} className="post-button">
+              Add Cover Art
+            </button>
+            <img className="status-img" src={artStatus} />
+          </div>
           <br/>
           <input type="submit" value="Create Post" className="button" />
          </div>

@@ -8,6 +8,7 @@ class SessionForm extends React.Component {
 		this.state = {
 			username: "",
 			password: "",
+			confirmPw: ""
 		 };
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.guestLogin = this.guestLogin.bind(this);
@@ -26,7 +27,6 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		this.props.processForm({user}).then(() => this.props.router.push("/posts"));
-
 	}
 
 

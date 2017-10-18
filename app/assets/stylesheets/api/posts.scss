@@ -294,5 +294,41 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
 
+.post-button {
+ font-size: 16px;
+ line-height: 1.8;
+ appearance: none;
+ box-shadow: none;
+ border-radius: 10;
+ color: #fff;
+ background-color: #2687FB;
+ border-radius: 5px;
+ border: none;
+ text-align: center;
+ height: 50px;
+ width: 170px;
+ box-shadow: -2px 2px 2px grey;
+}
+
+.post-button:hover {
+     box-shadow: -5px 5px 5px grey;
+}
+
+.post-form-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-img {
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+}
+
+.remote_url {
+  content: "http://remote-site.example.com/songs/remote-song.mp3"
 }

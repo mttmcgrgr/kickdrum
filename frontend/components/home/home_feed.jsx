@@ -29,8 +29,11 @@ class HomeFeed extends React.Component {
     } else {
       return (
         <div className="session-feed-container">
-          {posts.map(post => (
-            <HomeFeedItem post={post} receiveTrack={this.props.receiveTrack} key={post.id} />
+          {posts.map((post, idx) => (
+            <HomeFeedItem
+              post={post}
+              receiveTrack={this.props.receiveTrack}
+              key={idx} />
           ))}
         </div>
       );
