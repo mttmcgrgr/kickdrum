@@ -51,16 +51,18 @@ class PostIndex extends React.Component {
 
   renderViewType(){
     const { posts, currentUser, receiveTrack, createBookmark, deleteBookmark } = this.props;
-    console.log(posts);
-    if( posts.length === 0 ){ return null }
+
+    if( posts.length === 0 ){
+      return null
+    }
 
     if(this.state.listView === true){
       return(
         <div className="post-feed-list">
           <ul className="post_content_main">
-            {posts.map(post => (
+            {posts.map(( post, idx )=> (
               <ListIndexItem
-                key={post.id}
+                key={idx}
                 post={post}
                 currentUser={currentUser}
                 receiveTrack={receiveTrack}

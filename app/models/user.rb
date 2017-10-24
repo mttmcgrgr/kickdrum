@@ -9,9 +9,19 @@ class User < ActiveRecord::Base
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness
 
-	has_many :posts
-	has_many :bookmarks
-	has_many :bookmarked_posts, :through => :bookmarks, :source => :post
+	has_many :posts,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Post
+
+	has_many :bookmarks,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Bookmark
+
+	has_many :bookmarked_posts,
+    through: :bookmarks,
+    source: :post
 
 
 	def password= password

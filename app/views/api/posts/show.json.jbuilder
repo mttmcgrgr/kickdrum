@@ -1,4 +1,4 @@
-json.extract! post, :id, :user_id, :cover_url, ,:artist ,:title, :song_url
+json.extract! post, :id, :user_id, :cover_url, ,:artist ,:title, :song_url, :bookmarks, :bookmarkers
 
 json.title post.title
 json.artist post.artist

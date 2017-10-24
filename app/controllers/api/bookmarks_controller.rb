@@ -1,31 +1,27 @@
 class Api::BookmarksController < ApplicationController
 
-
-
   def create
-    @bookmark = current_user.bookmarks.new(bookmark_params)
+    @bookmark = Bookmark.new(bookmark_params)
+    @post = @bookmark.post
+
     if @bookmark.save
-      render "api/bookmarks/show"
+      render "api/posts/show"
     else
-      render json: @bookmark.errors, status: 422
+      render json: @like.errors.full_messages, status: 422
     end
+
   end
 
-
-  # def create
-  #   @bookmark = Bookmarks.new(bookmark_params)
-  #   @bookmark.user_id = current_user.id
-  #   if @bookmark.save
-  #     render "api/bookmarks/show"
-  #   else
-  #     render json: @bookmark.errors, status: 422
-  #   end
-  # end
-
   def destroy
-    @Bookmark = Bookmark.find_by(post_id: params[:id], user_id: current_user.id)
-    @bookmark.destroy
-    render json: @bookmark
+    @Bookmark = Bookmark.find_by(
+      post_id: bookmark_params[:post_id],
+      user_id: bookmark_params[:user_id]
+    )
+
+    if @bookmark
+       @bookmark.destroy
+      render "api/posts/show"
+    end
   end
 
 

@@ -15,7 +15,7 @@ class PlayerBar extends React.Component {
       <button className="close-player" onClick={this.props.clearTrack}>
         <img
           className="close-img"
-          src="http://res.cloudinary.com/dccshngpp/image/upload/v1497234330/Down-Arrow-PNG-Pic_qyh5e9.png"/>
+          src="https://www.broadsheet.com.au/assets/icons/close.svg"/>
       </button>
      <div className="player-container">
       <img className="player-image" src={this.props.cover_url}/>

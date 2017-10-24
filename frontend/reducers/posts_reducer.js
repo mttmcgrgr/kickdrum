@@ -9,7 +9,6 @@ const defaultState = {
   cover_url: "",
   song_url: "",
   errors: [],
-  bookmarks: []
 };
 
 const PostsReducer = (state = defaultState, action) => {
@@ -24,16 +23,6 @@ const PostsReducer = (state = defaultState, action) => {
     case REMOVE_POST:
       delete newState[action.post.id];
       return newState;
-    case RECEIVE_BOOKMARK:
-      newState[action.bookmark.post_id].bookmarks.push(action.bookmark);
-      return newState;
-    case RECEIVE_POST_ERRORS:
-      newState.errors = action.errors
-      return newState;
-    case REMOVE_BOOKMARK:
-      let bookmarkIndex = findIndex(newState[action.bookmark.post_id].bookmarks, action.bookmark);
-      newState[action.bookmark.post_id].bookmarks.splice(bookmarkIndex, 1);
-      return nextState;
     default:
       return state;
   }

@@ -59,7 +59,7 @@ class SessionForm extends React.Component {
 					<br/>
 				<img onClick= { this.props.modalClose }
 					className="session-close"
-					src="http://res.cloudinary.com/dccshngpp/image/upload/v1497326370/52084_vqsrat.png"/>
+					src="https://www.broadsheet.com.au/assets/icons/close.svg"/>
 				</div>
 
 			)
