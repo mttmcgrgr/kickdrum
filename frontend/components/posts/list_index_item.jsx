@@ -12,11 +12,16 @@ class ListIndexItem extends React.Component {
     this.handleBookmark = this.handleBookmark.bind(this);
   }
 
-   handleBookmark(e){
-     e.preventDefault();
-     const post = this.props.post;
-
+  handleBookmark(e) {
+   e.preventDefault();
+   const post = this.props.post;
+   if (post.bookmark === true) {
+     this.props.deleteBookmark(this.props.currentUser.id, post.id);
+   } else {
+     this.props.createBookmark(this.props.currentUser.id, post.id);
    }
+ }
+
 
 
    render() {
@@ -24,9 +29,8 @@ class ListIndexItem extends React.Component {
      const defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
      let marked = "http://res.cloudinary.com/dccshngpp/image/upload/v1497505286/blue-bookmark_vtsuka.png";
      let unmarked = "http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"
-
+     let markStyle = post.bookmark ? marked : unmarked;
      let userPic =  post.user_photo_url  ?  post.user_photo_url : defaultPic;
-     console.log(post.bookmarks, post.bookmarkers);
 
       return (
         <li className="li-post-index">
@@ -47,7 +51,9 @@ class ListIndexItem extends React.Component {
            </div>
           </section>
           <section className="post_footer">
-            <img className="bookmark" src={unmarked}/>
+            <img className="bookmark"
+              src={markStyle}
+              onClick={this.handleBookmark}/>
             <div className="post_footer_title">{post.title}</div>
             <div className="post_footer_artist">{post.artist}</div>
           </section>

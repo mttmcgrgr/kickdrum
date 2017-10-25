@@ -10,3 +10,8 @@ json.created_at post.created_at
 json.user_id post.user_id
 json.username post.user.username
 json.bookmarks post.bookmarks
+json.bookmarkers post.bookmarkers
+json.markCount post.bookmarks.count
+
+#checks for current user
+json.bookmark current_user.bookmarks?(post)

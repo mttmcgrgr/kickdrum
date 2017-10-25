@@ -1,16 +1,15 @@
 module.exports = {
   content : {
     display        : 'flex',
-    top            : '50%',
+    top            : '45%',
     left           : '50%',
     right          : 'auto',
     bottom         : 'auto',
     marginRight    : '-50%',
     transform      : 'translate(-50%, -50%)',
-    height         : "430px",
     width          :"300px",
     justifyContent : "center",
-    height         :"500px",
+    height         : "465px",
     boxShadow      : "-15px 15px 15px black",
   },
   overlay : {

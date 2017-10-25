@@ -13,10 +13,11 @@ class Api::BookmarksController < ApplicationController
   end
 
   def destroy
-    @Bookmark = Bookmark.find_by(
+    @bookmark = Bookmark.find_by(
       post_id: bookmark_params[:post_id],
       user_id: bookmark_params[:user_id]
     )
+    @post = @bookmark.post
 
     if @bookmark
        @bookmark.destroy
