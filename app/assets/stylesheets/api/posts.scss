@@ -295,14 +295,21 @@
  appearance: none;
  box-shadow: none;
  border-radius: 10;
- color: #fff;
- background-color: #35495e;
- border-radius: 5px;
+ color: #35495e;
+ background-color: white;
  border: none;
  text-align: center;
  height: 50px;
- width: 200px;
+ width: 233px;
  box-shadow: -2px 2px 2px grey;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+.post-button-text {
+  padding-left: 10px;
+  align-self: center;
 }
 
 .post-button:hover {

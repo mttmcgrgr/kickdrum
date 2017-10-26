@@ -16,7 +16,7 @@ class ListIndexItem extends React.Component {
    e.preventDefault();
    const post = this.props.post;
    const currentUser = this.props.currentUser;
-   console.log(post);
+   console.log(post.bookmarks);
    if (post.bookmark === true) {
      this.props.deleteBookmark( post.id );
    } else {

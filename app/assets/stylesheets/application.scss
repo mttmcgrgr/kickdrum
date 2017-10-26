@@ -55,7 +55,6 @@
   line-height: 1.8;
   appearance: none;
   box-shadow: none;
-  border-radius: 10;
   color: #fff;
   background-color: #35495e;
   border-radius: 5px;
@@ -205,11 +204,10 @@
 
 
  .create-form-box {
-   padding: 20px;
+    padding: 20px;
     background-color: white;
     text-align: left;
     z-index: 3;
-    border-radius: 10px;
     position: absolute;
     top: -210px;
     width: 230px;

@@ -8,10 +8,8 @@ class PostForm extends React.Component {
      title:'',
      artist:'',
      cover_url: '',
-     cover_uploaded: false,
      song_url: '',
-     song_uploaded: false,
-     user_id: props.user.id,
+     user_id: props.user.id
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -111,9 +109,6 @@ class PostForm extends React.Component {
   render () {
     let successImg = 'http://res.cloudinary.com/dccshngpp/image/upload/v1508350086/Green_check_iob46m.png'
     let errorImg =  'http://res.cloudinary.com/dccshngpp/image/upload/v1508350082/768px-Red_X.svg_dggd8h.png'
-
-    console.log(this.state.cover_url);
-
     let songStatus = this.state.song_uploaded ? successImg : errorImg;
     let artStatus = this.state.cover_uploaded ? successImg : errorImg;;
 
@@ -144,17 +139,17 @@ class PostForm extends React.Component {
           </label>
           <br/>
           <div className="post-form-buttons">
-            <img className="status-img" src={songStatus} />
             <button onClick={this.cloudSong} className="post-button">
-              Add Song
+              <p className="post-button-text">Add Song</p>
+              <img className="status-img" src={songStatus} />
             </button>
 
           </div>
           <br/>
           <div className="post-form-buttons">
-            <img className="status-img" src={artStatus} />
             <button onClick={this.cloudArt} className="post-button">
-              Add Cover Art
+              <p className="post-button-text">Add Cover Art</p>
+              <img className="status-img" src={artStatus} />
             </button>
 
           </div>
