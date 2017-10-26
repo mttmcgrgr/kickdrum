@@ -132,15 +132,12 @@
     border-width: 1px;
     border-top-style: none;
     border-color:#bababa;
-    box-shadow: -3px 3px 3px grey;
-
 }
 
 .post_header {
     padding: 20px 24px;
     padding-top: 15px;
     padding-bottom: 15px;
-    box-shadow: -3px 3px 3px grey;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background-color: white;
@@ -190,15 +187,11 @@
     width: 100%;
     flex-direction: column;
     position: absolute;
-    bottom: -60px;
+    bottom: -49px;
     z-index: 300;
     height: 50px;
-    opacity: 0.95;
-    border-radius: 5px;
-    border-style: solid;
     border-width: 1px;
     border-color: grey;
-    box-shadow: -5px 5px 5px black;
 }
 
 .hover-post-info:after {
@@ -303,12 +296,12 @@
  box-shadow: none;
  border-radius: 10;
  color: #fff;
- background-color: #2687FB;
+ background-color: #35495e;
  border-radius: 5px;
  border: none;
  text-align: center;
  height: 50px;
- width: 170px;
+ width: 200px;
  box-shadow: -2px 2px 2px grey;
 }
 

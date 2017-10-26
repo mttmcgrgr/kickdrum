@@ -11,9 +11,7 @@ class GridFeed extends React.Component {
     if (posts.length === 0) {
       return (
         <div className="sticky-note-add">
-          <img
-            src="http://res.cloudinary.com/dccshngpp/image/upload/v1496957034/postIt_bWelootsse2253_knhby6.png"
-          />
+          
         </div>
       )
     } else {

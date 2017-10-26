@@ -17,7 +17,6 @@
     border-style: solid;
     border-width: 1px;
     border-color: grey;
-    box-shadow: -2px 2px 2px grey;
 
 }
 
@@ -32,7 +31,7 @@
 }
 
 .parent {
-  position: relative;
+   position: relative;
     top: 20px;
     align-self: flex-start;
 }
@@ -139,6 +138,26 @@
     top: 23px;
 }
 
+.user-add {
+  margin: 10px;
+    padding: 10;
+    outline: 1;
+    font: serif;
+    color: #6295CA;
+    text-align: inherit;
+    text-decoration: inherit;
+    vertical-align: inherit;
+    box-sizing: inherit;
+    background: transparent;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    right: 100px;
+    top: 23px;
+}
+
 
 .user-feed-container {
   display: flex;
@@ -164,8 +183,9 @@
    height: 100%;
    position: relative;
    align-items: center;
-   transform: scale(0.9);
-   bottom: 100px;
+   transform: scale(0.95);
+   bottom: 15px;
+
 }
 
 .user-posts {
@@ -260,8 +280,6 @@ button:hover {
     height: 310px;
     border: solid 1px;
     border-color:#bababa;
-    box-shadow: -3px 3px 3px grey;
-
 }
 
 
@@ -316,7 +334,7 @@ button:hover {
   transition: .10s ease-in-out;
   transform: scale(1.1);
   z-index: 50;
-  box-shadow: -10px 10px 10px black;
+
 }
 
 .loading {
@@ -336,8 +354,8 @@ button:hover {
   position: relative;
   height: 100%;
   width: 100%;
-  //top: 200px;
-  transform:scale(1)
+  transform: scale(2);
+  top: 100px;
 }
 
 .feed_footer_text {

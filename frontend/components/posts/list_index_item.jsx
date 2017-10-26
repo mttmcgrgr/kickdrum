@@ -15,10 +15,12 @@ class ListIndexItem extends React.Component {
   handleBookmark(e) {
    e.preventDefault();
    const post = this.props.post;
+   const currentUser = this.props.currentUser;
+   console.log(post);
    if (post.bookmark === true) {
-     this.props.deleteBookmark(this.props.currentUser.id, post.id);
+     this.props.deleteBookmark( post.id );
    } else {
-     this.props.createBookmark(this.props.currentUser.id, post.id);
+     this.props.createBookmark( {bookmark: {post_id: post.id} });
    }
  }
 

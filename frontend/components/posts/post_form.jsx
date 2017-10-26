@@ -124,7 +124,7 @@ class PostForm extends React.Component {
           <h3 className="create-title">Create Post</h3>
 
           {this.renderErrors()}
-          
+
           <div className="login-form">
           <br/>
           <label>Title
@@ -144,17 +144,19 @@ class PostForm extends React.Component {
           </label>
           <br/>
           <div className="post-form-buttons">
+            <img className="status-img" src={songStatus} />
             <button onClick={this.cloudSong} className="post-button">
               Add Song
             </button>
-            <img className="status-img" src={songStatus} />
+
           </div>
           <br/>
           <div className="post-form-buttons">
+            <img className="status-img" src={artStatus} />
             <button onClick={this.cloudArt} className="post-button">
               Add Cover Art
             </button>
-            <img className="status-img" src={artStatus} />
+
           </div>
           <br/>
           <input type="submit" value="Create Post" className="button" />

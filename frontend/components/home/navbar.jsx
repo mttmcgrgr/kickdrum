@@ -81,10 +81,10 @@ class Greeting extends React.Component {
   personalGreeting(currentUser, logout){
     return(
   	<hgroup className="header-group-right">
-      <Link to={`/posts`} className="user-name">
+      <Link to={`/posts/new`} className="user-add">
         <img
-          className="greeting-feed"
-          src="http://res.cloudinary.com/dccshngpp/image/upload/v1496952043/download_cwklov.jpg"
+          className="greeting-add"
+          src="http://www.free-icons-download.net/images/add-button-icon-73846.png"
           />
       </Link>
       <Link to={`/users/${currentUser.id}`} className="user-name">

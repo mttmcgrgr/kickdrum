@@ -7,17 +7,16 @@ class UserInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true
+      loading: false
     }
     this.handleDelete = this.handleDelete.bind(this);
-    this.createPost = this.createPost.bind(this);
     this.featuredPost = this.featuredPost.bind(this);
     this.userInfo = this.userInfo.bind(this);
   }
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 50);
+    this.setState({loading: false}); }, 1);
   }
 
 
@@ -26,26 +25,7 @@ class UserInfo extends React.Component {
      this.props.fetchUser(this.props.post.user_id);
    }
 
-  createPost() {
-     const url = `/posts/new`;
-     hashHistory.push(url);
-   }
 
-   createButton(){
-     const { user, currentUser } = this.props;
-     if(user.username === currentUser.username){
-       return(
-         <button className="add-button" onClick={this.createPost}>
-           <img className="add-post-button"
-             src="http://res.cloudinary.com/dccshngpp/image/upload/v1497319913/button_create_ldioq7_tyddl6_kkznvi.png"/>
-         </button>
-       )
-     } else {
-       return(
-         ""
-       )
-     }
-   }
 
    featuredPost() {
      const { post, user, receiveTrack } = this.props;
@@ -71,7 +51,6 @@ class UserInfo extends React.Component {
                  src="http://res.cloudinary.com/dccshngpp/image/upload/v1497308572/play-rounded-flat_kgtguy.png"
                  onClick={()=> (receiveTrack(post))}/>
              </div>
-
            </div>
        )
      }
@@ -91,9 +70,6 @@ class UserInfo extends React.Component {
              <h1 className="user-name-info">{user.username}</h1>
            </div>
             <div className="info-top-section"></div>
-           {this.createButton()}
-
-           <img className="info-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
          </div>
        )
      } else {
@@ -104,7 +80,7 @@ class UserInfo extends React.Component {
              <h1 className="user-name-info">{user.username}</h1>
            </div>
             <div className="info-top-section"></div>
-           {this.createButton()}
+
            <h1 className="user-title-info">{post.title}</h1>
            <h3 className="user-artist-info">{post.artist}</h3>
            <img className="info-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>

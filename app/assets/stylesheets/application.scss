@@ -57,12 +57,11 @@
   box-shadow: none;
   border-radius: 10;
   color: #fff;
-  background-color: #2687FB;
+  background-color: #35495e;
   border-radius: 5px;
   border: none;
   text-align: center;
   height:50px;
-  box-shadow: -2px 2px 2px grey;
 }
 
 .button:hover {
@@ -241,7 +240,6 @@
   border-bottom-style: solid;
   border-width: 1px;
   border-color:grey;
-  box-shadow: -2px 2px 2px grey;
 }
 
 .image2 {
@@ -261,7 +259,7 @@
 
 .add-post-button {
   position: relative;
-  height: 50px;
+  height: 60px;
   border-style: none;
   float: right;
   top: 10px;
@@ -350,7 +348,14 @@ audio {
   height: 35px;
   bottom: 12px;
   position: relative;
-  right: 65px;
+  right: 130px;
+}
+
+.greeting-add {
+  height: 58px;
+  bottom: 24px;
+  position: relative;
+  right: 51px;
 }
 
 
@@ -452,10 +457,8 @@ audio {
   backface-visibility: hidden;
   width: 620px;
   height: 620px;
-  border-style: solid;
   border-width: 1px;
   border-color:grey;
-  box-shadow: -3px 0px 3px grey;
 }
 
 .create-title {
