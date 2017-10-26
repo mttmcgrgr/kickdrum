@@ -20,7 +20,6 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     this.props.createPost(this.state).then(() =>
       this.props.router.replace(`/posts`)
       )
@@ -141,7 +140,10 @@ class PostForm extends React.Component {
           <br/>
           <div className="post-form-buttons">
             <button onClick={this.cloudSong} className="post-button">
-              <p className="post-button-text">Add Song</p>
+              <div className="post-button-left">
+                <img className="music-icon" src="https://maxcdn.icons8.com/Share/icon/p1em/Files//audio_file1600.png" />
+                <p className="post-button-text">Upload Song</p>
+              </div>
               <img className="status-img" src={songStatus} />
             </button>
 
@@ -149,7 +151,10 @@ class PostForm extends React.Component {
           <br/>
           <div className="post-form-buttons">
             <button onClick={this.cloudArt} className="post-button">
-              <p className="post-button-text">Add Cover Art</p>
+              <div className="post-button-left">
+                <img className="art-icon" src="http://img.freepik.com/free-icon/gallery_318-131678.jpg?size=338c&ext=jpg" />
+                <p className="post-button-text">Upload Cover Art</p>
+              </div>
               <img className="status-img" src={artStatus} />
             </button>
 

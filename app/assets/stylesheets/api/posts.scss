@@ -308,12 +308,16 @@
 }
 
 .post-button-text {
-  padding-left: 10px;
   align-self: center;
 }
 
+.post-button-left {
+  display: flex;
+  align-items: flex-start;
+}
+
 .post-button:hover {
-     box-shadow: -5px 5px 5px grey;
+  box-shadow: -5px 5px 5px grey;
 }
 
 .post-form-buttons {
@@ -323,10 +327,20 @@
   justify-content: center;
 }
 
-.status-img {
-  width: 15px;
-  height: 15px;
+.music-icon {
+  height: 28px;
+  padding: 6px;
+}
+
+.art-icon {
+  height: 20px;
   padding: 10px;
+}
+
+.status-img {
+  height: 9px;
+  padding: 10px;
+  align-self: center;
 }
 
 .remote_url {
