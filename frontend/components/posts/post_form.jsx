@@ -20,6 +20,7 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.state);
     this.props.createPost(this.state).then(() =>
       this.props.router.replace(`/posts`)
       )
@@ -111,7 +112,7 @@ class PostForm extends React.Component {
     let errorImg =  'http://res.cloudinary.com/dccshngpp/image/upload/v1508350082/768px-Red_X.svg_dggd8h.png'
     let songStatus = this.state.song_uploaded ? successImg : errorImg;
     let artStatus = this.state.cover_uploaded ? successImg : errorImg;;
-
+    console.log(this.state);
     return (
     <div className="feed_background">
       <div className="login-form-container">

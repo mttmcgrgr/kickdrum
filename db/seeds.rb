@@ -514,6 +514,54 @@ artist: 'Pavement',
 song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1488341869/kenneldistrict.mp3',
 cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1488341885/ximja9zsctd8d2ksupiq.jpg',
 user_id: User.first.id
+},
+
+{
+title:"The Waiting",
+artist: 'Tom Petty and the Heartbreakers',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1507231513/oao1h0wvyz0gsa3wck7v.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1507231526/zmptnwo2xob3djdhwfdy.jpg',
+user_id: User.second.id
+},
+
+{
+title:"In Chains",
+artist: 'The War On Drugs',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1508355951/kdi3w1bavfsw3k2e3rgj.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1508355978/tr59c3tkdweolpzu1o1h.jpg',
+user_id: User.fifth.id
+},
+
+{
+title:"Swann Street",
+artist: 'Three',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1507234430/hrb1ejodtwty9rekhiv7.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1507234481/gygexwrxxjnrae3flqb9.jpg',
+user_id: User.fourth.id
+},
+
+{
+title:"All The Way",
+artist: 'New Order',
+song_url: 'http://res.cloudinary.com/dccshngpp/video/upload/v1509049037/rooqm4ccmr7iv8fwldvm.mp3',
+cover_url: 'http://res.cloudinary.com/dccshngpp/image/upload/v1509049065/zijfesa8ea5xor72jrz6.jpg',
+user_id: User.third.id
+},
+
+{
+title: "Alex Chilton",
+artist: 'The Replacements',
+song_url: "http://res.cloudinary.com/dccshngpp/video/upload/v1509049288/eyguk2z3mqcaotlkhfmu.mp3",
+cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1509049301/nd7fegdkyfs9no2jnt6b.jpg",
+user_id: User.second.id
+},
+
+{
+title: "Leave Them All Behind",
+artist: "Ride",
+song_url: "http://res.cloudinary.com/dccshngpp/video/upload/v1509049398/z4ygaph0hblhbzpxs9an.mp3",
+cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1509049405/wj4jofwypzoctyfbci6s.jpg",
+user_id: User.first.id
 }
 
 ])
