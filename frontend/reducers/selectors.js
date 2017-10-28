@@ -17,14 +17,14 @@ export const getBookmarkIndex = (array, bookmark) => {
   }
 };
 
-export const getPostKey = (state, post) => {
- const keys = Object.keys(state)
+export const getPostKey = (state, post_id) => {
+   const keys = Object.keys(state)
 
- for(var i = 0; i < keys.length; i++) {
-   let key = keys[i];
+   for(var i = 0; i < keys.length; i++) {
+     let key = keys[i];
 
-   if(state[key].id === post.id) {
-     return key
+     if(state[key].id === post_id) {
+       return key
+     }
    }
- }
 };

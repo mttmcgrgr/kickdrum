@@ -1,7 +1,7 @@
 import { RECEIVE_ALL_POSTS, RECEIVE_POST, REMOVE_POST, RECEIVE_POST_ERRORS } from '../actions/post_actions';
 import { RECEIVE_BOOKMARK, REMOVE_BOOKMARK } from '../actions/bookmark_actions';
 import merge from 'lodash/merge';
-import { getPostKey, getBookmarkPost, getBookmarkIndex } from './selectors'
+import { getPostKey, getBookmarkPost, getBookmarkIndex } from './selectors';
 
 const defaultState = {
   title: "",
@@ -14,6 +14,7 @@ const defaultState = {
 
 const PostsReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
+  let key;
 
   switch(action.type){
     case RECEIVE_ALL_POSTS:
@@ -25,13 +26,12 @@ const PostsReducer = (state = defaultState, action) => {
       delete newState[action.post.id];
       return newState;
     case RECEIVE_BOOKMARK:
-      let key = getPostKey(newState, getBookmarkPost(action));
-      let newBookmarks = getBookmarkPost(action).bookmarks || [];
-      newState[key].bookmarks = newBookmarks;
+      console.log(action)
+      newState[action.bookmark.post_id].bookmarks.push(action.bookmark)
       return newState;
     case REMOVE_BOOKMARK:
-      //just replace post or use post to remove bookmark
-      console.log(action.post.post.id, action.post.post.bookmarks);
+      console.log(action);
+      newState[action.bookmark.post_id].bookmarks = action.bookmark.post_bookmarks
       return newState;
     case RECEIVE_POST_ERRORS:
       newState.errors = action.errors;
@@ -42,3 +42,10 @@ const PostsReducer = (state = defaultState, action) => {
 };
 
 export default PostsReducer;
+
+
+/*
+let key = getPostKey(newState, getBookmarkPost(action));
+let newBookmarks = getBookmarkPost(action).bookmarks || [];
+newState[key].bookmarks = newBookmarks;
+*/

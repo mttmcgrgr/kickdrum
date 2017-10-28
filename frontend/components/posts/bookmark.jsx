@@ -6,23 +6,19 @@ class Bookmark extends React.Component {
     this.state = {
       marked : this.props.marked
     }
-
     this.handleBookmark = this.handleBookmark.bind(this);
   }
 
 
   handleBookmark(e) {
      e.preventDefault();
-     const { post, createBookmark, deleteBookmark } = this.props;
-  
+     const { createBookmark, deleteBookmark, post } = this.props;
      if ( this.state.marked ) {
-       deleteBookmark( post.id )
-       this.setState({ marked: !this.state.marked })
-       console.log(post);
+      this.setState({marked: false},
+        () => deleteBookmark( this.props.post.id ))
      } else {
-       createBookmark( {bookmark: {post_id: post.id} })
-       this.setState({ marked: !this.state.marked })
-       console.log(post);
+      this.setState({marked: true},
+        () => createBookmark( {bookmark: {post_id: post.id }} ))
      }
    }
 
@@ -30,15 +26,19 @@ class Bookmark extends React.Component {
   render() {
     const marked = "https://tinyurl.com/yck6res4"
     const unmarked = "https://tinyurl.com/yafhbe66"
+    
+    if (this.state.marked === undefined) {
+      return null
+    } else {
+      return (
+        <div>
+          <img className="bookmark"
+            src={this.state.marked ? marked : unmarked}
+            onClick={this.handleBookmark}/>
+        </div>
+      )
+    }
 
-    return (
-      <div>
-        <img className="bookmark"
-          src={this.state.marked ? marked : unmarked}
-          onClick={this.handleBookmark}/>
-      </div>
-
-    )
   }
 }
 

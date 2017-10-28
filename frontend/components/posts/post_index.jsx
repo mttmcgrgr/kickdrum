@@ -50,36 +50,38 @@ class PostIndex extends React.Component {
 
     if( posts.length === 0 ){
       return null
-    }
-
-    if(this.state.listView === true){
-      return(
-        <div className="post-feed-list">
-          <ul className="post_content_main">
-            {posts.map(( post, idx )=> (
-              <ListIndexItem
-                key={idx}
-                post={post}
-                currentUser={currentUser}
-                receiveTrack={receiveTrack}
-                createBookmark={createBookmark}
-                deleteBookmark={deleteBookmark} />
-            ))}
-          </ul>
-        </div>
-      )
     } else {
-      return(
-        <div className="post-grid-content">
-          <GridFeed
-            posts={posts}
-            user={user}
-            currentUser={currentUser}
-            receiveTrack={receiveTrack}
-            createBookmark={createBookmark}
-            deleteBookmark={deleteBookmark} />
-        </div>
-      )
+      let postsOrder = posts.reverse();
+
+      if(this.state.listView === true){
+        return(
+          <div className="post-feed-list">
+            <ul className="post_content_main">
+              {postsOrder.map(( post, idx )=> (
+                <ListIndexItem
+                  key={idx}
+                  post={post}
+                  currentUser={currentUser}
+                  receiveTrack={receiveTrack}
+                  createBookmark={createBookmark}
+                  deleteBookmark={deleteBookmark} />
+              ))}
+            </ul>
+          </div>
+        )
+      } else {
+        return(
+          <div className="post-grid-content">
+            <GridFeed
+              posts={postsOrder}
+              user={user}
+              currentUser={currentUser}
+              receiveTrack={receiveTrack}
+              createBookmark={createBookmark}
+              deleteBookmark={deleteBookmark} />
+          </div>
+        )
+      }
     }
   }
 

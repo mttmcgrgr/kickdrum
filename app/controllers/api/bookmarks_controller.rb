@@ -14,10 +14,11 @@ class Api::BookmarksController < ApplicationController
 
   def destroy
     @bookmark = current_user.bookmarks.find_by(post_id: params[:id])
-    @post = @bookmark.post
 
     if @bookmark.destroy
-      render "api/posts/show"
+      render :show
+    else
+      render json: @bookmark.errors.full_messages, status: 422
     end
   end
 
