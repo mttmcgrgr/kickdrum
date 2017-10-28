@@ -43,8 +43,7 @@ class ListIndexItem extends React.Component {
           post={post}
           currentUser={this.props.currentUser}
           createBookmark={this.props.createBookmark}
-          deleteBookmark={this.props.deleteBookmark}
-          marked={post.hasMarked}/>
+          deleteBookmark={this.props.deleteBookmark}/>
           <div className="post_footer_title">{post.title}</div>
           <div className="post_footer_artist">{post.artist}</div>
         </section>

@@ -4,7 +4,7 @@ class Bookmark extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      marked : this.props.marked
+      marked : this.props.post.hasMarked
     }
     this.handleBookmark = this.handleBookmark.bind(this);
   }
@@ -24,12 +24,9 @@ class Bookmark extends React.Component {
 
 
   render() {
-    const marked = "https://tinyurl.com/yck6res4"
-    const unmarked = "https://tinyurl.com/yafhbe66"
-    
-    if (this.state.marked === undefined) {
-      return null
-    } else {
+    const marked = "https://tinyurl.com/y9v2z6b2"
+    const unmarked = "https://tinyurl.com/y8pz2wag"
+
       return (
         <div>
           <img className="bookmark"
@@ -39,7 +36,6 @@ class Bookmark extends React.Component {
       )
     }
 
-  }
 }
 
 export default Bookmark;

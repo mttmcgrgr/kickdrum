@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import Loading from 'react-loading-animation';
+import Bookmark from '../posts/bookmark';
 
 
 class UserInfo extends React.Component {
@@ -83,7 +84,13 @@ class UserInfo extends React.Component {
 
            <h1 className="user-title-info">{post.title}</h1>
            <h3 className="user-artist-info">{post.artist}</h3>
-           <img className="info-bookmark" src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
+           <div className="info-bookmark">
+             <Bookmark
+             post={post}
+             currentUser={this.props.currentUser}
+             createBookmark={this.props.createBookmark}
+             deleteBookmark={this.props.deleteBookmark}/>
+           </div>
          </div>
 
        )

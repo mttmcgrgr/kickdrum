@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { Link } from 'react-router';
 import ProfileModal from '../../util/profile_modal';
 import { fetchUser, deletePost } from '../../actions/post_actions';
+import Bookmark from './bookmark';
 
 
 
@@ -17,6 +18,7 @@ class GridIndexItem extends React.Component {
     this.modalClose = this.modalClose.bind(this);
     this.modalOpen = this.modalOpen.bind(this);
     this.onModalOpen = this.onModalOpen.bind(this);
+
   }
 
   componentWillMount() {
@@ -46,12 +48,12 @@ class GridIndexItem extends React.Component {
 
 
   render(){
-    const { post, receiveTrack, currentUser, user, profileFeed } = this.props;
+    const { post, receiveTrack, currentUser, user } = this.props;
     let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
     let name = post.username ? post.username : user.username;
 
     let userPic;
-    if(profileFeed){
+    if(this.props.profileFeed){
       userPic =  user.photo_url  ?  user.photo_url : defaultPic;
     } else {
       userPic = post.user_photo_url ? post.user_photo_url : defaultPic;
@@ -103,8 +105,13 @@ class GridIndexItem extends React.Component {
               <div className="modal-top-section"></div>
               <h1 className="modal-song-info">{post.title}</h1>
               <h3 className="modal-artist-info">{post.artist}</h3>
-              <img className="modal-bookmark"
-                src="http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"/>
+              <div className="modal-bookmark">
+                <Bookmark
+                  post={post}
+                  currentUser={this.props.currentUser}
+                  createBookmark={this.props.createBookmark}
+                  deleteBookmark={this.props.deleteBookmark}/>
+              </div>
               <img className="modal-close"
                 onClick={this.modalClose}
                 src="https://www.broadsheet.com.au/assets/icons/close.svg"/>

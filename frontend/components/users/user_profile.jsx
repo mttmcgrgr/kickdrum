@@ -49,6 +49,8 @@ class UserProfile extends React.Component {
               currentUser={currentUser}
               post={recentPost}
               user={this.props.user}
+              createBookmark={this.props.createBookmark}
+              deleteBookmark={this.props.deleteBookmark}
               receiveTrack={this.props.receiveTrack}
               deletePost={this.props.deletePost}
               fetchUser={this.props.fetchUser}/>
@@ -58,6 +60,8 @@ class UserProfile extends React.Component {
               currentUser={currentUser}
               profileFeed={true}
               user={this.props.user}
+              createBookmark={this.props.createBookmark}
+              deleteBookmark={this.props.deleteBookmark}
               receiveTrack={this.props.receiveTrack}
               deletePost={this.props.deletePost}
               fetchUser={this.props.fetchUser}/>

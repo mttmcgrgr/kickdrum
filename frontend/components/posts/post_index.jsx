@@ -50,14 +50,14 @@ class PostIndex extends React.Component {
 
     if( posts.length === 0 ){
       return null
-    } else {
-      let postsOrder = posts.reverse();
 
+    } else {
       if(this.state.listView === true){
+
         return(
           <div className="post-feed-list">
             <ul className="post_content_main">
-              {postsOrder.map(( post, idx )=> (
+              {posts.map(( post, idx )=> (
                 <ListIndexItem
                   key={idx}
                   post={post}
@@ -70,10 +70,11 @@ class PostIndex extends React.Component {
           </div>
         )
       } else {
+
         return(
           <div className="post-grid-content">
             <GridFeed
-              posts={postsOrder}
+              posts={posts}
               user={user}
               currentUser={currentUser}
               receiveTrack={receiveTrack}
