@@ -10,6 +10,5 @@ json.post do
     json.user_id @post.user_id
     json.username @post.user.username
     json.bookmarks @post.bookmarks
-    json.markIds @post.bookmarks.map(&:user_id)
 
 end

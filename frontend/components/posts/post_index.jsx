@@ -2,13 +2,12 @@ import React from 'react';
 import ListIndexItem from './list_index_item';
 import GridFeed from './grid_feed';
 import Loading from 'react-loading-animation';
-import AOS from 'aos';
 
 class PostIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      loading: true,
+      loading: false,
       listView: true
     }
     this.changeView = this.changeView.bind(this);
@@ -20,9 +19,6 @@ class PostIndex extends React.Component {
     this.props.fetchPosts();
   }
 
-  componentWillReceiveProps (){
-    AOS.refresh();
-  }
 
   componentDidMount(){
     setTimeout(() => {
@@ -50,7 +46,7 @@ class PostIndex extends React.Component {
 
 
   renderViewType(){
-    const { posts, currentUser, receiveTrack, createBookmark, deleteBookmark } = this.props;
+    const { posts, user, currentUser, receiveTrack, createBookmark, deleteBookmark } = this.props;
 
     if( posts.length === 0 ){
       return null
@@ -76,15 +72,12 @@ class PostIndex extends React.Component {
       return(
         <div className="post-grid-content">
           <GridFeed
-            posts={this.props.posts}
-            user={this.props.user}
-            profileFeed={false}
-            currentUser={this.props.currentUser}
-            receiveTrack={this.props.receiveTrack}
-            deletePost={this.props.deletePost}
-            createBookmark={this.props.createBookmark}
-            deleteBookmark={this.props.deleteBookmark}
-            fetchUser={this.props.fetchUser}/>
+            posts={posts}
+            user={user}
+            currentUser={currentUser}
+            receiveTrack={receiveTrack}
+            createBookmark={createBookmark}
+            deleteBookmark={deleteBookmark} />
         </div>
       )
     }
@@ -95,7 +88,7 @@ class PostIndex extends React.Component {
     if(this.state.loading) {
       return(
         <div className="post-loading">
-          <Loading />
+
         </div>
       );
     } else {
@@ -113,9 +106,3 @@ class PostIndex extends React.Component {
 }
 
 export default PostIndex;
-
-/*
-AOS.init({
- duration: 200
-});
-*/

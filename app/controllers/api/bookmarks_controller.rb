@@ -5,7 +5,7 @@ class Api::BookmarksController < ApplicationController
     @bookmark.user_id = current_user.id
 
     if @bookmark.save
-      render "api/posts/show"
+      render :show
     else
       render json: @bookmark.errors.full_messages, status: 422
     end
@@ -25,7 +25,7 @@ class Api::BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:bookmark).permit(:user_id, :post_id)
+    params.require(:bookmark).permit( :post_id )
   end
 
 end

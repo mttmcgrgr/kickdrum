@@ -15,8 +15,8 @@ const mapDispatchToProps = dispatch => ({
   fetchPosts: () => dispatch(fetchPosts()),
   deletePost: id => dispatch(deletePost(id)),
   receiveTrack: post => dispatch(receiveTrack(post)),
-  createBookmark: (postId) => dispatch(createBookmark(postId)),
-  deleteBookmark: (postId) => dispatch(deleteBookmark(postId)),
+  createBookmark: (post_id) => dispatch(createBookmark(post_id)),
+  deleteBookmark: (post_id) => dispatch(deleteBookmark(post_id)),
 });
 
 export default connect(

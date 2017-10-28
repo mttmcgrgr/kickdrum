@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Bookmark from './bookmark';
 
 
 class ListIndexItem extends React.Component {
@@ -9,30 +10,26 @@ class ListIndexItem extends React.Component {
       refresh: false
     }
 
-    this.handleBookmark = this.handleBookmark.bind(this);
   }
 
-  handleBookmark(e) {
-   e.preventDefault();
-   const post = this.props.post;
-   const currentUser = this.props.currentUser;
-   console.log(post.bookmarks);
-   if (post.bookmark === true) {
-     this.props.deleteBookmark( post.id );
-   } else {
-     this.props.createBookmark( {bookmark: {post_id: post.id} });
-   }
- }
+  checkIfBookmarked(){
+    let { post, currentUser } = this.props;
+    let bookmarks = post.bookmarks || []
+    let markerIds = bookmarks.map((mark) => {
+        return mark.user_id;
+    })
 
+    if(markerIds.includes(currentUser.id)) {
+      return true
+    } else {
+      return false
+    }
+  }
 
 
    render() {
-     const { post, receiveTrack, currentUser, createBookmark, deleteBookmark } = this.props;
-     const defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
-     let marked = "http://res.cloudinary.com/dccshngpp/image/upload/v1497505286/blue-bookmark_vtsuka.png";
-     let unmarked = "http://res.cloudinary.com/dccshngpp/image/upload/v1487967562/bookmark-outline_318-73546_soguwg.jpg"
-     let markStyle = post.bookmark ? marked : unmarked;
-     let userPic =  post.user_photo_url  ?  post.user_photo_url : defaultPic;
+     const { post, receiveTrack, createBookmark, deleteBookmark } = this.props;
+     let userPic =  post.user_photo_url  ?  post.user_photo_url : "https://tinyurl.com/yccadzmo";
 
       return (
         <li className="li-post-index">
@@ -53,9 +50,11 @@ class ListIndexItem extends React.Component {
            </div>
           </section>
           <section className="post_footer">
-            <img className="bookmark"
-              src={markStyle}
-              onClick={this.handleBookmark}/>
+            <Bookmark
+            post={post}
+            createBookmark={createBookmark}
+            deleteBookmark={deleteBookmark}
+            marked={this.checkIfBookmarked()}/>
             <div className="post_footer_title">{post.title}</div>
             <div className="post_footer_artist">{post.artist}</div>
           </section>

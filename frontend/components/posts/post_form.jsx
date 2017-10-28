@@ -116,7 +116,7 @@ class PostForm extends React.Component {
     <div className="feed_background">
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="create-form-box">
-          <h3 className="create-title">Create Post</h3>
+          <h3 className="create-title">Upload to Kickdrum</h3>
 
           {this.renderErrors()}
 
@@ -160,7 +160,7 @@ class PostForm extends React.Component {
 
           </div>
           <br/>
-          <input type="submit" value="Create Post" className="button" />
+          <input type="submit" value="Create" className="button" />
          </div>
         </form>
       </div>
