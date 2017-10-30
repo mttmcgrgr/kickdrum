@@ -13,6 +13,7 @@ class Bookmark extends React.Component {
   handleBookmark(e) {
      e.preventDefault();
      const { createBookmark, deleteBookmark, post } = this.props;
+     console.log(post.hasMarked, this.state);
      if ( this.state.marked ) {
       this.setState({marked: false},
         () => deleteBookmark( this.props.post.id ))
@@ -26,14 +27,21 @@ class Bookmark extends React.Component {
   render() {
     const marked = "https://tinyurl.com/y9v2z6b2"
     const unmarked = "https://tinyurl.com/y8pz2wag"
+    const { post } = this.props;
+    let bookmarkCount = post.bookmarks ? post.bookmarks.length : 0;
 
-      return (
+    return (
+      <div>
+        <div className="follows-count">
+          {bookmarkCount}
+        </div>
         <div>
           <img className="bookmark"
             src={this.state.marked ? marked : unmarked}
             onClick={this.handleBookmark}/>
         </div>
-      )
+      </div>
+    )
     }
 
 }

@@ -3,7 +3,7 @@ import merge from 'lodash/merge';
 
 const defaultState = {
   username : "",
-  photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png",
+  photo_url: "https://i.embed.ly/1/image?url=https%3A%2F%2Fcdn.last.fm%2Fflatness%2Fresponsive%2F2%2Fnoimage%2Fdefault_user_140_g2.png&key=ee8455290d984b30859308ec0b4d701f",
   posts: [{
     cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1496796665/12-Vinyl-LP-Record-4_e9nbgk.png",
     song_url: "",
@@ -14,7 +14,7 @@ const defaultState = {
 
 const UsersReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
-  
+
   switch(action.type){
     case RECEIVE_USER:
       return action.user;

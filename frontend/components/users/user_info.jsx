@@ -27,7 +27,6 @@ class UserInfo extends React.Component {
    }
 
 
-
    featuredPost() {
      const { post, user, receiveTrack } = this.props;
 
@@ -59,7 +58,7 @@ class UserInfo extends React.Component {
 
 
    userInfo(){
-     const { post, user, deletePost, currentUser} = this.props;
+     const { post, user, deletePost, currentUser } = this.props;
      let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
      let userPic =  user.photo_url  ?  user.photo_url : defaultPic;
 

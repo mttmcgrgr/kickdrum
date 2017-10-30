@@ -37,11 +37,7 @@ class UserProfile extends React.Component {
     const currentUser = this.props.currentUser;
 
     if(this.state.loading === true) {
-      return(
-        <div className="loading">
-          <Loading />
-        </div>
-      )
+      return null
     } else {
       return (
           <div className="user-profile">

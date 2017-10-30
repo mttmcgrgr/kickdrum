@@ -86,12 +86,15 @@ class Greeting extends React.Component {
           className="greeting-add"
           src="http://www.free-icons-download.net/images/add-button-icon-73846.png"
           />
+        <div className="icon-text"></div>
       </Link>
       <Link to={`/users/${currentUser.id}`} className="user-name">
         <img
           className="greeting-profile"
-          src="http://res.cloudinary.com/dccshngpp/image/upload/v1496952045/profile-user-outline-vector-icon--social-icons--icons-download-26_oogjhi.png"
+          src={currentUser.photo_url}
+          //src="http://res.cloudinary.com/dccshngpp/image/upload/v1496952045/profile-user-outline-vector-icon--social-icons--icons-download-26_oogjhi.png"
           />
+        <div className="icon-text"></div>
       </Link>
       <img
         className="greeting-logout"

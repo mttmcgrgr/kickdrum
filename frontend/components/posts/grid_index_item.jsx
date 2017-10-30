@@ -11,14 +11,13 @@ class GridIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalOpen: false,
+      modalOpen: false
     };
 
     this.handleDelete = this.handleDelete.bind(this);
     this.modalClose = this.modalClose.bind(this);
     this.modalOpen = this.modalOpen.bind(this);
     this.onModalOpen = this.onModalOpen.bind(this);
-
   }
 
   componentWillMount() {
@@ -33,7 +32,6 @@ class GridIndexItem extends React.Component {
     ProfileModal.content.opacity = 100;
 
   }
-
 
   modalClose() {
     this.setState({modalOpen: false});

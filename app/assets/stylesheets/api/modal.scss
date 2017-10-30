@@ -38,11 +38,12 @@
   }
 
   .modal-bookmark {
-    height: 30px;
+    height: 32px;
     weight: 50px;
     position: absolute;
-    bottom: 25px;
-    right: 350px;
+    bottom: 27px;
+    right: 339px;
+    transform: scale(0.8);
 }
 
 .modal-close {

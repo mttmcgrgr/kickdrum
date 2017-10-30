@@ -15,10 +15,9 @@ class GridFeed extends React.Component {
     const currentUser = this.props.currentUser;
 
     if (posts.length === 0) {
-
       return null
     } else {
-
+      
       return (
         <div className="post-feed-container">
           <div className="home-posts">

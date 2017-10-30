@@ -40,6 +40,9 @@
 
 .change-view-button {
   height: 35px;
+    position: relative;
+    left: 7px;
+    bottom: 2px;
 }
 
 .post-feed-grid {
@@ -82,8 +85,10 @@
 
 
 .bookmark {
-  float: right;
+  position: relative;
   width: 45px;
+  bottom: 15px;
+  left: 5px;
 }
 
 .bookmark:hover {
@@ -114,23 +119,33 @@
 
 }
 
+.follows-count {
+  position: relative;
+  top: 18px;
+  right: 5px;
+  font-size: 20px;
+  font-style: normal;
+}
+
 
 
 .post_footer {
-    padding: 20px 24px;
-    padding_bottom: 10px;
-    margin-bottom: 65px;
-    border-bottom: 1px solid rgba(0,0,0,1);
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: white;
-    width:572px;
-    height: 55px;
-    position: relative;
-    border-style: solid;
-    border-width: 1px;
-    border-top-style: none;
-    border-color:#bababa;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 24px;
+  margin-bottom: 65px;
+  //border-bottom: 1px solid black;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: white;
+  width: 572px;
+  height: 55px;
+  position: relative;
+  //border-style: solid;
+  border-width: 1px;
+  //border-top-style: none;
+  border-color: #bababa;
+  justify-content: space-between;
 }
 
 .post_header {
@@ -141,11 +156,10 @@
     border-top-right-radius: 3px;
     background-color: white;
     width:572px;
-    border-style: solid;
+    //border-style: solid;
     border-width: 1px;
     border-bottom-style: none;
     border-color:#bababa;
-
     font-size: 20px;
     font-weight: normal;
     position:relative;
@@ -174,7 +188,21 @@
 .post_footer_artist {
   font-size: 20px;
   color: grey;
+}
 
+.create-button {
+   font-size: 20px;
+    line-height: 1.8;
+    appearance: none;
+    box-shadow: none;
+    color: #fff;
+    background-color: #35495e;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    height: 50px;
+    align-self: center;
+    width: 175px;
 }
 
 .hover-post-info {
@@ -191,6 +219,7 @@
     height: 50px;
     border-width: 1px;
     border-color: grey;
+    box-shadow: -5px 6px 5px #5f5e5e;
 }
 
 .hover-post-info:after {

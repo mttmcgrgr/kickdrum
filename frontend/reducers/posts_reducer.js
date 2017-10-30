@@ -14,8 +14,7 @@ const defaultState = {
 
 const PostsReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
-  let key;
-
+  let bookmarks
   switch(action.type){
     case RECEIVE_ALL_POSTS:
       return action.posts;
@@ -26,11 +25,11 @@ const PostsReducer = (state = defaultState, action) => {
       delete newState[action.post.id];
       return newState;
     case RECEIVE_BOOKMARK:
-      console.log(action)
+      console.log(action, newState)
       newState[action.bookmark.post_id].bookmarks.push(action.bookmark)
       return newState;
     case REMOVE_BOOKMARK:
-      console.log(action);
+      console.log(action, newState);
       newState[action.bookmark.post_id].bookmarks = action.bookmark.post_bookmarks
       return newState;
     case RECEIVE_POST_ERRORS:

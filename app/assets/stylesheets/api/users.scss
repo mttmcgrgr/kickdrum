@@ -13,8 +13,8 @@
     display: flex;
     flex-direction: column;
     top: 20px;
-    left: 202px;
-    border-style: solid;
+    left: 194px;
+    //border-style: solid;
     border-width: 1px;
     border-color: grey;
 
@@ -96,7 +96,7 @@
 .info-bookmark {
   height: 40px;
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
 }
 
 
@@ -111,10 +111,9 @@
 
 .info-top-section {
   border-bottom: solid 1px #dbd2d2;
-    position: relative;
-    width: 460px;
-    border-color: grey;
-
+  position: relative;
+  width: 460px;
+  border-color: #e3e3e3;
 }
 
 
@@ -134,8 +133,11 @@
     font-weight: bold;
     font-size: 25px;
     position: absolute;
-    right: 100px;
+    right: 90px;
     top: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .user-add {
@@ -278,7 +280,7 @@ button:hover {
     backface-visibility: hidden;
     width: 310px;
     height: 310px;
-    border: solid 1px;
+    //border: solid 1px;
     border-color:#bababa;
 }
 
@@ -334,6 +336,7 @@ button:hover {
   transition: .10s ease-in-out;
   transform: scale(1.1);
   z-index: 50;
+  box-shadow: -5px 6px 5px #5f5e5e;
 
 }
 

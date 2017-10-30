@@ -39,13 +39,17 @@ class ListIndexItem extends React.Component {
          </div>
         </section>
         <section className="post_footer">
-          <Bookmark
-          post={post}
-          currentUser={this.props.currentUser}
-          createBookmark={this.props.createBookmark}
-          deleteBookmark={this.props.deleteBookmark}/>
-          <div className="post_footer_title">{post.title}</div>
-          <div className="post_footer_artist">{post.artist}</div>
+          <div>
+            <div className="post_footer_title">{post.title}</div>
+            <div className="post_footer_artist">{post.artist}</div>
+          </div>
+          <div>
+            <Bookmark
+            post={post}
+            currentUser={this.props.currentUser}
+            createBookmark={this.props.createBookmark}
+            deleteBookmark={this.props.deleteBookmark}/>
+          </div>
         </section>
       </li>
      );

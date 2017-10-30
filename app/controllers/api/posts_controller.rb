@@ -1,8 +1,14 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = Post.all.includes(:user)
-    @posts.to_a.reverse!
+    @posts = Post.all
+
+    if logged_in?
+      render :index
+    else
+      render 'api/posts/home'
+    end
+
   end
 
   def show

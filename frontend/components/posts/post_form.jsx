@@ -110,8 +110,8 @@ class PostForm extends React.Component {
     let successImg = 'http://res.cloudinary.com/dccshngpp/image/upload/v1508350086/Green_check_iob46m.png'
     let errorImg =  'http://res.cloudinary.com/dccshngpp/image/upload/v1508350082/768px-Red_X.svg_dggd8h.png'
     let songStatus = this.state.song_uploaded ? successImg : errorImg;
-    let artStatus = this.state.cover_uploaded ? successImg : errorImg;;
-    console.log(this.state);
+    let artStatus = this.state.cover_uploaded ? successImg : errorImg;
+
     return (
     <div className="feed_background">
       <div className="login-form-container">
@@ -122,7 +122,7 @@ class PostForm extends React.Component {
 
           <div className="login-form">
           <br/>
-          <label>Title
+          <label>Title:
             <input
               type="text"
               value={this.state.title}
@@ -130,7 +130,7 @@ class PostForm extends React.Component {
               className="login-input" />
           </label>
            <br/>
-          <label>Artist
+          <label>Artist:
             <input
               type="text"
               value={this.state.artist}
@@ -160,7 +160,7 @@ class PostForm extends React.Component {
 
           </div>
           <br/>
-          <input type="submit" value="Create" className="button" />
+          <input type="submit" value="Upload" className="create-button" />
          </div>
         </form>
       </div>
