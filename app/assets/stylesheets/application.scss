@@ -108,7 +108,7 @@
     border-left: solid 1px #dbd2d2;
     width: 1px;
     position: relative;
-    top: 9px;
+    top: 5px;
     left: 2px;
 }
 
@@ -151,7 +151,7 @@
 
  .header-container {
    display: flex;
-    height: 70px;
+    height: 60px;
     background-color: white;
     width: 100%;
     background-color: white;
@@ -160,9 +160,9 @@
     z-index: 1;
     top: 0;
     position: relative;
-    //border-bottom-style: solid;
+    border-bottom-style: solid;
     border-width: 1px;
-    border-color:grey;
+    border-color:lightgrey;
  }
 
 
@@ -237,6 +237,7 @@
   border-bottom-style: solid;
   border-width: 1px;
   border-color:grey;
+  box-shadow: -5px 4px 10px 2px #c0bebe;
 }
 
 .image2 {
@@ -307,8 +308,7 @@
   }
 
   .logo-header {
-    width: 50px;
-    height: 50px;
+    width: 45px;
   }
 
 
@@ -382,7 +382,7 @@ audio {
   display: flex;
   position: relative;
   justify-content: center;
-  top: 70px;
+  top: 24px;
   color: #33495F;
 
 }
@@ -423,8 +423,8 @@ audio {
 .logo-text {
   font-family: 'Bungee Shade', cursive;
   padding-left: 15px;
-  padding-top: 10px;
-  font-size: 40px;
+  padding-top: 8px;
+  font-size: 35px;
 }
 
 .container {
@@ -551,7 +551,6 @@ audio {
 }
 
 .container:hover .image {
-  opacity: 0.95;
 }
 
 .container:hover .middle {
@@ -592,6 +591,7 @@ audio {
     width: 100%;
     position: absolute;
     justify-content: flex-end;
+    box-shadow: -5px 6px 5px #5f5e5e
 }
 
 

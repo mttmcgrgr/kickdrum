@@ -14,7 +14,7 @@ const defaultState = {
 
 const PostsReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
-  let bookmarks
+  
   switch(action.type){
     case RECEIVE_ALL_POSTS:
       return action.posts;

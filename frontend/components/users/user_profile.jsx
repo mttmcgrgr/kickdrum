@@ -51,23 +51,22 @@ class UserProfile extends React.Component {
               deletePost={this.props.deletePost}
               fetchUser={this.props.fetchUser}/>
 
-            <GridFeed
-              posts={otherPosts}
-              currentUser={currentUser}
-              profileFeed={true}
-              user={this.props.user}
-              createBookmark={this.props.createBookmark}
-              deleteBookmark={this.props.deleteBookmark}
-              receiveTrack={this.props.receiveTrack}
-              deletePost={this.props.deletePost}
-              fetchUser={this.props.fetchUser}/>
+            <div>
+              <GridFeed
+                posts={otherPosts}
+                currentUser={currentUser}
+                profileFeed={true}
+                user={this.props.user}
+                createBookmark={this.props.createBookmark}
+                deleteBookmark={this.props.deleteBookmark}
+                receiveTrack={this.props.receiveTrack}
+                deletePost={this.props.deletePost}
+                fetchUser={this.props.fetchUser}/>
+            </div>
           </div>
       );
-
     }
-
   }
-
 }
 
 

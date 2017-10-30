@@ -61,7 +61,7 @@ class UserInfo extends React.Component {
      const { post, user, deletePost, currentUser } = this.props;
      let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
      let userPic =  user.photo_url  ?  user.photo_url : defaultPic;
-
+     
      if(user.posts.length === 0){
        return(
          <div className="user-info-box">
