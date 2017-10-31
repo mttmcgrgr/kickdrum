@@ -39,10 +39,8 @@
 }
 
 .change-view-button {
-  height: 35px;
-    position: relative;
-    left: 7px;
-    bottom: 2px;
+  height: 28px;
+  position: relative;
 }
 
 .post-feed-grid {
@@ -59,36 +57,35 @@
 }
 
 .view-button{
-    box-shadow: none;
     border: none;
-    border-style: none;
-    border-width: 1px;
-    border-color: grey;
-    background-color: white;
-    outline: none;
 }
 
 .view-button-container {
-  position: absolute;
+   position: absolute;
     display: flex;
-    right: 240px;
+    right: 166px;
     margin-top: 20px;
     z-index: 500;
-    top: 2px;
+    top: -3px;
 }
 
 .li-post-index {
-  transform:scale(1);
-  margin-top: 20px;
+  transform:scale(0.9);
   margin-bottom: 20px;
   box-shadow: -5px 4px 10px 2px #c0bebe;
+}
+
+.root {
+  width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 
 .bookmark {
   position: relative;
   width: 45px;
-  bottom: 15px;
+  bottom: 23px;
   left: 5px;
 }
 
@@ -122,7 +119,7 @@
 
 .follows-count {
   position: relative;
-  top: 18px;
+  top: 10px;
   right: 5px;
   font-size: 20px;
   font-style: normal;

@@ -91,7 +91,6 @@ class PostIndex extends React.Component {
     if(this.state.loading) {
       return(
         <div className="post-loading">
-
         </div>
       );
     } else {

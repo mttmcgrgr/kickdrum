@@ -79,29 +79,28 @@ class Greeting extends React.Component {
 
 
   personalGreeting(currentUser, logout){
+
     return(
   	<hgroup className="header-group-right">
-      <Link to={`/posts/new`} className="user-add">
+      <Link to={`/posts/new`} className="">
         <img
           className="greeting-add"
-          src="http://www.free-icons-download.net/images/add-button-icon-73846.png"
+          src="http://res.cloudinary.com/dccshngpp/image/upload/v1509401328/noun_875291_wbrmkt.png"
           />
-        <div className="icon-text"></div>
       </Link>
-      <Link to={`/users/${currentUser.id}`} className="user-name">
+      <Link to={`/users/${currentUser.id}`} className="">
         <img
           className="greeting-profile"
           src={currentUser.photo_url}
-          //src="http://res.cloudinary.com/dccshngpp/image/upload/v1496952045/profile-user-outline-vector-icon--social-icons--icons-download-26_oogjhi.png"
           />
-        <div className="icon-text"></div>
       </Link>
-      <img
-        className="greeting-logout"
-        onClick={this.logOutRedirect}
-        src="http://res.cloudinary.com/dccshngpp/image/upload/v1496952049/43619-200_niqaab.png"
-        />
-
+      <div>
+        <img
+          className="greeting-logout"
+          onClick={this.logOutRedirect}
+          src="http://res.cloudinary.com/dccshngpp/image/upload/v1509401331/932394-200_cpjzqz.png"
+          />
+      </div>
   	</hgroup>
     );
   };

@@ -13,9 +13,11 @@ class Bookmark extends React.Component {
   handleBookmark(e) {
      e.preventDefault();
      const { createBookmark, deleteBookmark, post } = this.props;
-     console.log(post.hasMarked, this.state);
+
      if ( this.state.marked ) {
-      this.setState({marked: false},
+      this.setState({
+        marked: false
+      },
         () => deleteBookmark( post.id ))
      } else {
       this.setState({marked: true},

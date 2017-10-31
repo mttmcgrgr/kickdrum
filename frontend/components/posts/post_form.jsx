@@ -113,58 +113,61 @@ class PostForm extends React.Component {
     let artStatus = this.state.cover_uploaded ? successImg : errorImg;
 
     return (
-    <div className="feed_background">
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="create-form-box">
-          <h3 className="create-title">Upload to Kickdrum</h3>
+      <div>
+        <div className="feed_background">
+          <div className="login-form-container">
+            <form onSubmit={this.handleSubmit} className="create-form-box">
+              <h3 className="create-title">Upload to Kickdrum</h3>
 
-          {this.renderErrors()}
+              {this.renderErrors()}
 
-          <div className="login-form">
-          <br/>
-          <label>Title:
-            <input
-              type="text"
-              value={this.state.title}
-              onChange={this.update('title')}
-              className="login-input" />
-          </label>
-           <br/>
-          <label>Artist:
-            <input
-              type="text"
-              value={this.state.artist}
-              onChange={this.update('artist')}
-              className="login-input" />
-          </label>
-          <br/>
-          <div className="post-form-buttons">
-            <button onClick={this.cloudSong} className="post-button">
-              <div className="post-button-left">
-                <img className="music-icon" src="https://maxcdn.icons8.com/Share/icon/p1em/Files//audio_file1600.png" />
-                <p className="post-button-text">Upload Song</p>
+              <div className="login-form">
+              <br/>
+              <label>Title:
+                <input
+                  type="text"
+                  value={this.state.title}
+                  onChange={this.update('title')}
+                  className="login-input" />
+              </label>
+               <br/>
+              <label>Artist:
+                <input
+                  type="text"
+                  value={this.state.artist}
+                  onChange={this.update('artist')}
+                  className="login-input" />
+              </label>
+              <br/>
+              <div className="post-form-buttons">
+                <button onClick={this.cloudSong} className="post-button">
+                  <div className="post-button-left">
+                    <img className="music-icon" src="https://maxcdn.icons8.com/Share/icon/p1em/Files//audio_file1600.png" />
+                    <p className="post-button-text">Upload Song</p>
+                  </div>
+                  <img className="status-img" src={songStatus} />
+                </button>
+
               </div>
-              <img className="status-img" src={songStatus} />
-            </button>
+              <br/>
+              <div className="post-form-buttons">
+                <button onClick={this.cloudArt} className="post-button">
+                  <div className="post-button-left">
+                    <img className="art-icon" src="http://img.freepik.com/free-icon/gallery_318-131678.jpg?size=338c&ext=jpg" />
+                    <p className="post-button-text">Upload Cover Art</p>
+                  </div>
+                  <img className="status-img" src={artStatus} />
+                </button>
 
-          </div>
-          <br/>
-          <div className="post-form-buttons">
-            <button onClick={this.cloudArt} className="post-button">
-              <div className="post-button-left">
-                <img className="art-icon" src="http://img.freepik.com/free-icon/gallery_318-131678.jpg?size=338c&ext=jpg" />
-                <p className="post-button-text">Upload Cover Art</p>
               </div>
-              <img className="status-img" src={artStatus} />
-            </button>
-
+              <br/>
+              <input type="submit" value="Upload" className="create-button" />
+             </div>
+            </form>
           </div>
-          <br/>
-          <input type="submit" value="Upload" className="create-button" />
          </div>
-        </form>
       </div>
-     </div>
+
     );
   }
 }

@@ -12,10 +12,8 @@ class UserProfile extends React.Component {
     }
   }
 
-
   componentDidMount() {
-    const user_id = this.props.params.userId;
-    this.props.fetchUser(user_id);
+    this.props.fetchUser(this.props.params.userId);
     window.scrollTo(0,0);
     setTimeout(() => {
     this.setState({loading: false}); }, 75);
@@ -31,10 +29,9 @@ class UserProfile extends React.Component {
 
 
   render () {
-    let userPosts = [...this.props.user.posts];
-    let recentPost = userPosts.pop();
-    let otherPosts = userPosts.reverse();
-    const currentUser = this.props.currentUser;
+    const { posts, currentUser } = this.props;
+    const featuredPost = posts[posts.length - 1];
+    const otherPosts = posts.slice(1);
 
     if(this.state.loading === true) {
       return null
@@ -43,7 +40,7 @@ class UserProfile extends React.Component {
           <div className="user-profile">
             <UserInfo
               currentUser={currentUser}
-              post={recentPost}
+              post={featuredPost}
               user={this.props.user}
               createBookmark={this.props.createBookmark}
               deleteBookmark={this.props.deleteBookmark}

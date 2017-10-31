@@ -13,16 +13,15 @@ class ListIndexItem extends React.Component {
 
 
  render() {
-   const post  = this.props.post;
-   const userPic =  post.user_photo_url  ?  post.user_photo_url : "https://tinyurl.com/yccadzmo";
+   const { post } = this.props;
 
-   if (post === "") {
+   if (post === undefined) {
      return null
    } else {
     return (
       <li className="li-post-index">
         <section className="post_header">
-          <img className="post-user-pic" src={userPic} />
+          <img className="post-user-pic" src={post.user_photo_url} />
           <Link
             className="post-user-name" to={`/users/${post.user_id}`}>{post.username}</Link>
         </section>

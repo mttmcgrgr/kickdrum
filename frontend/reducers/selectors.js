@@ -1,7 +1,15 @@
 
-export const allPosts = (state) => {
-    return Object.values(state.posts);
- };
+export const findPostById = (posts, post_id) => {
+  for(var i = 0; i < posts.length; i++) {
+    var post = posts[i];
+
+    if(post.id === post_id){
+      return i;
+    }
+  }
+};
+
+
 
 export const getBookmarkPost = (action) => {
    return action.bookmark.bookmark.post;

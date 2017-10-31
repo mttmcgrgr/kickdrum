@@ -3,11 +3,12 @@ import UserProfile from './user_profile';
 import { fetchUser, deleteUser, clearUser } from '../../actions/user_actions';
 import { fetchUserPosts, deletePost } from '../../actions/post_actions';
 import { receiveTrack } from '../../actions/player_actions';
-import { createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
+import { createUserBookmark, deleteUserBookmark } from '../../actions/bookmark_actions';
 
 
 const mapStateToProps = state => ({
   user: state.user,
+  posts: state.user.posts,
   currentUser: state.session.currentUser|| {}
 });
 
@@ -19,8 +20,8 @@ const mapDispatchToProps = dispatch => ({
   deletePost: id => dispatch(deletePost(id)),
   receiveTrack: post => dispatch(receiveTrack(post)),
   clearUser: user => dispatch(clearUser(user)),
-  createBookmark: post_id => dispatch(createBookmark(post_id)),
-  deleteBookmark: post_id => dispatch(deleteBookmark(post_id))
+  createBookmark: post_id => dispatch(createUserBookmark(post_id)),
+  deleteBookmark: post_id => dispatch(deleteUserBookmark(post_id))
 });
 
 export default connect(
