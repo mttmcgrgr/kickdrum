@@ -6,14 +6,12 @@
 .user-info-box {
   padding: 20px;
     background-color: white;
-    height: 352px;
+    height: 281px;
     align-self: flex-end;
-    width: 464px;
+    width: 360px;
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 20px;
-    left: 190px;
     border-width: 1px;
     border-color: grey;
     box-shadow: -5px 4px 10px 2px #c0bebe;
@@ -24,16 +22,15 @@
   display: flex;
     z-index: 0;
     height: 100%;
-    width: 1000px;
+    width: 800px;
     position: relative;
-    left: -30px;
-    transform: scale(0.9);
 }
 
 .parent {
-   position: relative;
-    top: 20px;
-    align-self: flex-start;
+  position: relative;
+   height: 100%;
+   align-self: flex-start;
+   width: 50%;
 }
 
 .modal {
@@ -53,9 +50,8 @@
    display: flex;
     justify-content: center;
     position: relative;
-    width: 904px;
-    top: 18px;
-    left: -13px;
+    width: 750px;
+    top: 30px;
     border-top-style: solid;
     border-color: #b8bbb8;
     border-width: 1px;
@@ -70,17 +66,31 @@
 
 .profile-button {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   border-style: none;
-  height: 45px;
+  height: 40px;
   width: 70px;
+}
+
+.view-text {
+  position: relative;
+  bottom: 10px;
+}
+
+.view-count {
+  margin-top: 5px;
+  bottom: 25px;
 }
 
 .selected-button {
   display: flex;
   justify-content: center;
+  align-items: center;
+ flex-direction: column;
   border-style: none;
-  height: 45px;
+  height: 35px;
   border-top-style: solid;
   border-width: 2px;
   width: 70px;
@@ -90,17 +100,18 @@
 .user-title-info {
     font-weight: bold;
     text-align: left;
-    width: 450px;
+    width: 300px;
     top: 15px;
     position: relative;
-    font-size: 18px
+    font-size: 14px
 }
 
 .user-artist-info {
     color:grey;
     text-align: left;
-    width: 450px;
+    width: 300px;
     top: 15px;
+    font-size: 14px;
     position: relative;
     font-weight: normal;
 
@@ -131,15 +142,15 @@
 }
 
 .info-bookmark {
-  height: 40px;
-  position: absolute;
-  bottom: 25px;
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    transform: scale(.8);
 }
 
 
 .user_photo {
-  height: 60px;
-  width: 60px;
+  height: 45px;
   float: left;
   border-radius: 30px;
   position: relative;
@@ -149,7 +160,7 @@
 .info-top-section {
   border-bottom: solid 1px #dbd2d2;
   position: relative;
-  width: 460px;
+  width: 340px;
   border-color: #e3e3e3;
 }
 
@@ -222,8 +233,9 @@
    height: 100%;
    position: relative;
    align-items: center;
-   transform: scale(0.95);
+   transform: scale(1);
    bottom: 15px;
+   margin-top: 40px;
 
 }
 
@@ -315,9 +327,7 @@ button:hover {
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
-    width: 310px;
-    height: 310px;
-    //border: solid 1px;
+    width: 260px;
     border-color:#bababa;
     box-shadow: -5px 4px 10px 2px #c0bebe;
 }
@@ -364,11 +374,11 @@ button:hover {
     list-style: none;
     z-index: 1;
     transform: scale(1);
-    width: 310px;
-    height: 310px;
+    width: 260px;
     padding-right: 10px;
     margin-bottom: 10px;
 }
+
 
 .user_content_main:hover {
   transition: .10s ease-in-out;
@@ -417,19 +427,19 @@ button:hover {
 
 
 .info-play-container {
-  height: 340px;
-  width: 340px;
-  position: relative;
-  left: 70px;
-  top: 30px;
-  justify-content: flex-end;
-  display: flex;
-  opacity: 0;
-  z-index: 50;
+    height: 260px;
+    width: 260px;
+    position: relative;
+    left: 34px;
+    top: 30px;
+    justify-content: flex-end;
+    display: flex;
+    opacity: 0;
+    z-index: 50;
 }
 
 .info-play-container:hover {
-  opacity: 1 ;
+  opacity: 1;
 }
 
 .info-play {

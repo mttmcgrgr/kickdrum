@@ -79,12 +79,14 @@ class UserProfile extends React.Component {
                 <button
                   onClick={this.setPostView}
                   className={this.state.savedView ? "profile-button" : "selected-button"}>
-                  POSTS
+                 <div className="view-count">{posts.length}</div>
+                 <div className="view-text">POSTS</div>
                 </button>
                 <button
                   onClick={this.setSavedView}
                   className={this.state.savedView ? "selected-button" : "profile-button"}>
-                  SAVED
+                  <div className="view-count">{user_bookmarks.length}</div>
+                  <div className="view-text"> SAVED</div>
                 </button>
               </div>
             </div>
