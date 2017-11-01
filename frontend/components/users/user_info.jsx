@@ -58,7 +58,7 @@ class UserInfo extends React.Component {
 
 
    userInfo(){
-     const { post, user, deletePost, currentUser } = this.props;
+     const { post, user, currentUser, fetchUser } = this.props;
      let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
      let userPic =  user.photo_url  ?  user.photo_url : defaultPic;
 
@@ -84,11 +84,16 @@ class UserInfo extends React.Component {
            <h1 className="user-title-info">{post.title}</h1>
            <h3 className="user-artist-info">{post.artist}</h3>
            <div className="info-bookmark">
+             <div className="follows-count">
+               {this.props.post.bookmarkCount}
+             </div>
              <Bookmark
-             post={post}
-             currentUser={this.props.currentUser}
-             createBookmark={this.props.createBookmark}
-             deleteBookmark={this.props.deleteBookmark}/>
+               post={post}
+               fetchUser={fetchUser}
+               currentUser={currentUser}
+               createBookmark={this.props.createBookmark}
+               deleteBookmark={this.props.deleteBookmark}
+             />
            </div>
          </div>
 
@@ -97,7 +102,7 @@ class UserInfo extends React.Component {
    }
 
   render(){
-    
+
     if(this.state.loading === true) {
       return(
         <div className="loading">

@@ -1,8 +1,8 @@
 import * as BookmarkApiUtil from '../util/bookmark_api_util';
 export const RECEIVE_BOOKMARK = "RECEIVE_BOOKMARK";
 export const REMOVE_BOOKMARK = "REMOVE_BOOKMARK";
-export const RECEIVE_USER_BOOKMARK = "RECEIVE_USER_BOOKMARK";
-export const REMOVE_USER_BOOKMARK = "REMOVE_USER_BOOKMARK";
+export const RECEIVE_PROFILE_BOOKMARK = "RECEIVE_PROFILE_BOOKMARK";
+export const REMOVE_PROFILE_BOOKMARK = "REMOVE_PROFILE_BOOKMARK";
 
 const receiveBookmark = ( bookmark ) => ({
   type: RECEIVE_BOOKMARK,
@@ -14,24 +14,24 @@ const removeBookmark = ( bookmark ) => ({
   bookmark
 });
 
-const receiveUserBookmark = ( bookmark ) => ({
-  type: RECEIVE_USER_BOOKMARK,
+const receiveProfileBookmark = ( bookmark ) => ({
+  type: RECEIVE_PROFILE_BOOKMARK,
   bookmark
 });
 
-const removeUserBookmark = ( bookmark ) => ({
-  type: REMOVE_USER_BOOKMARK,
+const removeProfileBookmark = ( bookmark ) => ({
+  type: REMOVE_PROFILE_BOOKMARK,
   bookmark
 });
 
-export const createUserBookmark = ( post_id ) => dispatch => (
+export const createProfileBookmark = ( post_id ) => dispatch => (
     BookmarkApiUtil.createBookmark( post_id )
-    .then( bookmark => dispatch(receiveUserBookmark( bookmark )))
+    .then( bookmark => dispatch(receiveProfileBookmark( bookmark )))
 );
 
-export const deleteUserBookmark = ( post_id ) => dispatch => (
+export const deleteProfileBookmark = ( post_id ) => dispatch => (
     BookmarkApiUtil.deleteBookmark( post_id )
-    .then( bookmark => dispatch(removeUserBookmark( bookmark )))
+    .then( bookmark => dispatch(removeProfileBookmark( bookmark )))
 );
 
 

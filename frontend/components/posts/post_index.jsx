@@ -76,6 +76,7 @@ class PostIndex extends React.Component {
             <GridFeed
               posts={posts}
               user={user}
+              profileView={false}
               currentUser={currentUser}
               receiveTrack={receiveTrack}
               createBookmark={createBookmark}

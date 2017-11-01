@@ -6,15 +6,14 @@
 .user-info-box {
   padding: 20px;
     background-color: white;
-    height: 360px;
+    height: 352px;
     align-self: flex-end;
-    width: 460px;
+    width: 464px;
     position: relative;
     display: flex;
     flex-direction: column;
     top: 20px;
-    left: 194px;
-    //border-style: solid;
+    left: 190px;
     border-width: 1px;
     border-color: grey;
     box-shadow: -5px 4px 10px 2px #c0bebe;
@@ -50,14 +49,51 @@
     font-weight: normal;
 }
 
+.profile-line {
+   display: flex;
+    justify-content: center;
+    position: relative;
+    width: 904px;
+    top: 18px;
+    left: -13px;
+    border-top-style: solid;
+    border-color: #b8bbb8;
+    border-width: 1px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 193px;
+    position: relative;
+}
+
+.profile-button {
+  display: flex;
+  justify-content: center;
+  border-style: none;
+  height: 45px;
+  width: 70px;
+}
+
+.selected-button {
+  display: flex;
+  justify-content: center;
+  border-style: none;
+  height: 45px;
+  border-top-style: solid;
+  border-width: 2px;
+  width: 70px;
+  border-color: #2f4255;
+}
+
 .user-title-info {
     font-weight: bold;
     text-align: left;
     width: 450px;
     top: 15px;
     position: relative;
-    font-weight: bold;
-    font-size: 23px
+    font-size: 18px
 }
 
 .user-artist-info {
@@ -74,7 +110,7 @@
   position: relative;
   top: 8px;
   font-weight: normal;
-  font-size: 23px;
+  font-size: 18px;
   padding-left: 10px;
 }
 

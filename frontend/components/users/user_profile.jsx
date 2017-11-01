@@ -8,9 +8,14 @@ class UserProfile extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      loading: true
+      loading: true,
+      viewSaved: false
     }
+
+    this.setPostView = this.setPostView.bind(this);
+    this.setSavedView = this.setSavedView.bind(this);
   }
+
 
   componentDidMount() {
     this.props.fetchUser(this.props.params.userId);
@@ -27,13 +32,22 @@ class UserProfile extends React.Component {
     }
   }
 
+  setPostView(){
+    this.setState({viewSaved: false})
+  }
+
+  setSavedView(){
+    this.setState({viewSaved: true})
+  }
+
 
   render () {
-    const { posts, currentUser } = this.props;
-    const featuredPost = posts[posts.length - 1];
-    const otherPosts = posts.slice(1);
+    const { posts, currentUser, user, user_bookmarks } = this.props;
 
-    if(this.state.loading === true) {
+    const featuredPost = posts[0];
+    const userPosts = posts.slice(1)
+
+    if(this.props.user.username === "") {
       return null
     } else {
       return (
@@ -42,17 +56,31 @@ class UserProfile extends React.Component {
               currentUser={currentUser}
               post={featuredPost}
               user={this.props.user}
+              profileView={true}
               createBookmark={this.props.createBookmark}
               deleteBookmark={this.props.deleteBookmark}
               receiveTrack={this.props.receiveTrack}
-              deletePost={this.props.deletePost}
-              fetchUser={this.props.fetchUser}/>
-
+              fetchUser={this.props.fetchUser}
+            />
+            <div className="profile-line">
+              <div className="button-container">
+                <button
+                  onClick={this.setPostView}
+                  className={this.state.viewSaved ? "profile-button" : "selected-button"}>
+                  POSTS
+                </button>
+                <button
+                  onClick={this.setSavedView}
+                  className={this.state.viewSaved ? "selected-button" : "profile-button"}>
+                  SAVED
+                </button>
+              </div>
+            </div>
             <div>
               <GridFeed
-                posts={otherPosts}
+                posts={this.state.viewSaved ? user_bookmarks : userPosts}
                 currentUser={currentUser}
-                profileFeed={true}
+                profileView={true}
                 user={this.props.user}
                 createBookmark={this.props.createBookmark}
                 deleteBookmark={this.props.deleteBookmark}

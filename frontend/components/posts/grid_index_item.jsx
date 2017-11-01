@@ -104,6 +104,9 @@ class GridIndexItem extends React.Component {
               <h1 className="modal-song-info">{post.title}</h1>
               <h3 className="modal-artist-info">{post.artist}</h3>
               <div className="modal-bookmark">
+                <div className="follows-count">
+                  {this.props.post.bookmarkCount}
+                </div>
                 <Bookmark
                   post={post}
                   currentUser={this.props.currentUser}

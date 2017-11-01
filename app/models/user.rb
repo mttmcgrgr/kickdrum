@@ -10,18 +10,17 @@ class User < ActiveRecord::Base
 	before_validation :ensure_session_token_uniqueness
 
 	has_many :posts,
-    primary_key: :id,
+    -> { order(:id => :desc) },
     foreign_key: :user_id,
-    class_name: :Post
+    dependent: :destroy
 
 	has_many :bookmarks,
-    primary_key: :id,
-    foreign_key: :user_id,
-    class_name: :Bookmark
+	 dependent: :destroy
 
 	has_many :bookmarked_posts,
-    through: :bookmarks,
-    source: :post
+	 -> { order(:created_at => :desc) },
+	 :through => :bookmarks,
+	 :source => :post
 
 
 	def password= password

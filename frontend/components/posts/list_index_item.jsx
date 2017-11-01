@@ -11,7 +11,6 @@ class ListIndexItem extends React.Component {
     }
   }
 
-
  render() {
    const { post } = this.props;
 
@@ -43,6 +42,9 @@ class ListIndexItem extends React.Component {
             <div className="post_footer_artist">{post.artist}</div>
           </div>
           <div>
+            <div className="follows-count">
+              {this.props.post.bookmarkCount}
+            </div>
             <Bookmark
             post={post}
             currentUser={this.props.currentUser}

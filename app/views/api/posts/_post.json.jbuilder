@@ -11,5 +11,6 @@ json.username post.user.username
 json.user_id post.user_id
 json.user_photo_url post.user.photo_url
 json.bookmarks post.bookmarks
+json.bookmarkCount post.bookmarks.size
 json.hasMarked hasMarked
 json.created_at post.created_at
