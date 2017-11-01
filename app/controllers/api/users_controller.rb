@@ -17,7 +17,6 @@ class Api::UsersController < ApplicationController
 		@posts = @user.posts
 		@bookmarks = @user.bookmarks
 
-
     if @user
       render :profile
     else

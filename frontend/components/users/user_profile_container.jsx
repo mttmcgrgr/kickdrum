@@ -11,9 +11,8 @@ const mapStateToProps = state => ({
   posts: Object.keys(state.user.posts).map(id =>
     state.user.posts[id]
   ).reverse()|| [],
-  user_bookmarks: Object.keys(state.user.user_bookmarks).map(id =>
-    state.user.user_bookmarks[id].post
-  ).reverse()|| [],
+  user_bookmarks: state.user.user_bookmarks ? Object.keys(state.user.user_bookmarks).map(id =>
+    state.user.user_bookmarks[id].post).reverse() : [],
   currentUser: state.session.currentUser|| {}
 });
 

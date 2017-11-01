@@ -18,13 +18,13 @@ class Bookmark extends React.Component {
      if (this.state.submitting) {
         return null;
       } else if (this.props.post.hasMarked) {
-          this.setState({submitting: true},
-            () => this.props.deleteBookmark(post.id)
-            .then(this.setState({ submitting: false })));
+        this.setState({submitting: true},
+          () => this.props.deleteBookmark(post.id)
+          .then(this.setState({ submitting: false })));
       } else {
-            this.setState({submitting: true},
-            () => this.props.createBookmark({bookmark: {post_id: post.id}})
-            .then(this.setState({ submitting: false })));
+        this.setState({submitting: true},
+         () => this.props.createBookmark({bookmark: {post_id: post.id}})
+          .then(this.setState({ submitting: false })));
       }
    }
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import GridIndexItem from './grid_index_item';
-import { createProfileBookmark, deleteProfileBookmark } from '../../actions/bookmark_actions';
-
 
 class GridFeed extends React.Component {
   constructor(props) {
@@ -12,8 +10,7 @@ class GridFeed extends React.Component {
   render () {
     let posts = [...this.props.posts];
     const { currentUser, profileView, createBookmark, deleteBookmark } = this.props;
-
-    console.log(this.props);
+    console.log(this.props.posts);
     if (posts.length === 0) {
       return (
           <div className="post-feed-container">
@@ -34,8 +31,8 @@ class GridFeed extends React.Component {
               profileFeed={this.props.profileFeed}
               receiveTrack={this.props.receiveTrack}
               fetchUser={this.props.fetchUser}
-              createBookmark={profileView ? createProfileBookmark : createBookmark}
-              deleteBookmark={profileView ? deleteProfileBookmark : deleteBookmark} />
+              createBookmark={createBookmark}
+              deleteBookmark={deleteBookmark} />
           ))}
           </div>
         </div>

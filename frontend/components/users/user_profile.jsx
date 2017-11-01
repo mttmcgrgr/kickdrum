@@ -9,7 +9,8 @@ class UserProfile extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      viewSaved: false
+      fetching: false,
+      savedView: false
     }
 
     this.setPostView = this.setPostView.bind(this);
@@ -18,34 +19,45 @@ class UserProfile extends React.Component {
 
 
   componentDidMount() {
-    this.props.fetchUser(this.props.params.userId);
+    this.setState({loading: true},
+      () => this.props.fetchUser(this.props.params.userId)
+      .then(setTimeout(this.setState({ loading: false }), 75)));
     window.scrollTo(0,0);
-    setTimeout(() => {
-    this.setState({loading: false}); }, 75);
   }
 
   componentWillReceiveProps(nextProps){
     if(this.props.params.userId !== nextProps.params.userId){
-      this.props.fetchUser(nextProps.params.userId);
-      setTimeout(() => {
-      this.setState({loading: false}); }, 75);
+      this.setState({loading: true},
+        () => this.props.fetchUser(nextProps.params.userId)
+        .then(setTimeout(this.setState({ loading: false }), 3000)));
     }
   }
 
   setPostView(){
-    this.setState({viewSaved: false})
+    if(this.state.savedView){
+      this.setState({fetching: true},
+        () => this.props.fetchUser(this.props.params.userId)
+        .then(this.setState({ fetching: false, savedView: false })));
+    }
   }
 
   setSavedView(){
-    this.setState({viewSaved: true})
+    if(!this.state.savedView){
+      this.setState({fetching: true},
+        () => this.props.fetchUser(this.props.params.userId)
+        .then(this.setState({ fetching: false, savedView: true })));
+    }
   }
 
 
   render () {
     const { posts, currentUser, user, user_bookmarks } = this.props;
-
     const featuredPost = posts[0];
     const userPosts = posts.slice(1)
+
+    if(this.state.loading) {
+      return null
+    }
 
     if(this.props.user.username === "") {
       return null
@@ -66,19 +78,19 @@ class UserProfile extends React.Component {
               <div className="button-container">
                 <button
                   onClick={this.setPostView}
-                  className={this.state.viewSaved ? "profile-button" : "selected-button"}>
+                  className={this.state.savedView ? "profile-button" : "selected-button"}>
                   POSTS
                 </button>
                 <button
                   onClick={this.setSavedView}
-                  className={this.state.viewSaved ? "selected-button" : "profile-button"}>
+                  className={this.state.savedView ? "selected-button" : "profile-button"}>
                   SAVED
                 </button>
               </div>
             </div>
             <div>
               <GridFeed
-                posts={this.state.viewSaved ? user_bookmarks : userPosts}
+                posts={this.state.savedView ? user_bookmarks : userPosts}
                 currentUser={currentUser}
                 profileView={true}
                 user={this.props.user}

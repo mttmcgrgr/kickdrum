@@ -1,12 +1,12 @@
 import {RECEIVE_USER, REMOVE_USER } from '../actions/user_actions';
 import { RECEIVE_PROFILE_BOOKMARK, REMOVE_PROFILE_BOOKMARK } from '../actions/bookmark_actions';
 import merge from 'lodash/merge';
-import { findPostById, getBookmarkIndex } from './selectors';
 
 const defaultState = {
   username : "",
   photo_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1509405171/download_sqdjiv.jpg",
   posts: {},
+  bookmarks: {},
   user_bookmarks: {}
 };
 
@@ -21,12 +21,21 @@ const UsersReducer = (state = defaultState, action) => {
       delete newState[action.userId];
       return newState;
     case RECEIVE_PROFILE_BOOKMARK:
-      newState.user_bookmarks[action.bookmark.id] = action.bookmark.post
       console.log(newState, action);
+      if(newState.posts[action.bookmark.post_id].bookmarks){
+        newState.posts[action.bookmark.post_id].bookmarks[action.bookmark.id] = action.bookmark
+      } else {
+        newState[action.bookmark.post_id].bookmarks = {};
+        newState[action.bookmark.post_id].bookmarks[action.bookmark.id] = action.bookmark
+      }
+      newState.posts[action.bookmark.post_id].bookmarkCount += 1
+      newState.posts[action.bookmark.post_id].hasMarked = true
       return newState;
     case REMOVE_PROFILE_BOOKMARK:
-      delete newState.user_bookmarks[action.bookmark.id]
       console.log(newState, action);
+      delete newState.posts[action.bookmark.post_id].bookmarks[action.bookmark.id]
+      newState.posts[action.bookmark.post_id].bookmarkCount -= 1
+      newState.posts[action.bookmark.post_id].hasMarked = false
       return newState;
     default:
       return state;

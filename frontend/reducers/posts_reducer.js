@@ -8,8 +8,8 @@ const defaultState = {
   artist: "",
   cover_url: "",
   song_url: "",
-  errors: [],
-  bookmarks: []
+  errors: {},
+  bookmarks: {}
 };
 
 const PostsReducer = (state = defaultState, action) => {
@@ -25,14 +25,19 @@ const PostsReducer = (state = defaultState, action) => {
       delete newState[action.post.id];
       return newState;
     case RECEIVE_BOOKMARK:
-      newState[action.bookmark.post_id].bookmarks.push(action.bookmark);
-      newState[action.bookmark.post_id].bookmarkCount += 1;
-      newState[action.bookmark.post_id].hasMarked = true;
+      if(newState[action.bookmark.post_id].bookmarks){
+        newState[action.bookmark.post_id].bookmarks[action.bookmark.id] = action.bookmark
+      } else {
+        newState[action.bookmark.post_id].bookmarks = {};
+        newState[action.bookmark.post_id].bookmarks[action.bookmark.id] = action.bookmark
+      }
+      newState[action.bookmark.post_id].bookmarkCount += 1
+      newState[action.bookmark.post_id].hasMarked = true
       return newState;
     case REMOVE_BOOKMARK:
-      newState[action.bookmark.post_id].bookmarks = action.bookmark.post_bookmarks
-      newState[action.bookmark.post_id].bookmarkCount -= 1;
-      newState[action.bookmark.post_id].hasMarked = false;
+      delete newState[action.bookmark.post_id].bookmarks[action.bookmark.id]
+      newState[action.bookmark.post_id].bookmarkCount -= 1
+      newState[action.bookmark.post_id].hasMarked = false
       return newState;
     case RECEIVE_POST_ERRORS:
       newState.errors = action.errors;

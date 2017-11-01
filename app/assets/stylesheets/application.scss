@@ -433,6 +433,7 @@ audio {
   position: relative;
   width: 100%;
   z-index: 0;
+  border-style: none;
 }
 
 .container:hover {
@@ -463,6 +464,7 @@ audio {
   height: 620px;
   border-width: 1px;
   border-color:grey;
+  border-style: none;
 }
 
 .create-title {
