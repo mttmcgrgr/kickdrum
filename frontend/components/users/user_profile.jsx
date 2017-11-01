@@ -56,7 +56,7 @@ class UserProfile extends React.Component {
     const userPosts = posts.slice(1)
 
     if(this.state.loading) {
-      return null
+      return <div className="loading"></div>
     }
 
     if(this.props.user.username === "") {
