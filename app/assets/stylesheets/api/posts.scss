@@ -39,7 +39,7 @@
 }
 
 .change-view-button {
-  height: 28px;
+  height: 27px;
   position: relative;
 }
 
@@ -72,6 +72,7 @@
 .li-post-index {
   transform:scale(0.9);
   margin-bottom: 20px;
+  font-weight: bold;
   box-shadow: -5px 4px 10px 2px #c0bebe;
 }
 
@@ -211,6 +212,7 @@
     background-color: white;
     width: 100%;
     font-size: 12px;
+    font-weight: bold;
     flex-direction: column;
     position: absolute;
     bottom: -40px;

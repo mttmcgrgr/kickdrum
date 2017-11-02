@@ -119,10 +119,15 @@
 
 .user-name-info {
   position: relative;
-  top: 8px;
+  top: 1px;
   font-weight: normal;
   font-size: 18px;
   padding-left: 10px;
+}
+
+.user-info-loading {
+  width: 800px;
+  height: 321px;
 }
 
 .name-photo-container {

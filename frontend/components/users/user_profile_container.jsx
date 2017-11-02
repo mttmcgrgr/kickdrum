@@ -8,9 +8,9 @@ import { createProfileBookmark, deleteProfileBookmark } from '../../actions/book
 
 const mapStateToProps = state => ({
   user: state.user,
-  posts: Object.keys(state.user.posts).map(id =>
+  posts:state.user.posts ? Object.keys(state.user.posts).map(id =>
     state.user.posts[id]
-  ).reverse()|| [],
+  ).reverse() : [],
   user_bookmarks: state.user.user_bookmarks ? Object.keys(state.user.user_bookmarks).map(id =>
     state.user.user_bookmarks[id].post).reverse() : [],
   currentUser: state.session.currentUser|| {}

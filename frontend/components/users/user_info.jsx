@@ -8,7 +8,7 @@ class UserInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false
+      loading: true
     }
     this.handleDelete = this.handleDelete.bind(this);
     this.featuredPost = this.featuredPost.bind(this);
@@ -17,7 +17,7 @@ class UserInfo extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 1);
+    this.setState({loading: false}); }, 75);
   }
 
 
@@ -30,13 +30,13 @@ class UserInfo extends React.Component {
    featuredPost() {
      const { post, user, receiveTrack } = this.props;
 
-     if(user.posts.length === 0){
+     if( user.posts === undefined ){
        return(
           <div className="parent">
            <img className="image1"
              src="http://res.cloudinary.com/dccshngpp/image/upload/v1484542366/record-mockup-8_kmpmyz.jpg" />
            <img className="image2"
-             src="http://res.cloudinary.com/dccshngpp/image/upload/v1496796665/12-Vinyl-LP-Record-4_e9nbgk.png"/>
+             src="https://tinyurl.com/y9kttyfx"/>
            <div className="info-play-container"></div>
           </div>
        )
@@ -59,14 +59,12 @@ class UserInfo extends React.Component {
 
    userInfo(){
      const { post, user, currentUser, fetchUser } = this.props;
-     let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1497327009/12-Vinyl-LP-Record-4_e9nbgk_gxlll1_z7ur3d.png"
-     let userPic =  user.photo_url  ?  user.photo_url : defaultPic;
 
-     if(user.posts.length === 0){
+     if(user.posts === undefined){
        return(
          <div className="user-info-box">
            <div className="name-photo-container">
-             <img className="user_photo" src={userPic}/>
+             <img className="user_photo" src={user.photo_url}/>
              <h1 className="user-name-info">{user.username}</h1>
            </div>
             <div className="info-top-section"></div>
@@ -76,7 +74,7 @@ class UserInfo extends React.Component {
        return(
          <div className="user-info-box">
            <div className="name-photo-container">
-             <img className="user_photo" src={userPic}/>
+             <img className="user_photo" src={user.photo_url}/>
              <h1 className="user-name-info">{user.username}</h1>
            </div>
             <div className="info-top-section"></div>
@@ -105,8 +103,7 @@ class UserInfo extends React.Component {
 
     if(this.state.loading === true) {
       return(
-        <div className="loading">
-
+        <div className="user-info-loading">
         </div>
       )
     } else {

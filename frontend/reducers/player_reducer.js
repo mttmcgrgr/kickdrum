@@ -6,7 +6,8 @@ const defaultState = {
   artist: "",
   song_url: "",
   visible: false,
-  cover_url: ""
+  cover_url: "",
+  queue: []
 };
 
 

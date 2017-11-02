@@ -8,6 +8,7 @@ module.exports = {
     marginRight    : '-50%',
     transform      : 'translate(-50%, -50%)',
     width          :"300px",
+    fontWeight     : "bold",
     justifyContent : "center",
     height         : "465px",
     boxShadow      : "-15px 15px 15px black",

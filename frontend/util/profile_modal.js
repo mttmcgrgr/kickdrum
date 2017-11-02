@@ -21,6 +21,7 @@ module.exports = {
     width          : '800px',
     height         : '400px',
     zIndex         : 10,
+    fontWeight     : "bold",
     overflow       : "hidden",
     boxShadow      : "-15px 15px 15px black",
   }

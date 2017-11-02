@@ -21,7 +21,7 @@ class UserProfile extends React.Component {
   componentDidMount() {
     this.setState({loading: true},
       () => this.props.fetchUser(this.props.params.userId)
-      .then(setTimeout(this.setState({ loading: false }), 75)));
+      .then(this.setState({ loading: false })));
     window.scrollTo(0,0);
   }
 
@@ -29,7 +29,7 @@ class UserProfile extends React.Component {
     if(this.props.params.userId !== nextProps.params.userId){
       this.setState({loading: true},
         () => this.props.fetchUser(nextProps.params.userId)
-        .then(setTimeout(this.setState({ loading: false }), 3000)));
+        .then(this.setState({ loading: false })));
     }
   }
 
@@ -38,6 +38,10 @@ class UserProfile extends React.Component {
       this.setState({fetching: true},
         () => this.props.fetchUser(this.props.params.userId)
         .then(this.setState({ fetching: false, savedView: false })));
+    } else {
+      this.setState({fetching: true},
+        () => this.props.fetchUser(this.props.params.userId)
+        .then(this.setState({ fetching: false })));
     }
   }
 
@@ -46,21 +50,22 @@ class UserProfile extends React.Component {
       this.setState({fetching: true},
         () => this.props.fetchUser(this.props.params.userId)
         .then(this.setState({ fetching: false, savedView: true })));
+    } else {
+      this.setState({fetching: true},
+        () => this.props.fetchUser(this.props.params.userId)
+        .then(this.setState({ fetching: false })));
     }
   }
 
 
   render () {
     const { posts, currentUser, user, user_bookmarks } = this.props;
-    const featuredPost = posts[0];
+    const defaultPost = { cover_url: "https://tinyurl.com/y9kttyfx" };
+
+    const featuredPost = user.posts ? posts[0] : defaultPost;
     const userPosts = posts.slice(1)
-
-    if(this.state.loading) {
-      return <div className="loading"></div>
-    }
-
-    if(this.props.user.username === "") {
-      return null
+    if(this.state.loading){
+      return null;
     } else {
       return (
           <div className="user-profile">

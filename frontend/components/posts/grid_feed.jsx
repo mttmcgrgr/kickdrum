@@ -10,7 +10,7 @@ class GridFeed extends React.Component {
   render () {
     let posts = [...this.props.posts];
     const { currentUser, profileView, createBookmark, deleteBookmark } = this.props;
-    console.log(this.props.posts);
+
     if (posts.length === 0) {
       return (
           <div className="post-feed-container">
