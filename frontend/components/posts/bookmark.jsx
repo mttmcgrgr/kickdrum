@@ -31,7 +31,7 @@ class Bookmark extends React.Component {
   render() {
       const marked = "https://tinyurl.com/y9v2z6b2"
       const unmarked = "https://tinyurl.com/y8pz2wag"
-
+  
       if(this.props.post === undefined){
         return null
       } else {

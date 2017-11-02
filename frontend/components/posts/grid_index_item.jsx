@@ -49,7 +49,7 @@ class GridIndexItem extends React.Component {
     const { post, receiveTrack, currentUser, user } = this.props;
     let defaultPic = "http://res.cloudinary.com/dccshngpp/image/upload/v1489452204/default_pic.jpg"
     let name = post.username ? post.username : user.username;
-
+    
     let userPic;
     if(this.props.profileFeed){
       userPic =  user.photo_url  ?  user.photo_url : defaultPic;

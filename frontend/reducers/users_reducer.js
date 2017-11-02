@@ -18,6 +18,7 @@ const UsersReducer = (state = defaultState, action) => {
       delete newState[action.userId];
       return newState;
     case RECEIVE_PROFILE_BOOKMARK:
+     console.log(newState, action);
       if(newState.posts[action.bookmark.post_id].bookmarks){
         newState.posts[action.bookmark.post_id].bookmarks[action.bookmark.id] = action.bookmark
       } else {
@@ -28,9 +29,12 @@ const UsersReducer = (state = defaultState, action) => {
       newState.posts[action.bookmark.post_id].hasMarked = true
       return newState;
     case REMOVE_PROFILE_BOOKMARK:
-      delete newState.posts[action.bookmark.post_id].bookmarks[action.bookmark.id]
-      newState.posts[action.bookmark.post_id].bookmarkCount -= 1
-      newState.posts[action.bookmark.post_id].hasMarked = false
+     console.log(newState, action);
+     if(newState.posts[action.bookmark.post_id]){
+       newState.posts[action.bookmark.post_id].bookmarkCount -= 1
+       newState.posts[action.bookmark.post_id].hasMarked = false
+     }
+      delete newState.user_bookmarks[action.bookmark.id]
       return newState;
     default:
       return state;

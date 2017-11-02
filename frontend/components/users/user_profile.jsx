@@ -22,7 +22,6 @@ class UserProfile extends React.Component {
     this.setState({loading: true},
       () => this.props.fetchUser(this.props.params.userId)
       .then(this.setState({ loading: false })));
-    window.scrollTo(0,0);
   }
 
   componentWillReceiveProps(nextProps){

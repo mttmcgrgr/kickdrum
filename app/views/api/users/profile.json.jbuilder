@@ -6,7 +6,7 @@ json.partial! 'api/users/user', user: @user
       json.id bookmark.id
       json.user_id bookmark.user_id
       json.post_id bookmark.post_id
-      json.post bookmark.post
+      json.partial! 'api/posts/post', post: bookmark.post
     end
   end
 end

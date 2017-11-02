@@ -19,6 +19,7 @@ class Api::PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
+      @posts = Post.all
       render :index
     else
       render json: @post.errors.full_messages, status: 422
