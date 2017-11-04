@@ -341,10 +341,11 @@ audio {
     bottom: 5px;
 }
 
+
 .greeting-profile {
     height: 21px;
     border-radius: 15px;
-    border-style: solid;
+    border-style: none;
     display: flex;
     position: relative;
     margin-left: 15px;
@@ -414,7 +415,6 @@ audio {
 }
 
 
-
 .footer_artist {
     display: list-item;
     text-align: -webkit-match-parent;
@@ -455,8 +455,6 @@ audio {
 .modal-container:hover {
   z-index: 50;
 }
-
-
 
 
 .image {
