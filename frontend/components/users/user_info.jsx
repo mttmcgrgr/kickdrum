@@ -17,7 +17,7 @@ class UserInfo extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 75);
+    this.setState({loading: false}); }, 800);
   }
 
 
@@ -29,6 +29,12 @@ class UserInfo extends React.Component {
 
    featuredPost() {
      const { post, user, receiveTrack } = this.props;
+
+     if(this.state.loading) {
+       return (
+         <Loading/>
+       );
+     }
 
      if( user.posts === undefined ){
        return(

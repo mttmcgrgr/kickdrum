@@ -8,7 +8,7 @@ class UserProfile extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      loading: true,
+      loading: false,
       fetching: false,
       savedView: false
     }
@@ -31,6 +31,7 @@ class UserProfile extends React.Component {
         () => this.props.fetchUser(nextProps.params.userId)
         .then(this.setState({ loading: false })));
     }
+    window.scrollTo(0,0)
   }
 
   setPostView(){
@@ -61,11 +62,13 @@ class UserProfile extends React.Component {
   render () {
     const { posts, currentUser, user, user_bookmarks } = this.props;
     const defaultPost = { cover_url: "https://tinyurl.com/y9kttyfx" };
-
     const featuredPost = user.posts ? posts[0] : defaultPost;
     const userPosts = posts.slice(1)
+
     if(this.state.loading){
-      return null;
+      return (
+        <Loading />
+      );
     } else {
       return (
           <div className="user-profile">
