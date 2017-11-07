@@ -29,7 +29,10 @@ class UserProfile extends React.Component {
     if(this.props.params.userId !== nextProps.params.userId){
       this.setState({loading: true},
         () => this.props.fetchUser(nextProps.params.userId)
-        .then(this.setState({ loading: false })));
+        .then(this.setState({
+          loading: false,
+          savedView: false
+        })));
     }
     window.scrollTo(0,0)
   }
@@ -67,7 +70,7 @@ class UserProfile extends React.Component {
 
     if(this.state.loading){
       return (
-        <Loading />
+        null
       );
     } else {
       return (

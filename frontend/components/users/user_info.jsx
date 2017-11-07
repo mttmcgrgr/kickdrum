@@ -17,7 +17,7 @@ class UserInfo extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 800);
+    this.setState({loading: false}); }, 200);
   }
 
 
@@ -32,7 +32,7 @@ class UserInfo extends React.Component {
 
      if(this.state.loading) {
        return (
-         <Loading/>
+         null
        );
      }
 
