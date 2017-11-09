@@ -12,8 +12,8 @@ module.exports = {
   content : {
     display        : 'flex',
     padding        : "0px",
-    top            : '49%',
-    left           : '49%',
+    top            : '50%',
+    left           : '50%',
     right          : 'auto',
     bottom         : 'auto',
     marginRight    : '-50%',
@@ -21,6 +21,7 @@ module.exports = {
     width          : '800px',
     height         : '400px',
     zIndex         : 10,
+    borderRadius   : "0px",
     fontWeight     : "bold",
     overflow       : "hidden",
     boxShadow      : "-15px 15px 15px black",
