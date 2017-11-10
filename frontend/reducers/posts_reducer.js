@@ -8,7 +8,7 @@ const defaultState = {
   artist: "",
   cover_url: "",
   song_url: "",
-  errors: {},
+  errors: [],
   bookmarks: {}
 };
 
