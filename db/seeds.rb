@@ -557,6 +557,14 @@ user_id: User.second.id
 },
 
 {
+title: "Honestly",
+artist: 'Zwan',
+song_url: "http://res.cloudinary.com/dccshngpp/video/upload/v1510357267/onnodg5w8wmaexcepein.mp3",
+cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1510357544/bzvtmam3nzdwmytudzxu.jpg",
+user_id: User.third.id
+},
+
+{
 title: "Leave Them All Behind",
 artist: "Ride",
 song_url: "http://res.cloudinary.com/dccshngpp/video/upload/v1509049398/z4ygaph0hblhbzpxs9an.mp3",
