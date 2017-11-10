@@ -562,6 +562,14 @@ artist: "Ride",
 song_url: "http://res.cloudinary.com/dccshngpp/video/upload/v1509049398/z4ygaph0hblhbzpxs9an.mp3",
 cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1509049405/wj4jofwypzoctyfbci6s.jpg",
 user_id: User.first.id
+},
+
+{
+title: "Rock The Casbah (Original Version)",
+artist: "The Clash",
+song_url: "http://res.cloudinary.com/dccshngpp/video/upload/v1510344584/bs3bdjvku690x0dyl0a0.mp3",
+cover_url: "http://res.cloudinary.com/dccshngpp/image/upload/v1510344600/yoa9e5mmgefb4roctvad.jpg",
+user_id: User.second.id
 }
 
 ])
