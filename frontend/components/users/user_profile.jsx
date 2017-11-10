@@ -27,6 +27,7 @@ class UserProfile extends React.Component {
 
   componentWillReceiveProps(nextProps){
     if(this.props.params.userId !== nextProps.params.userId){
+      window.scrollTo(0,0)
       this.setState({loading: true},
         () => this.props.fetchUser(nextProps.params.userId)
         .then(this.setState({
@@ -34,7 +35,6 @@ class UserProfile extends React.Component {
           savedView: false
         })));
     }
-    window.scrollTo(0,0)
   }
 
   setPostView(){
