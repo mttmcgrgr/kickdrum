@@ -42,5 +42,4 @@ feed below the featured post. Each section is a subcomponent of a User Profile c
 
 ### Future Feature Implementation
 
-Plans include bookmarking capability and a bookmarks view in user profiles, queued
-playlist for the music player, artist pages and user follows.
+Plans include playlist functionality including the ability to queue songs. Other future features include post tags and search.
