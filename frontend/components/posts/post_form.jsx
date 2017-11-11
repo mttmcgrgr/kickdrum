@@ -114,7 +114,7 @@ class PostForm extends React.Component {
     let artStatus = this.state.cover_uploaded ? successImg : errorImg;
 
     return (
-      <div>
+      <div className="post-form-background">
         <div className="feed_background">
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="create-form-box">

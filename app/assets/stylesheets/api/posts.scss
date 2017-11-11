@@ -22,6 +22,15 @@
     transform:scale(0.8);
 }
 
+.post-form-background {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("http://mmmmaven.com/wp-content/uploads/1280-jp-record-shelf-1.jpg");
+}
+
 .modal-userpic {
     display: flex;
     justify-content: flex-start;
