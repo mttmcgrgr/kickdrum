@@ -21,7 +21,8 @@ class UserProfile extends React.Component {
   componentDidMount() {
     this.setState({loading: true},
       () => this.props.fetchUser(this.props.params.userId)
-      .then(this.setState({ loading: false })));
+      .then(setTimeout(() => {
+      this.setState({loading: false}); }, 500)));
     window.scrollTo(0,0)
   }
 
@@ -30,10 +31,8 @@ class UserProfile extends React.Component {
       window.scrollTo(0,0)
       this.setState({loading: true},
         () => this.props.fetchUser(nextProps.params.userId)
-        .then(this.setState({
-          loading: false,
-          savedView: false
-        })));
+        .then(setTimeout(() => {
+        this.setState({loading: false, savedView: false}); }, 500)));
     }
   }
 
