@@ -12,7 +12,7 @@ class GridFeed extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-    this.setState({loading: false}); }, 200);
+    this.setState({loading: false}); }, 300);
   }
 
   render () {
