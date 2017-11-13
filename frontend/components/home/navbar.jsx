@@ -56,11 +56,11 @@ class Greeting extends React.Component {
   sessionLinks(){
     return(
       <nav className="login-signup">
-        <button className="session-button" onClick={this.modalOpen("login")}>
+        <button className="session-login" onClick={this.modalOpen("login")}>
           Login
         </button>
         &nbsp;&nbsp;
-        <button className="session-button" onClick={this.modalOpen("signup")}>
+        <button className="session-signup" onClick={this.modalOpen("signup")}>
           Sign Up
         </button>
       </nav>
@@ -120,11 +120,11 @@ class Greeting extends React.Component {
              Demo
            </button>
            &nbsp;&nbsp;
-           <button className="session-button" onClick={this.modalOpen("login")}>
+           <button className="session-login" onClick={this.modalOpen("login")}>
              Login
            </button>
            &nbsp;&nbsp;
-           <button className="session-button" onClick={this.modalOpen("signup")}>
+           <button className="session-signup" onClick={this.modalOpen("signup")}>
              Sign Up
            </button>
          </nav>
