@@ -11,7 +11,7 @@ module.exports = {
     fontWeight     : "bold",
     justifyContent : "center",
     height         : "465px",
-    boxShadow      : "-15px 15px 15px black",
+    //boxShadow      : "-15px 15px 15px black",
   },
   overlay : {
     zIndex: 15,

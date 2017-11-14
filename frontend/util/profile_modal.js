@@ -12,7 +12,7 @@ module.exports = {
   content : {
     display        : 'flex',
     padding        : "0px",
-    top            : '50%',
+    top            : '45%',
     left           : '49%',
     right          : 'auto',
     bottom         : 'auto',
@@ -24,6 +24,6 @@ module.exports = {
     borderRadius   : "0px",
     fontWeight     : "bold",
     overflow       : "hidden",
-    boxShadow      : "-15px 15px 15px black",
+    //boxShadow      : "-15px 15px 15px black",
   }
 };
