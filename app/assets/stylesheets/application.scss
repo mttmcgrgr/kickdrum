@@ -210,12 +210,13 @@
 
  .create-form-box {
     padding: 20px;
-   background-color: white;
+    background-color: white;
     text-align: left;
     z-index: 3;
     position: absolute;
     top: -210px;
     width: 351px;
+    border: solid 1px #a3a3a3;
     //box-shadow: -5px 5px 5px #black;
  }
 

@@ -50,7 +50,7 @@
 .change-view-button {
   height: 26px;
   top: 1px;
-  right: 8px;
+  right: 6px;
   position: relative;
 }
 
@@ -328,21 +328,21 @@
 }
 
 .post-button {
- font-size: 16px;
- line-height: 1.8;
- appearance: none;
- box-shadow: none;
- border-radius: 10;
- color: #35495e;
- background-color: white;
- border: none;
- text-align: center;
- height: 50px;
- width: 233px;
- box-shadow: -2px 2px 2px grey;
- display: flex;
- flex-direction: row;
- justify-content: space-between;
+     font-size: 16px;
+     line-height: 1.8;
+     appearance: none;
+     box-shadow: none;
+     border-radius: 10;
+     color: #35495e;
+     background-color: white;
+     border: 1px solid #a5a3a3;
+     text-align: center;
+     height: 50px;
+     width: 233px;
+     /* box-shadow: -2px 2px 2px grey; */
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
 }
 
 .post-button-text {
@@ -355,7 +355,8 @@
 }
 
 .post-button:hover {
-  box-shadow: -5px 5px 5px grey;
+  //box-shadow: -5px 5px 5px grey;
+  background-color: #cfcfcf;
 }
 
 .post-form-buttons {
