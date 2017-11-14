@@ -36,10 +36,7 @@ class PostIndex extends React.Component {
 
     return(
       <button className="view-button" onClick={this.changeView}>
-        <img
-          className="change-view-button"
-          src={imgSrc}
-          />
+        <img className="change-view-button" src={imgSrc} />
       </button>
     )
   }
