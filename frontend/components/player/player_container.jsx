@@ -3,12 +3,9 @@ import PlayerBar from './player_bar';
 import { receiveTrack, clearTrack } from '../../actions/player_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  song_url: state.player.song_url,
-  cover_url: state.player.cover_url,
-  title: state.player.title,
-  artist: state.player.artist,
+  currentSong: state.player.currentSong || {},
+  queue: state.player.queue || [],
   visible: state.player.visible
-
 });
 
 const mapDispatchToProps = dispatch => ({

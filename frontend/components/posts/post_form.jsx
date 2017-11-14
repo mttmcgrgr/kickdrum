@@ -26,7 +26,6 @@ class PostForm extends React.Component {
   }
 
   renderErrors() {
-    console.log(this.props);
 		return(
 			<ul className="errors">
 				{this.props.errors.map((error, i) => (

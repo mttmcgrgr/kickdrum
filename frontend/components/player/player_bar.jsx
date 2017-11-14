@@ -8,24 +8,24 @@ class PlayerBar extends React.Component {
   }
 
   render() {
-    const playerClass = this.props.visible ? "footer-playbar" : "hidden-playbar";
-
+    const { currentSong, queue, clearTrack, visible } = this.props;
+    const playerStyle = visible ? "footer-playbar" : "hidden-playbar";
     return (
-    <div className={playerClass}>
-      <button className="close-player" onClick={this.props.clearTrack}>
+    <div className={playerStyle}>
+      <button className="close-player" onClick={clearTrack}>
         <img
           className="close-img"
           src="https://www.broadsheet.com.au/assets/icons/close.svg"/>
       </button>
      <div className="player-container">
-      <img className="player-image" src={this.props.cover_url}/>
+      <img className="player-image" src={currentSong.cover_url}/>
        <div className="player-text">
-         <div className="player-title" > {this.props.title}</div>
-         <div className="player-artist"> {this.props.artist}</div>
+         <div className="player-title" > {currentSong.title}</div>
+         <div className="player-artist"> {currentSong.artist}</div>
        </div>
           <div className="player-audio">
              <ReactAudioPlayer
-               src={this.props.song_url}
+               src={currentSong.song_url}
                autoPlay />
           </div>
      </div>
